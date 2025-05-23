@@ -1,5 +1,11 @@
+package com.examly.springappfeedbak.model;
 
-@Entity
+
+
 public class Feedback {
-    private String name;
+    private int feedbackId;
+    private User user;
+    private String feedbackText;
+    private Date date;
+
 }
