@@ -20,6 +20,9 @@ public class ApigatewayApplication {
 		return builder.routes()
 		.route("user_route",route->route.path("/api/users/**")
 		.uri("lb://USER-SERVICE"))
+		.route("user_loans",route->route.path("/api/loans/**")
+		.uri("lb://LOAN-SERVICE")
+		)
 		.build();
 	}
 
