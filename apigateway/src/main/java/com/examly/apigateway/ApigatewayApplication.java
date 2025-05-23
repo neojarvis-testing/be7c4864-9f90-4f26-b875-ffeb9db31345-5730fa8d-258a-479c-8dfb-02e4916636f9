@@ -18,8 +18,8 @@ public class ApigatewayApplication {
 	@Bean
 	public RouteLocator apiRouteLocator(RouteLocatorBuilder builder){
 		return builder.routes()
-		.route("user_route",route->route.path("/api/user/**")
-		.uri("lb://localhost:8085"))
+		.route("user_route",route->route.path("/api/users/**")
+		.uri("lb://USER-SERVICE"))
 		.build();
 	}
 
