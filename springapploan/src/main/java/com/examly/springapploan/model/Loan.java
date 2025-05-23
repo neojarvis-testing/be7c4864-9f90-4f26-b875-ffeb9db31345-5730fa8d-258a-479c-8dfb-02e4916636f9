@@ -1,3 +1,5 @@
+package main.java.com.examly.springapploan.model;
+
 
 @Entity
 public class Loan {

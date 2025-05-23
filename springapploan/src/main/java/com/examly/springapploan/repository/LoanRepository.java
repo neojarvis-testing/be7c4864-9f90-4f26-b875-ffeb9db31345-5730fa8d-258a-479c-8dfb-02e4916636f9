@@ -1,5 +1,6 @@
-package main.java.com.examly.springapploan.repository;
+package src.main.java.com.examly.springapploan.repository;
 
-public interface LoanRepository extends JpaRepository<Loan,> {
+@Repository
+public interface LoanRepository extends JpaRespository<Loan,Long>{
     
 }

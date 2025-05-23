@@ -1,8 +1,11 @@
+import java.lang.annotation.Inherited;
 import java.time.LocalDate;
 
 
+@Entity
 public class LoanApplication {
     
+    @Id
     private long loanApplicationId;
     private LocalDate applicationDate;
     private double loanAmount;
