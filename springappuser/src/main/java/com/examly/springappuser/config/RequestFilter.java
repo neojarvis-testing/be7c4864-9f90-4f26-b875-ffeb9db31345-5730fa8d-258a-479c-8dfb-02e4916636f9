@@ -3,7 +3,6 @@ package com.examly.springappuser.config;
 import java.io.IOException;
 import java.util.List;
 
-import org.hibernate.annotations.Comment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.GrantedAuthority;
