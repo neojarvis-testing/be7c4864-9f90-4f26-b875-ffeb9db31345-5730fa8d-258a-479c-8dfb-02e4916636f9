@@ -12,7 +12,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import com.examly.springappuser.util.JwtUtil;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -23,10 +22,10 @@ import jakarta.servlet.http.HttpServletResponse;
 public class RequestFilter extends OncePerRequestFilter {
 
 
-private JwtUtil jwtUtil;
+private JwtTokenGen jwtUtil;
 
 @Autowired
-public RequestFilter(JwtUtil jwtUtil){
+public RequestFilter(JwtTokenGen jwtUtil){
     this.jwtUtil = jwtUtil;
 }
 
