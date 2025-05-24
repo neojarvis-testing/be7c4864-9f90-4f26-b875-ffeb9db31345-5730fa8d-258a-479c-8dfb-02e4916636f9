@@ -1,4 +1,4 @@
-package com.examly.springappuser.util;
+package com.examly.springappuser.config;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -11,7 +11,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
 @Component
-public class JwtUtil {
+public class JwtTokenGen {
 
 
     private final String SECRET_KEY = "mytestkey";

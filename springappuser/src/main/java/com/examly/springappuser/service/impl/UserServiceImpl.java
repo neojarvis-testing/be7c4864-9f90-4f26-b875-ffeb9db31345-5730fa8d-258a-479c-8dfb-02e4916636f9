@@ -6,34 +6,37 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.examly.springappuser.config.JwtTokenGen;
 import com.examly.springappuser.dto.LoginRequest;
 import com.examly.springappuser.dto.LoginResponse;
+import com.examly.springappuser.exceptions.InvalidCredintials;
+import com.examly.springappuser.exceptions.UserExistsExeption;
+import com.examly.springappuser.exceptions.UserNotFoundException;
 import com.examly.springappuser.model.User;
 import com.examly.springappuser.repository.UserRepository;
 import com.examly.springappuser.service.UserService;
-import com.examly.springappuser.util.JwtUtil;
 
 @Service
 public class UserServiceImpl implements UserService{
     
 
     private UserRepository userRepository;
-    private JwtUtil jwtUtil;
+    private JwtTokenGen jwtUtil;
 
     @Autowired
-    public UserServiceImpl(UserRepository userRepository,JwtUtil jwtUtil) {
+    public UserServiceImpl(UserRepository userRepository,JwtTokenGen jwtUtil) {
         this.userRepository = userRepository;
         this.jwtUtil = jwtUtil;
     }
     
 
-    public User registerUser(User user){
+    public User registerUser(User user) throws UserExistsExeption{
 
         Optional<User> existingUserOptional = userRepository.findEmailAndUsername(user.getEmail(),user.getUsername());
 
             if(existingUserOptional.isPresent()){
                 //throw exception saying user already exisit
-                throw new RuntimeException("User Allready Exist !");
+                throw new UserExistsExeption("User Allready Exist !");
             }else{
                 return userRepository.save(user);
             }
@@ -41,10 +44,10 @@ public class UserServiceImpl implements UserService{
     }
 
 
-    public LoginResponse loginUser(LoginRequest loginRequest){
+    public LoginResponse loginUser(LoginRequest loginRequest) throws UserNotFoundException, InvalidCredintials{
 
     User user = userRepository.findByEmail(loginRequest.getEmail())
-    .orElseThrow(()->new RuntimeException("User Not Found !"));
+    .orElseThrow(()->new UserNotFoundException("User Not Found !"));
 
     if(StringUtils.equals(loginRequest.getPassword(), user.getPassword())){
         //generate token
@@ -52,7 +55,7 @@ public class UserServiceImpl implements UserService{
         //return response
         return new LoginResponse("SUCCESS", token);
     }else{
-        throw new RuntimeException("Incorrect Password !");
+        throw new InvalidCredintials("Incorrect Password !");
     }
 
 }
