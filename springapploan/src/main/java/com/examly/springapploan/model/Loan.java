@@ -1,5 +1,7 @@
-package main.java.com.examly.springapploan.model;
+package com.examly.springapploan.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
 @Entity
 public class Loan {

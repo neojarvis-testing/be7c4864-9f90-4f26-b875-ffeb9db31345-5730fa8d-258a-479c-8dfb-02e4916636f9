@@ -1,5 +1,10 @@
+package com.examly.springapploan.model;
+
 import java.lang.annotation.Inherited;
 import java.time.LocalDate;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
 
 @Entity
@@ -18,7 +23,7 @@ public class LoanApplication {
     private String accountHolder;
     private String accountNumber;
     private String iFSCCode;
-    private User user;
+    // private User user;
     private Loan loan;
 
     public long getLoanApplicationId() {
@@ -93,12 +98,12 @@ public class LoanApplication {
     public void setiFSCCode(String iFSCCode) {
         this.iFSCCode = iFSCCode;
     }
-    public User getUser() {
-        return user;
-    }
-    public void setUser(User user) {
-        this.user = user;
-    }
+    // public User getUser() {
+    //     return user;
+    // }
+    // public void setUser(User user) {
+    //     this.user = user;
+    // }
     public Loan getLoan() {
         return loan;
     }
