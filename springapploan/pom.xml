@@ -11,9 +11,9 @@
     </parent>
 
     <groupId>com.examly</groupId>
-    <artifactId>springapp</artifactId>
+    <artifactId>springapploan</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springapp</name>
+    <name>springapploan</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
