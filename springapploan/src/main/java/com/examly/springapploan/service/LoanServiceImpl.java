@@ -6,16 +6,9 @@ import org.springframework.stereotype.Service;
 
 import com.examly.springapploan.model.Loan;
 import com.examly.springapploan.repository.LoanRepository;
+import com.examly.springapploan.service.LoanService;
 
 @Service
 public class LoanServiceImpl implements LoanService {
-
-    private LoanRepository LoanRepository;
-
-
-    @Override
-    public List<Loan> getAllLoans() {
-        return null;
-    }
     
 }
