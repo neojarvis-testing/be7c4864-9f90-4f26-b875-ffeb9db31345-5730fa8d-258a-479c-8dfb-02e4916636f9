@@ -31,6 +31,6 @@ public class UserController {
     @PostMapping(path ="/login", consumes = "application/json", produces = "application/json")
     public ResponseEntity<LoginResponse> registerUserEntity(@RequestBody LoginRequest user)  throws UserNotFoundException,InvalidCredintials{
  
-        return new ResponseEntity<>(userService.loginUser(user), HttpStatus.CREATED);
+        return new ResponseEntity<>(userService.loginUser(user), HttpStatus.OK);
     }
 }

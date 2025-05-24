@@ -10,6 +10,5 @@
 /home/coder/project/workspace/springappuser/src/main/java/com/examly/springappuser/exceptions/GlobalExceptionHandler.java
 /home/coder/project/workspace/springappuser/src/main/java/com/examly/springappuser/exceptions/UserNotFoundException.java
 /home/coder/project/workspace/springappuser/src/main/java/com/examly/springappuser/exceptions/InvalidCredintials.java
-/home/coder/project/workspace/springappuser/src/main/java/com/examly/springappuser/config/RequestFilter.java
 /home/coder/project/workspace/springappuser/src/main/java/com/examly/springappuser/repository/UserRepository.java
 /home/coder/project/workspace/springappuser/src/main/java/com/examly/springappuser/service/UserService.java
