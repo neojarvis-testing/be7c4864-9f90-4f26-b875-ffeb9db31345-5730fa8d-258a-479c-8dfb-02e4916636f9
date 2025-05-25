@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -48,8 +49,20 @@ public class CollegeApplicationController {
     }
 
     //update college application access for Admin
-    public ResponseEntity<CollegeApplication> updateCollegeApplication(@RequestBody CollegeApplication collegeApplication){
-        
+    @PutMapping("/{collegeapplicationId}")
+    public ResponseEntity<CollegeApplication> updateCollegeApplication(@RequestBody CollegeApplication collegeApplication, int collegeapplicationId){
+        CollegeApplication updatedCollegeApplication = collegeApplicationService.updateCollegeApplication(collegeApplication,collegeapplicationId);
+        return new ResponseEntity<>(updatedCollegeApplication,HttpStatus.OK);
+    }
+
+    //delete college Application access for student
+    @DeleteMapping("/{collegeapplicationId}")
+    public ResponseEntity<ResponseDTO> deleteCollege(@PathVariable int collegeapplicationId){
+      collegeApplicationService.deleteCollege(collegeapplicationId);
+       ResponseDTO response = new ResponseDTO();
+       response.setStatus(true);
+       response.setMessage("Laon successfully deleted");
+       return new ResponseEntity<>(response,HttpStatus.OK);
     }
     
     

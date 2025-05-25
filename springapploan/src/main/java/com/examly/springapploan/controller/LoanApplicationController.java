@@ -27,6 +27,7 @@ public class LoanApplicationController {
 
     }
 
+    @Autowired
     public LoanApplicationController(LoanApplicationService loanApplicationService){
         this.loanApplicationService=loanApplicationService;
         
@@ -56,7 +57,8 @@ public class LoanApplicationController {
     //update Loan Application access for Loan Manager
     @PutMapping("/{loanApplicationId}")
     public ResponseEntity<LoanApplication> updateLoanApplication(@RequestBody LoanApplication laonApplication, @PathVariable long loanApplicationId){
-        LoanApplication loanApplication = loanApplicationService.updateLoanApplication(laonApplication,loanApplicationId);
+        LoanApplication updatedLoanApplication = loanApplicationService.updateLoanApplication(laonApplication,loanApplicationId);
+        return new ResponseEntity<>(updatedLoanApplication,HttpStatus.OK);
     }
 
     //delete loan Application Access for student

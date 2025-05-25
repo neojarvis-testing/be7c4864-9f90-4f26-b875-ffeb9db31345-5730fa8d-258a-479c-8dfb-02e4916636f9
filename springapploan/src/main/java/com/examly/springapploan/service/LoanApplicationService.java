@@ -10,7 +10,9 @@ public interface LoanApplicationService {
 
     LoanApplication getLoanApplication(long userId);
 
-    LoanApplication updateLoanApplication(long loanApplicationId);
+    LoanApplication addLoanApplication(LoanApplication loanApplication);
+
+    LoanApplication updateLoanApplication(LoanApplication loanApplication,long loanApplicationId);
 
     void deleteLoanApplication(long loanApplicationId);
 

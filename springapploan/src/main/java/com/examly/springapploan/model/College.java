@@ -1,6 +1,7 @@
 package com.examly.springapploan.model;
 
 public class College {
+    
     private int collegeId;
     private String collegeName;
     private String address;

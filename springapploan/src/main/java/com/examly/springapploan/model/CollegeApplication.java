@@ -11,9 +11,15 @@ public class CollegeApplication {
     private String percentage12th;
     private String school12th;
     private String status;
-    // private User user;
+    private int userId;
     private College college;
 
+    public int getUserId() {
+        return userId;
+    }
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
     public int getCollegeApplicationId() {
         return collegeApplicationId;
     }
@@ -56,12 +62,7 @@ public class CollegeApplication {
     public void setStatus(String status) {
         this.status = status;
     }
-    public User getUser() {
-        return user;
-    }
-    public void setUser(User user) {
-        this.user = user;
-    }
+    
     public College getCollege() {
         return college;
     }
