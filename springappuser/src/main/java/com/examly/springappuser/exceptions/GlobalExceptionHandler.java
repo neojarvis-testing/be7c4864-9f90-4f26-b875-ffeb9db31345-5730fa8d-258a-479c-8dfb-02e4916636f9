@@ -16,7 +16,7 @@ public class GlobalExceptionHandler {
     }
     @ExceptionHandler(UserExistsExeption.class)
     public ResponseEntity<?> handleUserExistsExeption(UserExistsExeption exception){
-        return new ResponseEntity<>(new ErrorDto(400, "User Already Exists !"),HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(new ErrorDto(400, "User Already Exists !"),HttpStatus.OK);
     }
 
     @ExceptionHandler(Exception.class)

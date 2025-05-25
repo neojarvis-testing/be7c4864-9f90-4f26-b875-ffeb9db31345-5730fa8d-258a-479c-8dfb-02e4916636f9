@@ -1,5 +1,8 @@
 package com.examly.springappuser.controller;
 
+import java.util.List;
+
+import org.apache.commons.lang.StringUtils;
 import org.apache.logging.log4j.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -12,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.examly.springappuser.dto.LoginRequest;
 import com.examly.springappuser.dto.LoginResponse;
 import com.examly.springappuser.exceptions.InvalidCredintials;
+import com.examly.springappuser.exceptions.InvalidInput;
 import com.examly.springappuser.exceptions.UserExistsExeption;
 import com.examly.springappuser.exceptions.UserNotFoundException;
 import com.examly.springappuser.model.User;
@@ -26,8 +30,19 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    private List<String> allowedRoles = List.of("ADMIN","LOAN_MANAGER","STUDENT");
+
     @PostMapping(path ="/register", consumes = "application/json", produces = "application/json")
-    public ResponseEntity<User> registerUser(@RequestBody User user)  throws UserExistsExeption{
+    public ResponseEntity<User> registerUser(@RequestBody User user)  throws UserExistsExeption, InvalidInput{
+
+        if(StringUtils.isEmpty(user.getEmail())||
+        StringUtils.isEmpty(user.getPassword())){
+            throw new InvalidInput("Invalid Input: "+user);
+        }
+
+        if(!allowedRoles.contains(user.getUserRole())){
+            throw new InvalidInput("Invalid User Type: "+user.getUserRole());
+        }
 
         return new ResponseEntity<>(userService.registerUser(user), HttpStatus.CREATED);
     }
