@@ -53,7 +53,16 @@ public class UserServiceImpl implements UserService{
         //generate token
         String token = jwtUtil.generateToken(user.getUsername(), user.getUserRole());
         //return response
-        return new LoginResponse("SUCCESS", token);
+
+        return LoginResponse.builder()
+        .status("SUCCESS")
+        .userId(user.getUserId())
+        .email(user.getEmail())
+        .mobileNumber(user.getMobileNumber())
+        .userRole(user.getUserRole())
+        .username(user.getUsername())
+        .token(token).build(); 
+         
     }else{
         throw new InvalidCredintials("Incorrect Password !");
     }
