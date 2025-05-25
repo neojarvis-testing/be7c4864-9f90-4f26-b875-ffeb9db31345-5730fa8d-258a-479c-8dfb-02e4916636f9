@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import {useMutation} from '@tanstack/react-query'; 
 import {useDispatch} from 'react-redux';
-import {loginSuccess} from '../userSlice';
+import {signUpSuccess} from '../userSlice';
 import {useNavigate} from 'react-router-dom';
 import api from '../apiConfig'
 
@@ -17,9 +17,9 @@ const [form,setForm] = useState({email:'',password: '',username: '',mobileNumber
     const signupMutation = useMutation({
         mutationFn: () => api.post('/api/users/register',form),
         onSuccess: (response)=>{
-            const {userId, email} = response.data;
-            dispatch(loginSuccess(userId,email));
-            alert('Register Successfull!');
+            const {name, email} = response.data;
+            dispatch(signUpSuccess(name,email));
+            alert('SignUp Successfull!');
             navigate("/Login");
         },onError: (onError)=>{
             alert("Register Failed !");

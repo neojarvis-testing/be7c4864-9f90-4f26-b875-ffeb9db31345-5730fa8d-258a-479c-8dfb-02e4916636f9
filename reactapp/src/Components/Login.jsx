@@ -15,8 +15,12 @@ const [form,setForm] = useState({email:'',password: ''});
 const loginMutation = useMutation({
     mutationFn: () => api.post('/api/users/login',form),
     onSuccess: (response)=>{
-        const {email, token} = response.data;
-        dispatch(loginSuccess(email,token));
+        console.log("Login Response",response);
+         const {email, token, userRole} = response.data;
+       //  console.log("Login Response 20",email+" "+token+" "+userRole);
+         const payload = {"email":email,"token":token,"userRole":userRole};
+        // console.log(payload);
+        dispatch(loginSuccess(payload));
         alert('Login Successfull!');
         navigate("/home");
     },onError: (onError)=>{
