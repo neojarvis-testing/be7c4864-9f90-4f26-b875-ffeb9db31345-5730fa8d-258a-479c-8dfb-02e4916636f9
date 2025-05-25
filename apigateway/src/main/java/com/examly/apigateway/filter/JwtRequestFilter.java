@@ -87,11 +87,15 @@ public class JwtRequestFilter implements GatewayFilter{
                 logger.info("UNAUTHORIZED user:{}, role:{}",username,role);
                 response.setStatusCode(HttpStatus.UNAUTHORIZED);
                 return response.setComplete();
-            }   
+                 }   
             }catch(Exception e){
                 logger.error("Invalid Token:{}, Error:{}",jwtToken,e.toString());
             }
-            }
-        }
-    }
+            logger.info("UNAUTHORIZED, Invalid Token");
+            response.setStatusCode(HttpStatus.UNAUTHORIZED);
+            return response.setComplete();
+             }   
+         }
+        
+    
 }

@@ -1,5 +1,6 @@
 package com.examly.springappuser.controller;
 
+import org.apache.logging.log4j.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,6 +21,8 @@ import com.examly.springappuser.service.UserService;
 @RequestMapping("/api/users")
 public class UserController {
     
+    private static final Logger logger = LogManager.getLogger(UserController.class);
+
     @Autowired
     private UserService userService;
 
@@ -30,7 +33,7 @@ public class UserController {
     }
     @PostMapping(path ="/login", consumes = "application/json", produces = "application/json")
     public ResponseEntity<LoginResponse> registerUserEntity(@RequestBody LoginRequest user)  throws UserNotFoundException,InvalidCredintials{
- 
-        return new ResponseEntity<>(userService.loginUser(user), HttpStatus.CREATED);
+         logger.info("email :{}, Password: {}",user.getEmail(),user.getPassword());
+        return new ResponseEntity<>(userService.loginUser(user), HttpStatus.OK);
     }
 }
