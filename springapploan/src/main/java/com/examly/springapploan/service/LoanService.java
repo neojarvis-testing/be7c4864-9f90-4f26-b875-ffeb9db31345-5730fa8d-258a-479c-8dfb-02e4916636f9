@@ -11,9 +11,9 @@ public interface LoanService {
 
     Loan getLoan(long loanId);
 
-    Loan updateLoan(Loan loan);
+    Loan updateLoan(Loan loan, long loanId);
 
-    String deleteLoan(long loanId);
+    void deleteLoan(long loanId);
 
 
 }

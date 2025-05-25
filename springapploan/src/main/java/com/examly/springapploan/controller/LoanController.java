@@ -2,42 +2,72 @@ package com.examly.springapploan.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.examly.springapploan.dto.LoanResponseDTO;
 import com.examly.springapploan.model.Loan;
+import com.examly.springapploan.service.LoanService;
 
 @RestController
+@RequestMapping("/api/loans")
 public class LoanController {
 
+    private LoanService loanService;
+
+    @Autowired
+    public LoanController(LoanService loanService){
+        this.loanService=loanService;
+    }
+
     //get all loans for student and Loan Manager
-    @GetMapping("/api/loans")
+    @GetMapping
     public ResponseEntity<List<Loan>> getAllLoans(){
-        return null;
+        List<Loan> loans = loanService.getAllLoans();
+        return new ResponseEntity<>(loans,HttpStatus.OK);
+
     }
 
     //Add Loan only for Loan Manager
-    @PostMapping("/api/loans")
+    @PostMapping
     public ResponseEntity<?> addLoan(@RequestBody Loan loan){
-        return null;
+        Loan savedLoan = loanService.addLoan(loan);
+        return new ResponseEntity<>(savedLoan,HttpStatus.CREATED);
     }
 
     //Get loan by loanId for student and loan manager
-    @GetMapping("/api/loans/{loanId}")
-    public ResponseEntity<List<Loan>> getAllLoans(@PathVariable long loanId){
-        return null;
+    @GetMapping("/{loanId}")
+    public ResponseEntity<Loan> getAllLoan(@PathVariable long loanId){
+        Loan loan = loanService.getLoan(loanId);
+        return new ResponseEntity<>(loan,HttpStatus.OK);
     }
 
-    // //update loan  for loan manager
-    @PutMapping("/api/loans/{loanId}")
-    public ResponseEntity<List<Loan>> updateLoan(@PathVariable long loanId){
-        return null;
+    //update loan  for loan manager
+    @PutMapping("/{loanId}")
+    public ResponseEntity<Loan> updateLoan(@RequestBody Loan loan, @PathVariable long loanId){
+        Loan loan = loanService.updateLoan(loan,loanId);
+        return new ResponseEntity<>(loan,HttpStatus.OK);
     }
+
+    //delete Loan for Loan Manager
+    @DeleteMapping("/{loanId}")
+    public ResponseEntity<LoanResponseDTO> deleteLoan(@PathVariable long loanId){
+        loanService.deleteLoan(loanId);
+        LoanResponseDTO loanReponse = new LoanResponseDTO();
+        loanReponse.setStatus(true);
+        loanReponse.setMessage("Laon successfully deleted");
+        return new ResponseEntity<>(loanReponse,HttpStatus.OK);
+    }
+
 
      
 }

@@ -1,5 +1,5 @@
 package com.examly.springapploan.service;
 
-public class UserServiceImpl {
+public class UserServiceImpl  {
     
 }
