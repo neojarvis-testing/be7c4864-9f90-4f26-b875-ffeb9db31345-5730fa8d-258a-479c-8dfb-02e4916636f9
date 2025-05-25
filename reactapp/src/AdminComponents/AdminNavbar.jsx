@@ -1,7 +1,22 @@
 import React,{useState} from 'react'; 
+import {useDispatch} from "react-redux"
+import {useNavigate} from "react-router-dom"
 import '../css/Navbar.css'
+import {logout} from '../userSlice'
+
+
+
 const AdminNavbar = ({username,userRole,setCurrentPage}) => {
- 
+
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        dispatch(logout());
+        navigate("/login");
+    }
+
+
 return (
     <div className='navbar'>
     <div className='nav-menu'>
@@ -18,7 +33,7 @@ return (
       
         <div  className='nav-item'  onClick={()=> setCurrentPage('CollegeApproval')}> College Approval</div>
         <div  className='nav-item'  onClick={()=> setCurrentPage('ViewFeedback')}>View Colleges</div>
-        <div  className='nav-item'  onClick={()=> setCurrentPage('Logout')}>Logout</div>
+        <div  className='nav-item'  onClick={handleLogout}>Logout</div>
     </div>
     </div>
     ); 

@@ -4,7 +4,7 @@ import {useDispatch} from 'react-redux';
 import {loginSuccess} from '../userSlice';
 import {useNavigate} from 'react-router-dom';
 import api from '../apiConfig' 
-
+import './Login.css'
 const Login = () => {
 
     const dispatch = useDispatch();
@@ -42,22 +42,19 @@ const handleSubmit = (e) => {
 };
 
     return (
-        <div style={{maxWidth:400,margin:'auto',alignItems:'center'}}>
-           <h2 className='mb-4'>Login</h2>
-           <form onSubmit={handleSubmit} className="p-4 border rounded shadow-sm bg-light">
-            <div> 
-            <label htmlFor='email' className='form-label'>Email:</label>
-            <input type="email" name="email" className='form-control' value={form.email} onChange={handleChange} required placeholder="Enter Email" />
+        <div className='form-container'>
+           <form onSubmit={handleSubmit} className='form-box'>
+           <h2>Login</h2>
+            <div>  
+            <input type="email" name="email" value={form.email} onChange={handleChange} required placeholder="Enter Email" />
+            <br/> 
+            <input type="passowrd" name="password" value={form.password} onChange={handleChange} required placeholder="Enter Password" />
             <br/>
-            <label htmlFor='password' className='form-label'>Password:</label>
-            <input type="passowrd" className='form-control' name="password" value={form.password} onChange={handleChange} required placeholder="Enter Password" />
-            <br/>
-            <button type="submit" className='btn btn-primary' disabled={loginMutation.isLoading} style={{marginTop: 15}}>
+            <button type="submit"  disabled={loginMutation.isLoading} style={{marginTop: 15}}>
                 {loginMutation.isLoading ? 'Logging in...' : 'Login'}
                 </button>
             </div>
-            </form>
-          
+            </form> 
         </div>);
 };
 

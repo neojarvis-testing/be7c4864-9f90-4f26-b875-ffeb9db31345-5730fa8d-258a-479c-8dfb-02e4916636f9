@@ -1,8 +1,11 @@
-import React,{useState, useEffect} from 'react'; 
+import React,{useState,useEffect} from 'react'; 
 import {useSelector} from 'react-redux'; 
 import AdminMenu from '../AdminComponents/AdminNavbar'; 
 import LoanManagerMenu from '../LoanManagerComponents/LoanManagerNavbar'; 
 import StudentMenu from '../StudentComponents/StudentNavbar'; 
+import {useNavigate} from "react-router-dom"
+import {useDispatch} from "react-redux"
+import {logout} from '../userSlice'
 
 import CollegeApproval from '../AdminComponents/CollegeApproval';
 import CollegeForm from '../AdminComponents/CollegeForm';
@@ -12,14 +15,28 @@ import Dashboard from '../AdminComponents/Dashboard';
 
 const Home = () => {
 
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
     const user = useSelector((state)=>state.user);
     const [currentPage, setCurrentPage] = useState("Dashboard");
    
-    let userRole = user?.userRole || localStorage.getItem("userRole") ;
-    let username = user?.username || localStorage.getItem("username") ;  
-    let userId = user?.userId || localStorage.getItem("userId") ;  
-    
+    let userRole = user?.userRole || localStorage.getItem("userRole");
+    let username = user?.username || localStorage.getItem("username");  
+    let userId = user?.userId || localStorage.getItem("userId");  
+    let isAuthenicated = user?.isAuthenicated || localStorage.getItem("isAuthenicated");  
+
+    //look for not auth!
+    useEffect(()=>{
+        if(!isAuthenicated){
+            dispatch(logout());
+            navigate("/login");
+    }
+    },[isAuthenicated,navigate]);
+
+
     var selectedMenuBar = null;
+
     if(userRole==="ADMIN"){selectedMenuBar = <AdminMenu username={username} userRole={userRole} setCurrentPage={setCurrentPage} />}
     else if(userRole==="LOAN_MANAGER"){selectedMenuBar = <LoanManagerMenu username={username} userRole={userRole} setCurrentPage={setCurrentPage} />}
     else if(userRole==="STUDENT"){selectedMenuBar = <StudentMenu username={username} userRole={userRole} setCurrentPage={setCurrentPage}  />}
