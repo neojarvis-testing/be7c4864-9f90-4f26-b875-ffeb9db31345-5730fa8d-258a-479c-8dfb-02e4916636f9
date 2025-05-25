@@ -10,7 +10,17 @@ import com.examly.springapploan.dto.ErrorDTO;
 public class GlobalExceptionHandler {
     
     @ExceptionHandler(LoanNotFoudException.class)
-    public ResponseEntity<ErrorDTO> handleUserNotFoundException(LoanNotFoudException exception){
+    public ResponseEntity<ErrorDTO> handleLaonNotFoundException(LoanNotFoudException exception){
+        return new ResponseEntity<>(new ErrorDTO(400, exception.getMessage()),HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(CollegeNotFoundException.class)
+    public ResponseEntity<ErrorDTO> handleCollegeNotFoundException(CollegeNotFoundException exception){
+        return new ResponseEntity<>(new ErrorDTO(400, exception.getMessage()),HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(CollegeApplicationNotFoundException.class)
+    public ResponseEntity<ErrorDTO> handleCollegeApplicationNotFoundException(CollegeApplicationNotFoundException exception){
         return new ResponseEntity<>(new ErrorDTO(400, exception.getMessage()),HttpStatus.BAD_REQUEST);
     }
 

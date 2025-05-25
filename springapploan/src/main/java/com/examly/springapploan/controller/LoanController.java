@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.examly.springapploan.dto.LoanResponseDTO;
+import com.examly.springapploan.dto.ResponseDTO;
 import com.examly.springapploan.model.Loan;
 import com.examly.springapploan.service.LoanService;
 
@@ -54,15 +54,15 @@ public class LoanController {
     //update loan  for loan manager
     @PutMapping("/{loanId}")
     public ResponseEntity<Loan> updateLoan(@RequestBody Loan loan, @PathVariable long loanId){
-        Loan loan = loanService.updateLoan(loan,loanId);
-        return new ResponseEntity<>(loan,HttpStatus.OK);
+        Loan updatedLoan = loanService.updateLoan(loan,loanId);
+        return new ResponseEntity<>(updatedLoan,HttpStatus.OK);
     }
 
     //delete Loan for Loan Manager
     @DeleteMapping("/{loanId}")
-    public ResponseEntity<LoanResponseDTO> deleteLoan(@PathVariable long loanId){
+    public ResponseEntity<ResponseDTO> deleteLoan(@PathVariable long loanId){
         loanService.deleteLoan(loanId);
-        LoanResponseDTO loanReponse = new LoanResponseDTO();
+        ResponseDTO loanReponse = new ResponseDTO();
         loanReponse.setStatus(true);
         loanReponse.setMessage("Laon successfully deleted");
         return new ResponseEntity<>(loanReponse,HttpStatus.OK);

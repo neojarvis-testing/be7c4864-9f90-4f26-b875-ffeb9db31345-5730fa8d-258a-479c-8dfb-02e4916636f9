@@ -11,7 +11,7 @@ public class CollegeApplication {
     private String percentage12th;
     private String school12th;
     private String status;
-    private User user;
+    // private User user;
     private College college;
 
     public int getCollegeApplicationId() {

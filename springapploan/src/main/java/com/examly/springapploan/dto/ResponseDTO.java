@@ -1,6 +1,6 @@
 package com.examly.springapploan.dto;
 
-public class LoanResponseDTO {
+public class ResponseDTO {
     
     private boolean status;
     private String message;
