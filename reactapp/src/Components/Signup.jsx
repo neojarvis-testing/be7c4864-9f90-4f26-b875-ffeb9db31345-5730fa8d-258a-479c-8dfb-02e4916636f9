@@ -62,6 +62,11 @@ return (
             <br/>
             <label htmlFor='userRole' className='form-label'>Role(ADMIN/STUDENT/LOAN_MANAGER):</label> 
             <input type="text" name="userRole"  className='form-control'  value={form.userRole} onChange={handleChange} required placeholder="Enter UserRole" />
+           <select id='userRole'  className='form-control'  name='userRole' onChange={handleChange}>
+            <option value="STUDENT" selected>STUDENT</option>
+            <option value="LOAN_MANAGER">LOAN_MANAGER</option>
+            <option value="ADMIN">ADMIN</option>
+           </select>
             <br/>
             <button type="submit"  className='btn btn-primary' disabled={form.isLoading} style={{marginTop: 15}}>
                 {signupMutation.isLoading ? 'Signup Loading ..' : 'Signup'}

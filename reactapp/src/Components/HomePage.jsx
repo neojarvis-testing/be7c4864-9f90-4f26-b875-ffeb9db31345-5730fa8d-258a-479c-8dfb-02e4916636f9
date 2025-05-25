@@ -10,7 +10,12 @@ const Home = () => {
     const user = useSelector((state)=>state.user);
     console.log(user);
    
-    const userRole = user?.userRole; 
+    let userRole = user?.userRole;  
+    let username = user?.username; 
+    if(userRole){
+        localStorage.getItem("email"); 
+        userRole = localStorage.getItem("userRole");
+    }
     
     var selectedMenuBar = null;
 
@@ -22,7 +27,7 @@ const Home = () => {
 
 return (
     <div style={{maxWidth:400,margin:'auto'}}>
-        <h2>Menu Bar: </h2>
+        <h2>Welcome, {username} </h2>
         {selectedMenuBar}
     </div>); 
 };
