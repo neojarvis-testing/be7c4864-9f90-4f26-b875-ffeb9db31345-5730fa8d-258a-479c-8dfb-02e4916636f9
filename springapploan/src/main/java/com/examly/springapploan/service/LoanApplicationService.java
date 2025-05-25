@@ -12,7 +12,7 @@ public interface LoanApplicationService {
 
     LoanApplication updateLoanApplication(long loanApplicationId);
 
-    String deleteLoanApplication(long loanApplicationId);
+    void deleteLoanApplication(long loanApplicationId);
 
     
 
