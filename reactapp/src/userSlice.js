@@ -1,5 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
-import jwt_decode from "jwt-decode";
+import { createSlice } from "@reduxjs/toolkit"; 
 
 const userSlice = createSlice({
     name:"user",
@@ -7,24 +6,15 @@ const userSlice = createSlice({
         email: null,
         token: null,
         userRole: null,
+        userId: null,
+        username: null,
         isAuthenicated: false,
     },
     reducers:{
         loginSuccess: (state, action)=>{
            // console.log(action.payload) 
-            const {email,token,userRole} = action.payload;
-             console.log(token);
-            if(token){
-                try{
-                    console.log("decoding data");
-                    const decodedata = jwt_decode(token);
-                    console.log("data>"+decodedata);
-                }catch(e){
-                    console.error(e);
-                }
-               
-            }
-            
+            const {email,token,userRole,userId,username} = action.payload;
+           
             state.email = email;
             state.token = token; 
             state.userRole =userRole;

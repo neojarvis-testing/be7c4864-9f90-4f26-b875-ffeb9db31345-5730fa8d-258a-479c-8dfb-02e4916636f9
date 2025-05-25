@@ -13,8 +13,8 @@ const Home = () => {
     let userRole = user?.userRole;  
     let username = user?.username; 
     if(userRole){
-        localStorage.getItem("email"); 
-        userRole = localStorage.getItem("userRole");
+        userRole = localStorage.getItem("userRole"); 
+        username = localStorage.getItem("username"); 
     }
     
     var selectedMenuBar = null;
@@ -27,7 +27,7 @@ const Home = () => {
 
 return (
     <div style={{maxWidth:400,margin:'auto'}}>
-        <h2>Welcome, {username} </h2>
+        <h2>Welcome, {username}!</h2>
         {selectedMenuBar}
     </div>); 
 };

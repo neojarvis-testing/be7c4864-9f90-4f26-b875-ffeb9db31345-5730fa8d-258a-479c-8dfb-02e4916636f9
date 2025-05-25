@@ -5,17 +5,17 @@ const AdminNavbar = () => {
 return (
     <div className='navbar'>
     <div className='nav-links'>
-        <a href='/CollegeForm'>Home</a> 
+        <a href='/home'>Home</a> 
         <div className='dropdown'>
             <button className='bropbtn'>College
             <div className='dropdown-content'>
-                <a href='/addCollege'>Add College</a>
-                <a href='/viewColleges'>View Colleges</a>
+                <a href='/college-form'>Add College</a>
+                <a href='/view-college'>View Colleges</a>
             </div>
             </button>
         </div>
-        <a href='/VideColleges'>Adminion Approval</a>
-        <a href='/VideColleges'>Feedback</a>
+        <a href='/college-approval'>Adminion Approval</a>
+        <a href='/view-feedback'>Feedback</a>
     </div>
     </div>
     ); 
