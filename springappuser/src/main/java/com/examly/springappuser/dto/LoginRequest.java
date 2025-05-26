@@ -4,8 +4,8 @@ import java.io.Serializable;
 
 public class LoginRequest implements Serializable {
 
-    String email;
-    String password;
+    private String email;
+    private String password;
     
     public LoginRequest(){}
 

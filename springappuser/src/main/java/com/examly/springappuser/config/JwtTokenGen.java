@@ -1,23 +1,22 @@
-package com.examly.springappuser.util;
+package com.examly.springappuser.config;
 
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-
 import org.springframework.stereotype.Component;
-
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
 @Component
-public class JwtUtil {
+public class JwtTokenGen {
 
 
     private final String SECRET_KEY = "mytestkey";
 
     public String generateToken(String username,String role){
         Map<String,Object> claims = new HashMap<>(); 
+        claims.put("userId", role); 
         claims.put("role", role);
         return createToken(claims, username);
     }
@@ -46,6 +45,9 @@ public class JwtUtil {
     }
     public String getUserRole(String jwtToken){
         return extractClaims(jwtToken).get("role",String.class);
+    }
+    public String getUserId(String jwtToken){
+        return extractClaims(jwtToken).get("userId",String.class);
     }
  
     public boolean isTokenExpired(String token){
