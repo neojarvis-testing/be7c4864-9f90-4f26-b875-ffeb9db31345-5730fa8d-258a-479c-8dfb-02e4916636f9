@@ -15,10 +15,10 @@ import org.springframework.web.bind.annotation.RestController;
 import src.main.java.com.examly.springappfeedback.model.Feedback;
 import src.main.java.com.examly.springappfeedback.service.FeedbackService;
 
-
 @RestController
 @RequestMapping("/api/feedback")
 public class FeedbackController {
+
     @Autowired
     FeedbackService feedbackService;
 
@@ -67,5 +67,4 @@ public class FeedbackController {
             return new ResponseEntity<>(feedbackList, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-
 }
