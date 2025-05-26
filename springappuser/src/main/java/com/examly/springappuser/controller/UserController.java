@@ -40,6 +40,10 @@ public class UserController {
             throw new InvalidInput("Invalid Input: "+user);
         }
 
+        if(StringUtils.isEmpty(user.getUserRole())){
+            user.setUserRole("STUDENT");
+        }
+
         if(!allowedRoles.contains(user.getUserRole())){
             throw new InvalidInput("Invalid User Type: "+user.getUserRole());
         }
