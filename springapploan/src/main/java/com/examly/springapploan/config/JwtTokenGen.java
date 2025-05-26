@@ -1,4 +1,4 @@
-package com.examly.springappuser.config;
+package com.examly.springapploan.config;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+ 
 
 @Component
 public class JwtTokenGen {
@@ -32,12 +33,15 @@ public class JwtTokenGen {
     }
 
     
-    public Claims extractClaims(String token){
-
+    public Claims extractClaims(String token) throws AuthException{
+        try{
         return Jwts.parser()
         .setSigningKey(SECRET_KEY)
         .parseClaimsJws(token)
-        .getBody();
+        .getBody();}
+        catch(Exception e){
+            throw AuthException("Invalid Token");
+        }
     }
 
     public String getUserName(String jwtToken){
@@ -46,8 +50,11 @@ public class JwtTokenGen {
     public String getUserRole(String jwtToken){
         return extractClaims(jwtToken).get("role",String.class);
     }
-    public String getUserId(String jwtToken){
-        return extractClaims(jwtToken).get("userId",String.class);
+
+    public String getUserId(String jwtToken) throws AuthException{
+        
+            return extractClaims(jwtToken).get("userId",String.class);
+        
     }
  
     public boolean isTokenExpired(String token){
