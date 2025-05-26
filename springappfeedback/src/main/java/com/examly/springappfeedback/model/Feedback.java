@@ -1,4 +1,4 @@
-package src.main.java.com.examly.springappfeedback.model;
+package com.examly.springappfeedback.model;
 
 import java.sql.Date;
 import jakarta.persistence.Entity;

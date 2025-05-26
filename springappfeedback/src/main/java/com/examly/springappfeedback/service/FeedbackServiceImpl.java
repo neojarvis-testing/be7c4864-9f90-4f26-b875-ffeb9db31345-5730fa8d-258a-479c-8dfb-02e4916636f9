@@ -1,21 +1,21 @@
-package src.main.java.com.examly.springappfeedback.service;
+package com.examly.springappfeedback.service;
+
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collector;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.examly.springappuser.repository.UserRepository;
-
-import src.main.java.com.examly.springappfeedback.model.Feedback;
-import src.main.java.com.examly.springappfeedback.model.User;
-import src.main.java.com.examly.springappfeedback.repository.FeedbackRepository;
+import com.examly.springappfeedback.repository.UserRepository;
+import com.examly.springappfeedback.model.Feedback;
+import com.examly.springappfeedback.model.User;
+import com.examly.springappfeedback.repository.FeedbackRepository;
 
 @Service
 public class FeedbackServiceImpl implements FeedbackService{
+
     @Autowired
     private FeedbackRepository feedbackRepository;
+
     @Autowired
     private UserRepository userRepository;
 
@@ -37,7 +37,7 @@ public class FeedbackServiceImpl implements FeedbackService{
         }
     }
 
-    public List<Feedback> getFeedbackByUserId(int userId){
+    public List<Feedback> getFeedbackByUserId(long userId){
         Optional<User> userOptional = userRepository.findById(userId);
         if(userOptional.isEmpty()){
             throw new IllegalAccessException("user doesn't exist!");

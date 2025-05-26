@@ -1,10 +1,7 @@
-package com.examly.springappuser.repository;
+package com.examly.springappfeedback.repository;
 
 import org.springframework.stereotype.Repository;
-import com.examly.springappuser.model.User;
-
-import java.util.Optional;
-
+import com.examly.springappfeedback.model.User;
 import org.springframework.data.jpa.repository.*;
 
 @Repository

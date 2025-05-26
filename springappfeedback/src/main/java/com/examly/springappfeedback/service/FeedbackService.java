@@ -1,12 +1,12 @@
-package src.main.java.com.examly.springappfeedback.service;
-import java.util.List;
+package com.examly.springappfeedback.service;
 
-import src.main.java.com.examly.springappfeedback.model.Feedback;
-import src.main.java.com.examly.springappfeedback.repository.FeedbackRepository;
+import java.util.List;
+import com.examly.springappfeedback.model.Feedback;
+
 
 public interface FeedbackService {
    List<Feedback> getAllFeedback();
    Feedback creatFeedback(Feedback feedback);
-   List<Feedback> getFeedbackByUserId(int userId);
+   List<Feedback> getFeedbackByUserId(long userId);
    boolean deleteFeedback(int feedbackId);
 }

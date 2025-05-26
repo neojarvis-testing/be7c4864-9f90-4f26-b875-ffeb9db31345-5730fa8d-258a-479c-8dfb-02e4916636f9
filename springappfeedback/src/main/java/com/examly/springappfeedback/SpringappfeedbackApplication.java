@@ -1,5 +1,4 @@
-// package com.examly.springappfeedback;
-package src.main.java.com.examly.springappfeedback;
+package com.examly.springappfeedback;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
