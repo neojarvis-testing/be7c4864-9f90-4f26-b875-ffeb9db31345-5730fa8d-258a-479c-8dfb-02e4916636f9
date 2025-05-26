@@ -30,8 +30,9 @@ public class CollegeServiceImpl implements CollegeService {
     }
 
     @Override
-    public College getCollege(int collegeId) {
-        return collegeRepository.findById(collegeId).orElseThrow(()-> new CollegeNotFoundException(collegeId));
+    public College getCollege(int collegeId) throws CollegeNotFoundException   {
+       return collegeRepository.findById(collegeId).orElseThrow(()-> new CollegeNotFoundException("college Id not found"));
+     
     }
 
     @Override
@@ -40,7 +41,7 @@ public class CollegeServiceImpl implements CollegeService {
     }
 
     @Override
-    public College updateCollege(College college, int collegeId) {
+    public College updateCollege(College college, int collegeId) throws CollegeNotFoundException {
         College existingCollege = collegeRepository.findById(collegeId).orElseThrow(()-> new CollegeNotFoundException(collegeId));
         existingCollege.setAddress(college.getAddress());
         existingCollege.setCollegeName(college.getCollegeName());
@@ -54,7 +55,7 @@ public class CollegeServiceImpl implements CollegeService {
     }
 
     @Override
-    public void deleteCollege(int collegeId) {
+    public void deleteCollege(int collegeId) throws CollegeNotFoundException {
         College college = collegeRepository.findById(collegeId).orElseThrow(()-> new CollegeNotFoundException(collegeId));
         collegeRepository.delete(college);
     }

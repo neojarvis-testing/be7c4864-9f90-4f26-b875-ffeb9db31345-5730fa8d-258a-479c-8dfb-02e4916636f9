@@ -9,6 +9,12 @@ import com.examly.springapploan.dto.ErrorDTO;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
     
+    @ExceptionHandler(AuthException.class)
+    public ResponseEntity<ErrorDTO> handleAuthException(AuthException e){
+        return new ResponseEntity<>(new ErrorDTO(400,e.getMessage()),HttpStatus.BAD_REQUEST);
+    }
+
+
     @ExceptionHandler(LoanNotFoudException.class)
     public ResponseEntity<ErrorDTO> handleLaonNotFoundException(LoanNotFoudException exception){
         return new ResponseEntity<>(new ErrorDTO(400, exception.getMessage()),HttpStatus.BAD_REQUEST);

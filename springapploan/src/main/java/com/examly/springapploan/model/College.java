@@ -1,8 +1,30 @@
 package com.examly.springapploan.model;
 
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
 public class College {
     
-    private int collegeId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "college_id")
+    private Integer collegeId;
     private String collegeName;
     private String address;
     private String contactNumber;
@@ -10,55 +32,7 @@ public class College {
     private String website;
     private String courses;
     private String status;
-
-    public int getCollegeId() {
-        return collegeId;
-    }
-    public void setCollegeId(int collegeId) {
-        this.collegeId = collegeId;
-    }
-    public String getCollegeName() {
-        return collegeName;
-    }
-    public void setCollegeName(String collegeName) {
-        this.collegeName = collegeName;
-    }
-    public String getAddress() {
-        return address;
-    }
-    public void setAddress(String address) {
-        this.address = address;
-    }
-    public String getContactNumber() {
-        return contactNumber;
-    }
-    public void setContactNumber(String contactNumber) {
-        this.contactNumber = contactNumber;
-    }
-    public String getEmail() {
-        return email;
-    }
-    public void setEmail(String email) {
-        this.email = email;
-    }
-    public String getWebsite() {
-        return website;
-    }
-    public void setWebsite(String website) {
-        this.website = website;
-    }
-    public String getCourses() {
-        return courses;
-    }
-    public void setCourses(String courses) {
-        this.courses = courses;
-    }
-    public String getStatus() {
-        return status;
-    }
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    
+     @OneToMany(cascade = CascadeType.ALL,fetch =FetchType.EAGER, mappedBy="collegeApplicationId")
+    private List<CollegeApplication> collegeApplicationList;
+ 
 }
