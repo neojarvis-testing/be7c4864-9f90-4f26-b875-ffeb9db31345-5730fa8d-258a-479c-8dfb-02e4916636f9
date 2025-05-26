@@ -13,11 +13,7 @@ import com.examly.springapploan.repository.CollegeApplicationRepository;
 public class CollegeApplicationServiceImpl implements CollegeApplicationService {
 
     private CollegeApplicationRepository collegeApplicationRepository;
-
-    public CollegeApplicationServiceImpl(){
-
-    }
-
+ 
     @Autowired
     public CollegeApplicationServiceImpl(CollegeApplicationRepository collegeApplicationRepository){
         this.collegeApplicationRepository = collegeApplicationRepository;
@@ -41,7 +37,8 @@ public class CollegeApplicationServiceImpl implements CollegeApplicationService 
     @Override
     public CollegeApplication updateCollegeApplication(CollegeApplication collegeApplication,
             int id) {
-        CollegeApplication existingCollegeApplication = collegeApplicationRepository.findById(id).orElseThrow(() -> new CollegeApplicationNotFoundException(id));
+        CollegeApplication existingCollegeApplication = collegeApplicationRepository
+        .findById(id).orElseThrow(() -> new CollegeApplicationNotFoundException(id));
         existingCollegeApplication.setApplicationDate(collegeApplication.getApplicationDate());
         existingCollegeApplication.setCollege(collegeApplication.getCollege());
         existingCollegeApplication.setMarkSheet12th(collegeApplication.getMarkSheet12th());
@@ -54,7 +51,8 @@ public class CollegeApplicationServiceImpl implements CollegeApplicationService 
 
     @Override
     public void deleteCollegeApplication(int collegeApplicationId) {
-        CollegeApplication existingCollegeApplication = collegeApplicationRepository.findById(id).orElseThrow(() -> new CollegeApplicationNotFoundException(id));
+        CollegeApplication existingCollegeApplication = collegeApplicationRepository.findById(collegeApplicationId)
+        .orElseThrow(() -> new CollegeApplicationNotFoundException(collegeApplicationId));
         collegeApplicationRepository.delete(existingCollegeApplication);
     }
 

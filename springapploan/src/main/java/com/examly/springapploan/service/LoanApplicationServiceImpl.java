@@ -15,10 +15,6 @@ public class LoanApplicationServiceImpl implements LoanApplicationService {
 
     private LoanApplicationRepository loanApplicationRepository;
 
-    public LoanApplicationServiceImpl(){
-
-    }
-
     @Autowired
     public LoanApplicationServiceImpl(LoanApplicationRepository loanApplicationRepository) {
         this.loanApplicationRepository = loanApplicationRepository;
@@ -36,14 +32,15 @@ public class LoanApplicationServiceImpl implements LoanApplicationService {
 
     @Override
     public LoanApplication updateLoanApplication(LoanApplication loanApplication, long loanApplicationId) {
-        LoanApplication existingLoanApplication = loanApplicationRepository.findById(loanApplicationId).orElseThrow(()-> new LoanApplicationNotFound(loanApplicationId));
+        LoanApplication existingLoanApplication = loanApplicationRepository
+        .findById(loanApplicationId).orElseThrow(()-> new LoanApplicationNotFound(loanApplicationId));
        existingLoanApplication.setEmploymentStatus(loanApplication.getEmploymentStatus());
        return null;
     }
 
     @Override
-    public String deleteLoanApplication(long loanApplicationId) {
-        return null;
+    public void deleteLoanApplication(long loanApplicationId) {
+       // return null;
     }
 
     @Override

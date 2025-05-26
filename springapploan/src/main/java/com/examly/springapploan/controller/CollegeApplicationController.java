@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -37,7 +38,7 @@ public class CollegeApplicationController {
     //Get Application Access for Admin
     @GetMapping("/{collegeapplicationId}")
     public ResponseEntity<CollegeApplication> getApplication(@PathVariable int collegeapplicationId){
-        CollegeApplication collegeApplication = collegeApplicationService.getApplication(collegeapplicationId);
+        CollegeApplication collegeApplication =null;// collegeApplicationService.getApplication(collegeapplicationId);
         return new ResponseEntity<>(collegeApplication,HttpStatus.OK);
     }
 
@@ -57,12 +58,13 @@ public class CollegeApplicationController {
 
     //delete college Application access for student
     @DeleteMapping("/{collegeapplicationId}")
-    public ResponseEntity<ResponseDTO> deleteCollege(@PathVariable int collegeapplicationId){
-      collegeApplicationService.deleteCollege(collegeapplicationId);
-       ResponseDTO response = new ResponseDTO();
-       response.setStatus(true);
-       response.setMessage("Laon successfully deleted");
-       return new ResponseEntity<>(response,HttpStatus.OK);
+    public ResponseEntity<?> deleteCollege(@PathVariable int collegeapplicationId){
+ //     collegeApplicationService.deleteCollege(collegeapplicationId);
+      // ResponseDTO response = new ResponseDTO();
+    //    response.setStatus(true);
+    //    response.setMessage("Laon successfully deleted");
+      // return new ResponseEntity<>(response,HttpStatus.OK);
+      return new ResponseEntity<>(null,HttpStatus.OK);
     }
     
     
