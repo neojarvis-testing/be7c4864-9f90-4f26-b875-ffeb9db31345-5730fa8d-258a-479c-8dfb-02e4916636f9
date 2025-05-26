@@ -3,6 +3,8 @@ package com.examly.springappfeedback.service;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.examly.springappfeedback.repository.UserRepository;
@@ -37,7 +39,7 @@ public class FeedbackServiceImpl implements FeedbackService{
         }
     }
 
-    public List<Feedback> getFeedbackByUserId(long userId){
+    public List<Feedback> getFeedbackByUserId(long userId) throws IllegalAccessException{
         Optional<User> userOptional = userRepository.findById(userId);
         if(userOptional.isEmpty()){
             throw new IllegalAccessException("user doesn't exist!");
@@ -45,7 +47,7 @@ public class FeedbackServiceImpl implements FeedbackService{
         List<Feedback> feedbackList = feedbackRepository.findAll();
         return feedbackList.stream()
         .filter(feedback -> feedback.getUser() != null && feedback.getUser().getUserId()==userId)
-        .collect(Collector.toList());
+        .collect(Collectors.toList());
     }
 
     public boolean deleteFeedback(int feedbackId){
