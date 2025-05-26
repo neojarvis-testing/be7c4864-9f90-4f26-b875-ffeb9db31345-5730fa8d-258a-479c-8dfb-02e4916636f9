@@ -58,6 +58,8 @@ return (
     <div>
         {selectedMenuBar}
         <div className='page-content'>
+            <h1>EDUINVESTOR</h1>
+            <h1>Contact Us</h1>
             {renderPage()}
         </div>
     </div>); 
