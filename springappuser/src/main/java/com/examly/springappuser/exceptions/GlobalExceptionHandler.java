@@ -16,7 +16,15 @@ public class GlobalExceptionHandler {
     }
     @ExceptionHandler(UserExistsExeption.class)
     public ResponseEntity<?> handleUserExistsExeption(UserExistsExeption exception){
-        return new ResponseEntity<>(new ErrorDto(400, "User Already Exists !"),HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(new ErrorDto(400, "User Already Exists !"),HttpStatus.OK);
+    }
+    @ExceptionHandler(InvalidCredintials.class)
+    public ResponseEntity<?> invalidCredintialsExeption(InvalidCredintials exception){
+        return new ResponseEntity<>(new ErrorDto(400, "Incorrect Password !"),HttpStatus.BAD_REQUEST);
+    }
+    @ExceptionHandler(InvalidInput.class)
+    public ResponseEntity<?> invalidInputException(InvalidInput exception){
+        return new ResponseEntity<>(new ErrorDto(400, "Invalid Input !"),HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(Exception.class)

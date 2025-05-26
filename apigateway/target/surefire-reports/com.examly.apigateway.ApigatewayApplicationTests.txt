@@ -1,9 +1,15 @@
 -------------------------------------------------------------------------------
 Test set: com.examly.apigateway.ApigatewayApplicationTests
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 40, Failures: 37, Errors: 3, Skipped: 0, Time elapsed: 10.31 s <<< FAILURE! - in com.examly.apigateway.ApigatewayApplicationTests
 com.examly.apigateway.ApigatewayApplicationTests.backend_testRegisterAdmin  Time elapsed: 1.43 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <503 SERVICE_UNAVAILABLE>
+=======
+Tests run: 40, Failures: 37, Errors: 0, Skipped: 0, Time elapsed: 4.094 s <<< FAILURE! - in com.examly.apigateway.ApigatewayApplicationTests
+com.examly.apigateway.ApigatewayApplicationTests.backend_testRegisterAdmin  Time elapsed: 0.484 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <400 BAD_REQUEST>
+>>>>>>> origin/sai-conflict-resolver-branch
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
@@ -83,6 +89,7 @@ org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <503 SERVI
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
+<<<<<<< HEAD
 com.examly.apigateway.ApigatewayApplicationTests.backend_testLoginAdmin  Time elapsed: 1.021 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "com.fasterxml.jackson.databind.JsonNode.asText()" because the return value of "com.fasterxml.jackson.databind.JsonNode.get(String)" is null
 	at com.examly.apigateway.ApigatewayApplicationTests.backend_testLoginAdmin(ApigatewayApplicationTests.java:83)
@@ -160,6 +167,10 @@ java.lang.NullPointerException: Cannot invoke "com.fasterxml.jackson.databind.Js
 
 com.examly.apigateway.ApigatewayApplicationTests.backend_testRegisterLoanManager  Time elapsed: 1.014 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <503 SERVICE_UNAVAILABLE>
+=======
+com.examly.apigateway.ApigatewayApplicationTests.backend_testRegisterLoanManager  Time elapsed: 0.014 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <400 BAD_REQUEST>
+>>>>>>> origin/sai-conflict-resolver-branch
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
@@ -239,6 +250,7 @@ org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <503 SERVI
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
+<<<<<<< HEAD
 com.examly.apigateway.ApigatewayApplicationTests.backend_testLoginLoanManager  Time elapsed: 1.015 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "com.fasterxml.jackson.databind.JsonNode.asText()" because the return value of "com.fasterxml.jackson.databind.JsonNode.get(String)" is null
 	at com.examly.apigateway.ApigatewayApplicationTests.backend_testLoginLoanManager(ApigatewayApplicationTests.java:99)
@@ -316,6 +328,10 @@ java.lang.NullPointerException: Cannot invoke "com.fasterxml.jackson.databind.Js
 
 com.examly.apigateway.ApigatewayApplicationTests.backend_testRegisterStudent  Time elapsed: 1.014 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <503 SERVICE_UNAVAILABLE>
+=======
+com.examly.apigateway.ApigatewayApplicationTests.backend_testRegisterStudent  Time elapsed: 0.014 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <400 BAD_REQUEST>
+>>>>>>> origin/sai-conflict-resolver-branch
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
@@ -395,6 +411,7 @@ org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <503 SERVI
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
+<<<<<<< HEAD
 com.examly.apigateway.ApigatewayApplicationTests.backend_testLoginStudent  Time elapsed: 1.014 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "com.fasterxml.jackson.databind.JsonNode.asText()" because the return value of "com.fasterxml.jackson.databind.JsonNode.get(String)" is null
 	at com.examly.apigateway.ApigatewayApplicationTests.backend_testLoginStudent(ApigatewayApplicationTests.java:115)
@@ -473,11 +490,17 @@ java.lang.NullPointerException: Cannot invoke "com.fasterxml.jackson.databind.Js
 com.examly.apigateway.ApigatewayApplicationTests.backend_testAddLoanByLoanManager  Time elapsed: 0.003 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: loanmanagertoken should not be null ==> expected: not <null>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+=======
+com.examly.apigateway.ApigatewayApplicationTests.backend_testAddLoanByLoanManager  Time elapsed: 0.307 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <401 UNAUTHORIZED>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+>>>>>>> origin/sai-conflict-resolver-branch
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:309)
-	at com.examly.apigateway.ApigatewayApplicationTests.backend_testAddLoanByLoanManager(ApigatewayApplicationTests.java:124)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at com.examly.apigateway.ApigatewayApplicationTests.backend_testAddLoanByLoanManager(ApigatewayApplicationTests.java:149)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -550,14 +573,15 @@ org.opentest4j.AssertionFailedError: loanmanagertoken should not be null ==> exp
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testAddLoanByAdmin  Time elapsed: 0.002 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: admintoken should not be null ==> expected: not <null>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+com.examly.apigateway.ApigatewayApplicationTests.backend_testAddLoanByAdmin  Time elapsed: 0.009 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <401 UNAUTHORIZED>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:309)
-	at com.examly.apigateway.ApigatewayApplicationTests.backend_testAddLoanByAdmin(ApigatewayApplicationTests.java:155)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at com.examly.apigateway.ApigatewayApplicationTests.backend_testAddLoanByAdmin(ApigatewayApplicationTests.java:180)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -630,14 +654,15 @@ org.opentest4j.AssertionFailedError: admintoken should not be null ==> expected:
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testAddLoansByStudent  Time elapsed: 0.002 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: studenttoken should not be null ==> expected: not <null>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+com.examly.apigateway.ApigatewayApplicationTests.backend_testAddLoansByStudent  Time elapsed: 0.008 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <401 UNAUTHORIZED>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:309)
-	at com.examly.apigateway.ApigatewayApplicationTests.backend_testAddLoansByStudent(ApigatewayApplicationTests.java:186)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at com.examly.apigateway.ApigatewayApplicationTests.backend_testAddLoansByStudent(ApigatewayApplicationTests.java:211)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -710,14 +735,21 @@ org.opentest4j.AssertionFailedError: studenttoken should not be null ==> expecte
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
+<<<<<<< HEAD
 com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllInsurancesByLoanManager  Time elapsed: 0.002 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: LoanManager token should not be null ==> expected: not <null>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+=======
+com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllInsurancesByLoanManager  Time elapsed: 0.011 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <200 OK> but was: <401 UNAUTHORIZED>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+>>>>>>> origin/sai-conflict-resolver-branch
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:309)
-	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllInsurancesByLoanManager(ApigatewayApplicationTests.java:217)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllInsurancesByLoanManager(ApigatewayApplicationTests.java:227)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -790,14 +822,15 @@ org.opentest4j.AssertionFailedError: LoanManager token should not be null ==> ex
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllLoansByStudent  Time elapsed: 0.002 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Student token should not be null ==> expected: not <null>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllLoansByStudent  Time elapsed: 0.01 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <200 OK> but was: <401 UNAUTHORIZED>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:309)
-	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllLoansByStudent(ApigatewayApplicationTests.java:234)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllLoansByStudent(ApigatewayApplicationTests.java:245)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -870,14 +903,21 @@ org.opentest4j.AssertionFailedError: Student token should not be null ==> expect
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
+<<<<<<< HEAD
 com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllLoansByAdmin  Time elapsed: 0.002 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Admin token should not be null ==> expected: not <null>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+=======
+com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllLoansByAdmin  Time elapsed: 0.01 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <401 UNAUTHORIZED>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+>>>>>>> origin/sai-conflict-resolver-branch
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:309)
-	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllLoansByAdmin(ApigatewayApplicationTests.java:251)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllLoansByAdmin(ApigatewayApplicationTests.java:262)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -950,14 +990,21 @@ org.opentest4j.AssertionFailedError: Admin token should not be null ==> expected
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
+<<<<<<< HEAD
 com.examly.apigateway.ApigatewayApplicationTests.backend_testGetLoansByIdAsLoanManager  Time elapsed: 0.003 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: loanmanager Token should not be null ==> expected: not <null>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+=======
+com.examly.apigateway.ApigatewayApplicationTests.backend_testGetLoansByIdAsLoanManager  Time elapsed: 0.007 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <200 OK> but was: <401 UNAUTHORIZED>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+>>>>>>> origin/sai-conflict-resolver-branch
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:309)
-	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetLoansByIdAsLoanManager(ApigatewayApplicationTests.java:269)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetLoansByIdAsLoanManager(ApigatewayApplicationTests.java:280)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1030,14 +1077,15 @@ org.opentest4j.AssertionFailedError: loanmanager Token should not be null ==> ex
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testGetLoansByIdAsStudent  Time elapsed: 0.002 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Student token should not be null ==> expected: not <null>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+com.examly.apigateway.ApigatewayApplicationTests.backend_testGetLoansByIdAsStudent  Time elapsed: 0.008 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <401 UNAUTHORIZED>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:309)
-	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetLoansByIdAsStudent(ApigatewayApplicationTests.java:287)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetLoansByIdAsStudent(ApigatewayApplicationTests.java:298)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1110,14 +1158,15 @@ org.opentest4j.AssertionFailedError: Student token should not be null ==> expect
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testGetLoansByIdAsAdmin  Time elapsed: 0.001 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Admin token should not be null ==> expected: not <null>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+com.examly.apigateway.ApigatewayApplicationTests.backend_testGetLoansByIdAsAdmin  Time elapsed: 0.007 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <401 UNAUTHORIZED>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:309)
-	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetLoansByIdAsAdmin(ApigatewayApplicationTests.java:305)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetLoansByIdAsAdmin(ApigatewayApplicationTests.java:316)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1190,14 +1239,15 @@ org.opentest4j.AssertionFailedError: Admin token should not be null ==> expected
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testAddLoanApplicationByStudent  Time elapsed: 0.002 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Student Token should not be null ==> expected: not <null>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+com.examly.apigateway.ApigatewayApplicationTests.backend_testAddLoanApplicationByStudent  Time elapsed: 0.037 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <404 NOT_FOUND>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:309)
-	at com.examly.apigateway.ApigatewayApplicationTests.backend_testAddLoanApplicationByStudent(ApigatewayApplicationTests.java:323)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at com.examly.apigateway.ApigatewayApplicationTests.backend_testAddLoanApplicationByStudent(ApigatewayApplicationTests.java:348)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1270,14 +1320,15 @@ org.opentest4j.AssertionFailedError: Student Token should not be null ==> expect
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testAddLoanApplicationByAdmin  Time elapsed: 0.002 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Admin Token should not be null ==> expected: not <null>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+com.examly.apigateway.ApigatewayApplicationTests.backend_testAddLoanApplicationByAdmin  Time elapsed: 0.011 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <404 NOT_FOUND>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:309)
-	at com.examly.apigateway.ApigatewayApplicationTests.backend_testAddLoanApplicationByAdmin(ApigatewayApplicationTests.java:354)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at com.examly.apigateway.ApigatewayApplicationTests.backend_testAddLoanApplicationByAdmin(ApigatewayApplicationTests.java:379)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1350,14 +1401,15 @@ org.opentest4j.AssertionFailedError: Admin Token should not be null ==> expected
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testAddLoanApplicationByLoanManager  Time elapsed: 0.002 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: LoanManager Token should not be null ==> expected: not <null>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+com.examly.apigateway.ApigatewayApplicationTests.backend_testAddLoanApplicationByLoanManager  Time elapsed: 0.009 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <404 NOT_FOUND>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:309)
-	at com.examly.apigateway.ApigatewayApplicationTests.backend_testAddLoanApplicationByLoanManager(ApigatewayApplicationTests.java:385)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at com.examly.apigateway.ApigatewayApplicationTests.backend_testAddLoanApplicationByLoanManager(ApigatewayApplicationTests.java:410)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1430,14 +1482,15 @@ org.opentest4j.AssertionFailedError: LoanManager Token should not be null ==> ex
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testGetLoanApplicationByUserIdAsLoanManager  Time elapsed: 0.002 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: LoanManager token should not be null ==> expected: not <null>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+com.examly.apigateway.ApigatewayApplicationTests.backend_testGetLoanApplicationByUserIdAsLoanManager  Time elapsed: 0.009 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <404 NOT_FOUND>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:309)
-	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetLoanApplicationByUserIdAsLoanManager(ApigatewayApplicationTests.java:416)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetLoanApplicationByUserIdAsLoanManager(ApigatewayApplicationTests.java:427)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1510,14 +1563,15 @@ org.opentest4j.AssertionFailedError: LoanManager token should not be null ==> ex
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testGetLoanApplicationByUserIdAsStudent  Time elapsed: 0.002 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Student token should not be null ==> expected: not <null>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+com.examly.apigateway.ApigatewayApplicationTests.backend_testGetLoanApplicationByUserIdAsStudent  Time elapsed: 0.008 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <200 OK> but was: <404 NOT_FOUND>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:309)
-	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetLoanApplicationByUserIdAsStudent(ApigatewayApplicationTests.java:434)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetLoanApplicationByUserIdAsStudent(ApigatewayApplicationTests.java:445)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1590,14 +1644,15 @@ org.opentest4j.AssertionFailedError: Student token should not be null ==> expect
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testGetLoanApplicationByUserIdAsAdmin  Time elapsed: 0.002 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Admoin token should not be null ==> expected: not <null>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+com.examly.apigateway.ApigatewayApplicationTests.backend_testGetLoanApplicationByUserIdAsAdmin  Time elapsed: 0.008 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <200 OK> but was: <404 NOT_FOUND>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:309)
-	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetLoanApplicationByUserIdAsAdmin(ApigatewayApplicationTests.java:452)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetLoanApplicationByUserIdAsAdmin(ApigatewayApplicationTests.java:463)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1670,14 +1725,21 @@ org.opentest4j.AssertionFailedError: Admoin token should not be null ==> expecte
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
+<<<<<<< HEAD
 com.examly.apigateway.ApigatewayApplicationTests.backend_testAddFeedbackByStudent  Time elapsed: 0.003 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Student token should not be null ==> expected: not <null>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+=======
+com.examly.apigateway.ApigatewayApplicationTests.backend_testAddFeedbackByStudent  Time elapsed: 0.008 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <404 NOT_FOUND>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+>>>>>>> origin/sai-conflict-resolver-branch
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:309)
-	at com.examly.apigateway.ApigatewayApplicationTests.backend_testAddFeedbackByStudent(ApigatewayApplicationTests.java:470)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at com.examly.apigateway.ApigatewayApplicationTests.backend_testAddFeedbackByStudent(ApigatewayApplicationTests.java:488)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1750,14 +1812,15 @@ org.opentest4j.AssertionFailedError: Student token should not be null ==> expect
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testAddFeedbackByPolicyManager  Time elapsed: 0.002 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: PolicyManager should not be null ==> expected: not <null>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+com.examly.apigateway.ApigatewayApplicationTests.backend_testAddFeedbackByPolicyManager  Time elapsed: 0.009 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <404 NOT_FOUND>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:309)
-	at com.examly.apigateway.ApigatewayApplicationTests.backend_testAddFeedbackByPolicyManager(ApigatewayApplicationTests.java:494)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at com.examly.apigateway.ApigatewayApplicationTests.backend_testAddFeedbackByPolicyManager(ApigatewayApplicationTests.java:512)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1830,14 +1893,15 @@ org.opentest4j.AssertionFailedError: PolicyManager should not be null ==> expect
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testAddFeedbackByAdmin  Time elapsed: 0.002 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Admin Token should not be null ==> expected: not <null>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+com.examly.apigateway.ApigatewayApplicationTests.backend_testAddFeedbackByAdmin  Time elapsed: 0.008 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <404 NOT_FOUND>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:309)
-	at com.examly.apigateway.ApigatewayApplicationTests.backend_testAddFeedbackByAdmin(ApigatewayApplicationTests.java:518)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at com.examly.apigateway.ApigatewayApplicationTests.backend_testAddFeedbackByAdmin(ApigatewayApplicationTests.java:536)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1910,14 +1974,21 @@ org.opentest4j.AssertionFailedError: Admin Token should not be null ==> expected
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
+<<<<<<< HEAD
 com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllFeedbackByLoanManager  Time elapsed: 0.003 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: LoanManager token should not be null ==> expected: not <null>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+=======
+com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllFeedbackByLoanManager  Time elapsed: 0.008 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <200 OK> but was: <404 NOT_FOUND>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+>>>>>>> origin/sai-conflict-resolver-branch
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:309)
-	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllFeedbackByLoanManager(ApigatewayApplicationTests.java:542)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllFeedbackByLoanManager(ApigatewayApplicationTests.java:552)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1990,14 +2061,15 @@ org.opentest4j.AssertionFailedError: LoanManager token should not be null ==> ex
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllFeedbackByAdmin  Time elapsed: 0.002 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Admin token should not be null ==> expected: not <null>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllFeedbackByAdmin  Time elapsed: 0.029 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <200 OK> but was: <404 NOT_FOUND>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:309)
-	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllFeedbackByAdmin(ApigatewayApplicationTests.java:559)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllFeedbackByAdmin(ApigatewayApplicationTests.java:569)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2070,14 +2142,15 @@ org.opentest4j.AssertionFailedError: Admin token should not be null ==> expected
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllFeedbackByCustomer  Time elapsed: 0.002 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Student token should not be null ==> expected: not <null>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllFeedbackByCustomer  Time elapsed: 0.008 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <404 NOT_FOUND>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:309)
-	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllFeedbackByCustomer(ApigatewayApplicationTests.java:576)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllFeedbackByCustomer(ApigatewayApplicationTests.java:586)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2150,14 +2223,21 @@ org.opentest4j.AssertionFailedError: Student token should not be null ==> expect
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
+<<<<<<< HEAD
 com.examly.apigateway.ApigatewayApplicationTests.backend_testGetFeedbackByUserIdAsStudent  Time elapsed: 0.003 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Student token should not be null ==> expected: not <null>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+=======
+com.examly.apigateway.ApigatewayApplicationTests.backend_testGetFeedbackByUserIdAsStudent  Time elapsed: 0.009 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <200 OK> but was: <404 NOT_FOUND>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+>>>>>>> origin/sai-conflict-resolver-branch
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:309)
-	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetFeedbackByUserIdAsStudent(ApigatewayApplicationTests.java:593)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetFeedbackByUserIdAsStudent(ApigatewayApplicationTests.java:604)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2230,14 +2310,15 @@ org.opentest4j.AssertionFailedError: Student token should not be null ==> expect
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testGetFeedbackByUserIdAsLoanManager  Time elapsed: 0.002 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: LoanManager token should not be null ==> expected: not <null>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+com.examly.apigateway.ApigatewayApplicationTests.backend_testGetFeedbackByUserIdAsLoanManager  Time elapsed: 0.008 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <404 NOT_FOUND>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:309)
-	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetFeedbackByUserIdAsLoanManager(ApigatewayApplicationTests.java:611)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetFeedbackByUserIdAsLoanManager(ApigatewayApplicationTests.java:622)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2310,14 +2391,15 @@ org.opentest4j.AssertionFailedError: LoanManager token should not be null ==> ex
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testGetFeedbackByUserIdAsAdmin  Time elapsed: 0.002 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Admin token should not be null ==> expected: not <null>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+com.examly.apigateway.ApigatewayApplicationTests.backend_testGetFeedbackByUserIdAsAdmin  Time elapsed: 0.007 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <404 NOT_FOUND>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:309)
-	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetFeedbackByUserIdAsAdmin(ApigatewayApplicationTests.java:629)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetFeedbackByUserIdAsAdmin(ApigatewayApplicationTests.java:640)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2390,14 +2472,15 @@ org.opentest4j.AssertionFailedError: Admin token should not be null ==> expected
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testAddCollegeByAdmin  Time elapsed: 0.002 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Admin Token should not be null ==> expected: not <null>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+com.examly.apigateway.ApigatewayApplicationTests.backend_testAddCollegeByAdmin  Time elapsed: 0.008 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <404 NOT_FOUND>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:309)
-	at com.examly.apigateway.ApigatewayApplicationTests.backend_testAddCollegeByAdmin(ApigatewayApplicationTests.java:647)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at com.examly.apigateway.ApigatewayApplicationTests.backend_testAddCollegeByAdmin(ApigatewayApplicationTests.java:668)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2470,14 +2553,15 @@ org.opentest4j.AssertionFailedError: Admin Token should not be null ==> expected
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testAddCollegeByLoanManager  Time elapsed: 0.002 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: LoanManager Token should not be null ==> expected: not <null>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+com.examly.apigateway.ApigatewayApplicationTests.backend_testAddCollegeByLoanManager  Time elapsed: 0.008 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <404 NOT_FOUND>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:309)
-	at com.examly.apigateway.ApigatewayApplicationTests.backend_testAddCollegeByLoanManager(ApigatewayApplicationTests.java:674)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at com.examly.apigateway.ApigatewayApplicationTests.backend_testAddCollegeByLoanManager(ApigatewayApplicationTests.java:695)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2550,14 +2634,21 @@ org.opentest4j.AssertionFailedError: LoanManager Token should not be null ==> ex
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
+<<<<<<< HEAD
 com.examly.apigateway.ApigatewayApplicationTests.backend_testAddCollegeByStudent  Time elapsed: 0.002 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Student Token should not be null ==> expected: not <null>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+=======
+com.examly.apigateway.ApigatewayApplicationTests.backend_testAddCollegeByStudent  Time elapsed: 0.008 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <404 NOT_FOUND>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+>>>>>>> origin/sai-conflict-resolver-branch
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:309)
-	at com.examly.apigateway.ApigatewayApplicationTests.backend_testAddCollegeByStudent(ApigatewayApplicationTests.java:701)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at com.examly.apigateway.ApigatewayApplicationTests.backend_testAddCollegeByStudent(ApigatewayApplicationTests.java:722)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2630,14 +2721,15 @@ org.opentest4j.AssertionFailedError: Student Token should not be null ==> expect
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllCollegeByAdmin  Time elapsed: 0.002 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Admin token should not be null ==> expected: not <null>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllCollegeByAdmin  Time elapsed: 0.039 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <200 OK> but was: <404 NOT_FOUND>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:309)
-	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllCollegeByAdmin(ApigatewayApplicationTests.java:728)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllCollegeByAdmin(ApigatewayApplicationTests.java:739)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2710,14 +2802,15 @@ org.opentest4j.AssertionFailedError: Admin token should not be null ==> expected
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllCollegeByStudent  Time elapsed: 0.002 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Admin token should not be null ==> expected: not <null>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllCollegeByStudent  Time elapsed: 0.008 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <200 OK> but was: <404 NOT_FOUND>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:309)
-	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllCollegeByStudent(ApigatewayApplicationTests.java:746)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllCollegeByStudent(ApigatewayApplicationTests.java:757)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2790,14 +2883,21 @@ org.opentest4j.AssertionFailedError: Admin token should not be null ==> expected
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
+<<<<<<< HEAD
 com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllCollegeByLoanManager  Time elapsed: 0.003 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Admin token should not be null ==> expected: not <null>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+=======
+com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllCollegeByLoanManager  Time elapsed: 0.008 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <404 NOT_FOUND>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+>>>>>>> origin/sai-conflict-resolver-branch
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:309)
-	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllCollegeByLoanManager(ApigatewayApplicationTests.java:764)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetAllCollegeByLoanManager(ApigatewayApplicationTests.java:775)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2870,14 +2970,15 @@ org.opentest4j.AssertionFailedError: Admin token should not be null ==> expected
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testGetCollegeByIdAsAdmin  Time elapsed: 0.002 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Admin token should not be null ==> expected: not <null>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+com.examly.apigateway.ApigatewayApplicationTests.backend_testGetCollegeByIdAsAdmin  Time elapsed: 0.009 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <200 OK> but was: <404 NOT_FOUND>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:309)
-	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetCollegeByIdAsAdmin(ApigatewayApplicationTests.java:783)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetCollegeByIdAsAdmin(ApigatewayApplicationTests.java:794)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2950,14 +3051,15 @@ org.opentest4j.AssertionFailedError: Admin token should not be null ==> expected
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testGetCollegeByIdAsStudent  Time elapsed: 0.002 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Admin token should not be null ==> expected: not <null>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+com.examly.apigateway.ApigatewayApplicationTests.backend_testGetCollegeByIdAsStudent  Time elapsed: 0.015 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <404 NOT_FOUND>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:309)
-	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetCollegeByIdAsStudent(ApigatewayApplicationTests.java:801)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetCollegeByIdAsStudent(ApigatewayApplicationTests.java:812)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -3030,14 +3132,21 @@ org.opentest4j.AssertionFailedError: Admin token should not be null ==> expected
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
+<<<<<<< HEAD
 com.examly.apigateway.ApigatewayApplicationTests.backend_testGetCollegeByIdAsLoanManager  Time elapsed: 0.003 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Admin token should not be null ==> expected: not <null>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+=======
+com.examly.apigateway.ApigatewayApplicationTests.backend_testGetCollegeByIdAsLoanManager  Time elapsed: 0.008 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <404 NOT_FOUND>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+>>>>>>> origin/sai-conflict-resolver-branch
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
-	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
-	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:309)
-	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetCollegeByIdAsLoanManager(ApigatewayApplicationTests.java:819)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1142)
+	at com.examly.apigateway.ApigatewayApplicationTests.backend_testGetCollegeByIdAsLoanManager(ApigatewayApplicationTests.java:830)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -3110,8 +3219,8 @@ org.opentest4j.AssertionFailedError: Admin token should not be null ==> expected
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testLoginInValidCredential  Time elapsed: 1.014 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <503 SERVICE_UNAVAILABLE>
+com.examly.apigateway.ApigatewayApplicationTests.backend_testLoginInValidCredential  Time elapsed: 0.046 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <400 BAD_REQUEST>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
