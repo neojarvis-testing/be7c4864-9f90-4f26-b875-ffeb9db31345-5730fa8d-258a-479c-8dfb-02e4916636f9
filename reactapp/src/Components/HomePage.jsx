@@ -6,11 +6,20 @@ import StudentMenu from '../StudentComponents/StudentNavbar';
 import {useNavigate} from "react-router-dom"
 import {useDispatch} from "react-redux"
 import {logout} from '../userSlice'
+import ErrorPage from "./ErrorPage"
 
 import CollegeApproval from '../AdminComponents/CollegeApproval';
 import CollegeForm from '../AdminComponents/CollegeForm';
 import ViewColleges from '../AdminComponents/ViewColleges';
 import ViewFeedBack from '../AdminComponents/ViewFeedback';
+
+//loan Components
+import LoanForm from "../LoanManagerComponents/LoanForm";
+import ViewLoans from "../LoanManagerComponents/ViewLoans";
+import LoanRequest from "../LoanManagerComponents/LoanRequest";
+import ViewFeedback from "../LoanManagerComponents/ViewFeedback";
+
+
 import Dashboard from '../AdminComponents/Dashboard';
 
 const Home = () => {
@@ -37,19 +46,37 @@ const Home = () => {
 
     var selectedMenuBar = null;
 
-    if(userRole==="ADMIN"){selectedMenuBar = <AdminMenu username={username} userRole={userRole} setCurrentPage={setCurrentPage} />}
-    else if(userRole==="LOAN_MANAGER"){selectedMenuBar = <LoanManagerMenu username={username} userRole={userRole} setCurrentPage={setCurrentPage} />}
-    else if(userRole==="STUDENT"){selectedMenuBar = <StudentMenu username={username} userRole={userRole} setCurrentPage={setCurrentPage}  />}
+    if(userRole==="Admin"){selectedMenuBar = <AdminMenu username={username} userRole={userRole} setCurrentPage={setCurrentPage} />}
+    else if(userRole==="LoanManager"){selectedMenuBar = <LoanManagerMenu username={username} userRole={userRole} setCurrentPage={setCurrentPage} />}
+    else if(userRole==="Student"){selectedMenuBar = <StudentMenu username={username} userRole={userRole} setCurrentPage={setCurrentPage}  />}
     else{ 
+        <ErrorPage message="UNAUTHORIZED !" />
     };
 
 const renderPage = () =>{
     switch(currentPage){
+        //Admin
         case 'Dashboard': return <Dashboard  username={username} userRole={userRole}  />;
         case 'CollegeApproval': return <CollegeApproval  username={username} userRole={userRole}  userId={userId}  />;
         case 'CollegeForm': return <CollegeForm  username={username} userRole={userRole}   userId={userId}   />;
         case 'ViewColleges': return <ViewColleges  username={username} userRole={userRole}   userId={userId}   />;
         case 'ViewFeedBack': return <ViewFeedBack  username={username} userRole={userRole}   userId={userId}   />;
+
+        //LoanManager
+        case 'Dashboard': return <Dashboard  username={username} userRole={userRole}  />;
+        case 'LoanForm': return <LoanForm  username={username} userRole={userRole}  userId={userId}  />;
+        case 'ViewLoans': return <ViewLoans  username={username} userRole={userRole}  userId={userId}  />;
+        case 'LoanRequest': return <LoanRequest  username={username} userRole={userRole}  userId={userId}  />;
+        case 'ViewFeedback': return <ViewFeedback  username={username} userRole={userRole}  userId={userId}  />;
+
+        //Student
+        // case 'Dashboard': return <Dashboard  username={username} userRole={userRole}  />;
+        // case 'LoanForm': return <LoanForm  username={username} userRole={userRole}  userId={userId}  />;
+        // case 'ViewLoans': return <ViewLoans  username={username} userRole={userRole}  userId={userId}  />;
+        // case 'LoanRequest': return <LoanRequest  username={username} userRole={userRole}  userId={userId}  />;
+        // case 'ViewFeedback': return <ViewFeedback  username={username} userRole={userRole}  userId={userId}  />;
+
+
         default:  return <Dashboard  username={username} userRole={userRole}   />;
     }
 };

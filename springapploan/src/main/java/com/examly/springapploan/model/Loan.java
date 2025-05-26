@@ -22,7 +22,7 @@ public class Loan implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer loanId;
+    private Long loanId;
     private String loanType;
     private double interestRate;
     private double maxAmount;

@@ -103,6 +103,10 @@ return (
                 {loading ? 'Logging in...' : 'Submit'}
                 </button>
             </div>
+            <br/>
+            
+             <a href='/'>Want to Login?<b>Login</b></a> 
+
             </form>
     </div>); 
 };

@@ -36,7 +36,7 @@ public class LoanServiceImpl implements LoanService {
     }
 
     @Override
-    public Loan getLoan(long loanId) {
+    public Loan getLoan(Long loanId) {
         return loanRepository.findById(loanId)
         .orElseThrow(()-> new LoanNotFoudException(loanId));
     }

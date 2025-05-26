@@ -11,6 +11,6 @@ const LoanRequest = () => {
     </>
     
   )
-}
+};
 
-export default LoanRequest
+export default LoanRequest;

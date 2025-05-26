@@ -83,6 +83,8 @@ const handleSubmit = (e) => {
             <button type="submit"  disabled={loading} >
                 {loading ? 'Logging in...' : 'Login'}
                 </button>
+                <br/>
+             <a href='/signup'>Want to Register ? <b>SignUp</b></a> 
             </div>
             </form> 
         </div>);

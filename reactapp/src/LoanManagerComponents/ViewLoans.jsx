@@ -13,4 +13,4 @@ const ViewLoans = () => {
   )
 }
 
-export default ViewLoans
+export default ViewLoans;
