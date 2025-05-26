@@ -3,17 +3,17 @@ import {useMutation} from '@tanstack/react-query';
 import {useDispatch} from 'react-redux';
 import {loginSuccess} from '../userSlice';
 import {useNavigate} from 'react-router-dom';
-import api from '../apiConfig' 
+import {baseUrl} from '../apiConfig' 
+import axios from 'axios';
 import './Login.css'
 const Login = () => {
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
-
 const [form,setForm] = useState({email:'',password: ''});
 
 const loginMutation = useMutation({
-    mutationFn: () => api.post('/api/users/login',form),
+    mutationFn: () => axios.post(`${baseUrl}/api/users/login`,form),
     onSuccess: (response)=>{
         console.log("Login Response",response);
          const {email, token, userRole,userId,username} = response.data; 

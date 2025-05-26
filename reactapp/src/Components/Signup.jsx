@@ -3,19 +3,20 @@ import {useMutation} from '@tanstack/react-query';
 import {useDispatch} from 'react-redux';
 import {signUpSuccess} from '../userSlice';
 import {useNavigate} from 'react-router-dom';
-import api from '../apiConfig'
+import {baseUrl} from '../apiConfig' 
+import axios from 'axios';
 
 const Signup = () => {
 
     
     const dispatch = useDispatch();
     const navigate = useNavigate();
-
+ 
 const [form,setForm] = useState({email:'',password: '',username: '',mobileNumber: '', userRole: ''});
 
 
     const signupMutation = useMutation({
-        mutationFn: () => api.post('/api/users/register',form),
+        mutationFn: () => axios.post(`${baseUrl}/api/users/register`,form),
         onSuccess: (response)=>{
             const {name, email} = response.data;
             dispatch(signUpSuccess(name,email));
