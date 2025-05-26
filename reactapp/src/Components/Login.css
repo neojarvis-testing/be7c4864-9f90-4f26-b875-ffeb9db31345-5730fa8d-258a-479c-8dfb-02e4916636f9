@@ -42,3 +42,8 @@
 .form-box button:hover{
   background-color: aqua;
 }
+
+.error{
+    color: red;
+    font-weight: bold;
+    }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.examly.apigateway.ApigatewayApplicationTests" time="4.576" tests="40" errors="0" skipped="0" failures="37">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.examly.apigateway.ApigatewayApplicationTests" time="4.608" tests="40" errors="0" skipped="0" failures="37">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -14,7 +14,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/coder/project/workspace/apigateway/target/surefire/surefirebooter-20250525225915721_3.jar /home/coder/project/workspace/apigateway/target/surefire 2025-05-25T22-59-15_662-jvmRun1 surefire-20250525225915721_1tmp surefire_0-20250525225915721_2tmp"/>
+    <property name="sun.java.command" value="/home/coder/project/workspace/apigateway/target/surefire/surefirebooter-20250526012533229_3.jar /home/coder/project/workspace/apigateway/target/surefire 2025-05-26T01-25-33_169-jvmRun1 surefire-20250526012533229_1tmp surefire_0-20250526012533229_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/coder/project/workspace/apigateway/target/test-classes:/home/coder/project/workspace/apigateway/target/classes:/home/coder/.m2/repository/org/springframework/cloud/spring-cloud-starter-gateway/4.0.6/spring-cloud-starter-gateway-4.0.6.jar:/home/coder/.m2/repository/org/springframework/cloud/spring-cloud-starter/4.0.3/spring-cloud-starter-4.0.3.jar:/home/coder/.m2/repository/org/springframework/cloud/spring-cloud-context/4.0.3/spring-cloud-context-4.0.3.jar:/home/coder/.m2/repository/org/springframework/security/spring-security-crypto/6.1.0/spring-security-crypto-6.1.0.jar:/home/coder/.m2/repository/org/springframework/cloud/spring-cloud-commons/4.0.3/spring-cloud-commons-4.0.3.jar:/home/coder/.m2/repository/org/springframework/security/spring-security-rsa/1.0.11.RELEASE/spring-security-rsa-1.0.11.RELEASE.jar:/home/coder/.m2/repository/org/bouncycastle/bcpkix-jdk15on/1.69/bcpkix-jdk15on-1.69.jar:/home/coder/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.69/bcprov-jdk15on-1.69.jar:/home/coder/.m2/repository/org/bouncycastle/bcutil-jdk15on/1.69/bcutil-jdk15on-1.69.jar:/home/coder/.m2/repository/org/springframework/cloud/spring-cloud-gateway-server/4.0.6/spring-cloud-gateway-server-4.0.6.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.1.0/spring-boot-starter-validation-3.1.0.jar:/home/coder/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.8/tomcat-embed-el-10.1.8.jar:/home/coder/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.0.Final/hibernate-validator-8.0.0.Final.jar:/home/coder/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/home/coder/.m2/repository/org/jboss/logging/jboss-logging/3.5.0.Final/jboss-logging-3.5.0.Final.jar:/home/coder/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/home/coder/.m2/repository/io/projectreactor/addons/reactor-extra/3.5.1/reactor-extra-3.5.1.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/3.1.0/spring-boot-starter-actuator-3.1.0.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-starter/3.1.0/spring-boot-starter-3.1.0.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot/3.1.0/spring-boot-3.1.0.jar:/home/coder/.m2/repository/org/springframework/spring-context/6.0.9/spring-context-6.0.9.jar:/home/coder/.m2/repository/org/springframework/spring-aop/6.0.9/spring-aop-6.0.9.jar:/home/coder/.m2/repository/org/springframework/spring-expression/6.0.9/spring-expression-6.0.9.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.1.0/spring-boot-autoconfigure-3.1.0.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.1.0/spring-boot-starter-logging-3.1.0.jar:/home/coder/.m2/repository/ch/qos/logback/logback-classic/1.4.7/logback-classic-1.4.7.jar:/home/coder/.m2/repository/ch/qos/logback/logback-core/1.4.7/logback-core-1.4.7.jar:/home/coder/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.20.0/log4j-to-slf4j-2.20.0.jar:/home/coder/.m2/repository/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar:/home/coder/.m2/repository/org/slf4j/jul-to-slf4j/2.0.7/jul-to-slf4j-2.0.7.jar:/home/coder/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/home/coder/.m2/repository/org/yaml/snakeyaml/1.33/snakeyaml-1.33.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-actuator-autoconfigure/3.1.0/spring-boot-actuator-autoconfigure-3.1.0.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-actuator/3.1.0/spring-boot-actuator-3.1.0.jar:/home/coder/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.0/jackson-datatype-jsr310-2.15.0.jar:/home/coder/.m2/repository/io/micrometer/micrometer-observation/1.11.0/micrometer-observation-1.11.0.jar:/home/coder/.m2/repository/io/micrometer/micrometer-commons/1.11.0/micrometer-commons-1.11.0.jar:/home/coder/.m2/repository/io/micrometer/micrometer-core/1.11.0/micrometer-core-1.11.0.jar:/home/coder/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.12/HdrHistogram-2.1.12.jar:/home/coder/.m2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar:/home/coder/.m2/repository/io/jsonwebtoken/jjwt/0.9.1/jjwt-0.9.1.jar:/home/coder/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.0/jackson-databind-2.15.0.jar:/home/coder/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.0/jackson-annotations-2.15.0.jar:/home/coder/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.0/jackson-core-2.15.0.jar:/home/coder/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar:/home/coder/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar:/home/coder/.m2/repository/org/springframework/cloud/spring-cloud-starter-netflix-eureka-client/4.0.2/spring-cloud-starter-netflix-eureka-client-4.0.2.jar:/home/coder/.m2/repository/org/springframework/cloud/spring-cloud-netflix-eureka-client/4.0.2/spring-cloud-netflix-eureka-client-4.0.2.jar:/home/coder/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.2.1/httpclient5-5.2.1.jar:/home/coder/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.2.1/httpcore5-5.2.1.jar:/home/coder/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.2.1/httpcore5-h2-5.2.1.jar:/home/coder/.m2/repository/com/netflix/eureka/eureka-client/2.0.0/eureka-client-2.0.0.jar:/home/coder/.m2/repository/com/netflix/netflix-commons/netflix-eventbus/0.3.0/netflix-eventbus-0.3.0.jar:/home/coder/.m2/repository/com/netflix/netflix-commons/netflix-infix/0.3.0/netflix-infix-0.3.0.jar:/home/coder/.m2/repository/commons-jxpath/commons-jxpath/1.3/commons-jxpath-1.3.jar:/home/coder/.m2/repository/joda-time/joda-time/2.3/joda-time-2.3.jar:/home/coder/.m2/repository/org/antlr/antlr-runtime/3.4/antlr-runtime-3.4.jar:/home/coder/.m2/repository/org/antlr/stringtemplate/3.2.1/stringtemplate-3.2.1.jar:/home/coder/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/home/coder/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/home/coder/.m2/repository/org/apache/commons/commons-math/2.2/commons-math-2.2.jar:/home/coder/.m2/repository/com/thoughtworks/xstream/xstream/1.4.19/xstream-1.4.19.jar:/home/coder/.m2/repository/io/github/x-stream/mxparser/1.2.2/mxparser-1.2.2.jar:/home/coder/.m2/repository/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar:/home/coder/.m2/repository/jakarta/ws/rs/jakarta.ws.rs-api/3.1.0/jakarta.ws.rs-api-3.1.0.jar:/home/coder/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/home/coder/.m2/repository/com/netflix/servo/servo-core/0.12.21/servo-core-0.12.21.jar:/home/coder/.m2/repository/com/google/guava/guava/19.0/guava-19.0.jar:/home/coder/.m2/repository/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.jar:/home/coder/.m2/repository/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar:/home/coder/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/home/coder/.m2/repository/commons-configuration/commons-configuration/1.10/commons-configuration-1.10.jar:/home/coder/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/home/coder/.m2/repository/org/codehaus/jettison/jettison/1.4.0/jettison-1.4.0.jar:/home/coder/.m2/repository/com/netflix/eureka/eureka-core/2.0.0/eureka-core-2.0.0.jar:/home/coder/.m2/repository/jakarta/servlet/jakarta.servlet-api/6.0.0/jakarta.servlet-api-6.0.0.jar:/home/coder/.m2/repository/com/fasterxml/woodstox/woodstox-core/6.2.1/woodstox-core-6.2.1.jar:/home/coder/.m2/repository/org/codehaus/woodstox/stax2-api/4.2.1/stax2-api-4.2.1.jar:/home/coder/.m2/repository/org/springframework/cloud/spring-cloud-starter-loadbalancer/4.0.3/spring-cloud-starter-loadbalancer-4.0.3.jar:/home/coder/.m2/repository/org/springframework/cloud/spring-cloud-loadbalancer/4.0.3/spring-cloud-loadbalancer-4.0.3.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-starter-cache/3.1.0/spring-boot-starter-cache-3.1.0.jar:/home/coder/.m2/repository/org/springframework/spring-context-support/6.0.9/spring-context-support-6.0.9.jar:/home/coder/.m2/repository/com/stoyanr/evictor/1.0.0/evictor-1.0.0.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.1.0/spring-boot-starter-test-3.1.0.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-test/3.1.0/spring-boot-test-3.1.0.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.1.0/spring-boot-test-autoconfigure-3.1.0.jar:/home/coder/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/home/coder/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/home/coder/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.0/jakarta.xml.bind-api-4.0.0.jar:/home/coder/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/home/coder/.m2/repository/net/minidev/json-smart/2.4.10/json-smart-2.4.10.jar:/home/coder/.m2/repository/net/minidev/accessors-smart/2.4.9/accessors-smart-2.4.9.jar:/home/coder/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/home/coder/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/home/coder/.m2/repository/net/bytebuddy/byte-buddy/1.14.4/byte-buddy-1.14.4.jar:/home/coder/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/home/coder/.m2/repository/org/junit/jupiter/junit-jupiter/5.9.3/junit-jupiter-5.9.3.jar:/home/coder/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.3/junit-jupiter-api-5.9.3.jar:/home/coder/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/coder/.m2/repository/org/junit/platform/junit-platform-commons/1.9.3/junit-platform-commons-1.9.3.jar:/home/coder/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/coder/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.3/junit-jupiter-params-5.9.3.jar:/home/coder/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.3/junit-jupiter-engine-5.9.3.jar:/home/coder/.m2/repository/org/junit/platform/junit-platform-engine/1.9.3/junit-platform-engine-1.9.3.jar:/home/coder/.m2/repository/org/mockito/mockito-core/4.8.1/mockito-core-4.8.1.jar:/home/coder/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.4/byte-buddy-agent-1.14.4.jar:/home/coder/.m2/repository/org/objenesis/objenesis/3.2/objenesis-3.2.jar:/home/coder/.m2/repository/org/mockito/mockito-junit-jupiter/4.8.1/mockito-junit-jupiter-4.8.1.jar:/home/coder/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/home/coder/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/home/coder/.m2/repository/org/springframework/spring-core/6.0.9/spring-core-6.0.9.jar:/home/coder/.m2/repository/org/springframework/spring-jcl/6.0.9/spring-jcl-6.0.9.jar:/home/coder/.m2/repository/org/springframework/spring-test/6.0.9/spring-test-6.0.9.jar:/home/coder/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-starter-webflux/3.1.0/spring-boot-starter-webflux-3.1.0.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.1.0/spring-boot-starter-json-3.1.0.jar:/home/coder/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.0/jackson-datatype-jdk8-2.15.0.jar:/home/coder/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.0/jackson-module-parameter-names-2.15.0.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-starter-reactor-netty/3.1.0/spring-boot-starter-reactor-netty-3.1.0.jar:/home/coder/.m2/repository/io/projectreactor/netty/reactor-netty-http/1.1.7/reactor-netty-http-1.1.7.jar:/home/coder/.m2/repository/io/netty/netty-codec-http/4.1.92.Final/netty-codec-http-4.1.92.Final.jar:/home/coder/.m2/repository/io/netty/netty-common/4.1.92.Final/netty-common-4.1.92.Final.jar:/home/coder/.m2/repository/io/netty/netty-buffer/4.1.92.Final/netty-buffer-4.1.92.Final.jar:/home/coder/.m2/repository/io/netty/netty-transport/4.1.92.Final/netty-transport-4.1.92.Final.jar:/home/coder/.m2/repository/io/netty/netty-codec/4.1.92.Final/netty-codec-4.1.92.Final.jar:/home/coder/.m2/repository/io/netty/netty-handler/4.1.92.Final/netty-handler-4.1.92.Final.jar:/home/coder/.m2/repository/io/netty/netty-codec-http2/4.1.92.Final/netty-codec-http2-4.1.92.Final.jar:/home/coder/.m2/repository/io/netty/netty-resolver-dns/4.1.92.Final/netty-resolver-dns-4.1.92.Final.jar:/home/coder/.m2/repository/io/netty/netty-resolver/4.1.92.Final/netty-resolver-4.1.92.Final.jar:/home/coder/.m2/repository/io/netty/netty-codec-dns/4.1.92.Final/netty-codec-dns-4.1.92.Final.jar:/home/coder/.m2/repository/io/netty/netty-resolver-dns-native-macos/4.1.92.Final/netty-resolver-dns-native-macos-4.1.92.Final-osx-x86_64.jar:/home/coder/.m2/repository/io/netty/netty-resolver-dns-classes-macos/4.1.92.Final/netty-resolver-dns-classes-macos-4.1.92.Final.jar:/home/coder/.m2/repository/io/netty/netty-transport-native-epoll/4.1.92.Final/netty-transport-native-epoll-4.1.92.Final-linux-x86_64.jar:/home/coder/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.92.Final/netty-transport-native-unix-common-4.1.92.Final.jar:/home/coder/.m2/repository/io/netty/netty-transport-classes-epoll/4.1.92.Final/netty-transport-classes-epoll-4.1.92.Final.jar:/home/coder/.m2/repository/io/projectreactor/netty/reactor-netty-core/1.1.7/reactor-netty-core-1.1.7.jar:/home/coder/.m2/repository/io/netty/netty-handler-proxy/4.1.92.Final/netty-handler-proxy-4.1.92.Final.jar:/home/coder/.m2/repository/io/netty/netty-codec-socks/4.1.92.Final/netty-codec-socks-4.1.92.Final.jar:/home/coder/.m2/repository/org/springframework/spring-web/6.0.9/spring-web-6.0.9.jar:/home/coder/.m2/repository/org/springframework/spring-beans/6.0.9/spring-beans-6.0.9.jar:/home/coder/.m2/repository/org/springframework/spring-webflux/6.0.9/spring-webflux-6.0.9.jar:/home/coder/.m2/repository/io/projectreactor/reactor-core/3.5.6/reactor-core-3.5.6.jar:/home/coder/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="FILE_LOG_CHARSET" value="UTF-8"/>
     <property name="java.awt.headless" value="true"/>
-    <property name="surefire.real.class.path" value="/home/coder/project/workspace/apigateway/target/surefire/surefirebooter-20250525225915721_3.jar"/>
+    <property name="surefire.real.class.path" value="/home/coder/project/workspace/apigateway/target/surefire/surefirebooter-20250526012533229_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.14+7-Debian-1deb11u1"/>
     <property name="user.name" value="coder"/>
@@ -47,7 +47,7 @@
     <property name="user.dir" value="/home/coder/project/workspace/apigateway"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="PID" value="15280"/>
+    <property name="PID" value="49210"/>
     <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
     <property name="native.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
@@ -58,7 +58,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="backend_testRegisterAdmin" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.598">
+  <testcase name="backend_testRegisterAdmin" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.692">
     <failure message="expected: &lt;201 CREATED&gt; but was: &lt;500 INTERNAL_SERVER_ERROR&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <500 INTERNAL_SERVER_ERROR>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -139,8 +139,8 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[22:59:16.395 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.examly.apigateway.ApigatewayApplicationTests]: ApigatewayApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-22:59:16.474 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.examly.apigateway.ApigatewayApplication for test class com.examly.apigateway.ApigatewayApplicationTests
+    <system-out><![CDATA[01:25:33.942 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.examly.apigateway.ApigatewayApplicationTests]: ApigatewayApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+01:25:34.021 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.examly.apigateway.ApigatewayApplication for test class com.examly.apigateway.ApigatewayApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -150,81 +150,81 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.0)
 
-2025-05-25T22:59:16.814Z  INFO 15280 --- [           main] c.e.a.ApigatewayApplicationTests         : Starting ApigatewayApplicationTests using Java 17.0.14 with PID 15280 (started by coder in /home/coder/project/workspace/apigateway)
-2025-05-25T22:59:16.815Z  INFO 15280 --- [           main] c.e.a.ApigatewayApplicationTests         : No active profile set, falling back to 1 default profile: "default"
-2025-05-25T22:59:17.595Z  INFO 15280 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=33064d9e-de8d-30f1-bde6-831c7e1f096f
-2025-05-25T22:59:17.731Z  INFO 15280 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2025-05-25T22:59:17.732Z  INFO 15280 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2025-05-25T22:59:17.733Z  INFO 15280 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2025-05-25T22:59:18.314Z  INFO 15280 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
-2025-05-25T22:59:18.314Z  INFO 15280 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
-2025-05-25T22:59:18.315Z  INFO 15280 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
-2025-05-25T22:59:18.315Z  INFO 15280 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
-2025-05-25T22:59:18.315Z  INFO 15280 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
-2025-05-25T22:59:18.315Z  INFO 15280 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
-2025-05-25T22:59:18.315Z  INFO 15280 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
-2025-05-25T22:59:18.315Z  INFO 15280 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
-2025-05-25T22:59:18.315Z  INFO 15280 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
-2025-05-25T22:59:18.315Z  INFO 15280 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
-2025-05-25T22:59:18.315Z  INFO 15280 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
-2025-05-25T22:59:18.315Z  INFO 15280 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
-2025-05-25T22:59:18.315Z  INFO 15280 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
-2025-05-25T22:59:18.315Z  INFO 15280 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
-2025-05-25T22:59:18.412Z DEBUG 15280 --- [           main] o.s.w.r.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2025-05-25T22:59:18.505Z  INFO 15280 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2025-05-25T22:59:18.536Z DEBUG 15280 --- [           main] o.s.w.r.r.m.a.ControllerMethodResolver   : ControllerAdvice beans: none
-2025-05-25T22:59:18.561Z DEBUG 15280 --- [           main] o.s.w.s.adapter.HttpWebHandlerAdapter    : enableLoggingRequestDetails='false': form data and headers will be masked to prevent unsafe logging of potentially sensitive data
-2025-05-25T22:59:18.633Z  INFO 15280 --- [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-05-25T22:59:18.652Z  WARN 15280 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-05-25T22:59:18.905Z  INFO 15280 --- [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 33381
-2025-05-25T22:59:18.906Z  INFO 15280 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 33381
-2025-05-25T22:59:18.909Z  INFO 15280 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-05-25T22:59:18.958Z  INFO 15280 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-05-25T22:59:18.962Z  INFO 15280 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-25T22:59:18.976Z  INFO 15280 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-05-25T22:59:18.976Z  INFO 15280 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-05-25T22:59:18.976Z  INFO 15280 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-05-25T22:59:18.976Z  INFO 15280 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-05-25T22:59:18.976Z  INFO 15280 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-05-25T22:59:18.976Z  INFO 15280 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-05-25T22:59:18.976Z  INFO 15280 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-05-25T22:59:18.995Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/
-2025-05-25T22:59:19.064Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
-2025-05-25T22:59:19.099Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 200 OK
-2025-05-25T22:59:19.100Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-2025-05-25T22:59:19.116Z  INFO 15280 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2025-05-25T22:59:19.118Z  INFO 15280 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-05-25T22:59:19.120Z  INFO 15280 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-05-25T22:59:19.123Z  INFO 15280 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1748213959123 with initial instances count: 1
-2025-05-25T22:59:19.125Z  INFO 15280 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application API-GATEWAY with eureka with status UP
-2025-05-25T22:59:19.125Z  INFO 15280 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1748213959125, current=UP, previous=STARTING]
-2025-05-25T22:59:19.126Z  INFO 15280 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/fbdfcfebebefebefccadafadacdfbef-0.fbdfcfebebefebefccadafadacdfbef.ide.svc.cluster.local:api-gateway:0: registering service...
-2025-05-25T22:59:19.129Z DEBUG 15280 --- [nfoReplicator-0] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/API-GATEWAY
-2025-05-25T22:59:19.130Z DEBUG 15280 --- [nfoReplicator-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
-2025-05-25T22:59:19.139Z DEBUG 15280 --- [nfoReplicator-0] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = fbdfcfebebefebefccadafadacdfbef-0.fbdfcfebebefebefccadafadacdfbef.ide.svc.cluster.local:api-gateway:0, appName = API-GATEWAY, hostName = localhost, status = UP, ipAddr = 10.244.3.111, port = 33381, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@636a36f6] as "application/json"
-2025-05-25T22:59:19.163Z DEBUG 15280 --- [nfoReplicator-0] o.s.web.client.RestTemplate              : Response 204 NO_CONTENT
-2025-05-25T22:59:19.163Z  INFO 15280 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/fbdfcfebebefebefccadafadacdfbef-0.fbdfcfebebefebefccadafadacdfbef.ide.svc.cluster.local:api-gateway:0 - registration status: 204
-2025-05-25T22:59:19.169Z  INFO 15280 --- [           main] c.e.a.ApigatewayApplicationTests         : Started ApigatewayApplicationTests in 2.602 seconds (process running for 3.405)
-2025-05-25T22:59:19.442Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:33381/api/users/register
-2025-05-25T22:59:19.442Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:19.442Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Writing [{"userId": 1,"email": "demoadmin@gmail.com", "password": "admin@1234", "username": "admin123", "userRole": "Admin", "mobileNumber": "1234567890"}] as "application/json"
-2025-05-25T22:59:19.499Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-1] HTTP POST "/api/users/register"
-2025-05-25T22:59:19.758Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 500 INTERNAL_SERVER_ERROR
-2025-05-25T22:59:19.759Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
-2025-05-25T22:59:19.760Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-1] Completed 500 INTERNAL_SERVER_ERROR
+2025-05-26T01:25:34.337Z  INFO 49210 --- [           main] c.e.a.ApigatewayApplicationTests         : Starting ApigatewayApplicationTests using Java 17.0.14 with PID 49210 (started by coder in /home/coder/project/workspace/apigateway)
+2025-05-26T01:25:34.338Z  INFO 49210 --- [           main] c.e.a.ApigatewayApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2025-05-26T01:25:35.167Z  INFO 49210 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=33064d9e-de8d-30f1-bde6-831c7e1f096f
+2025-05-26T01:25:35.229Z  INFO 49210 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-05-26T01:25:35.230Z  INFO 49210 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-05-26T01:25:35.231Z  INFO 49210 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-05-26T01:25:35.742Z  INFO 49210 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2025-05-26T01:25:35.743Z  INFO 49210 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2025-05-26T01:25:35.743Z  INFO 49210 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2025-05-26T01:25:35.743Z  INFO 49210 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2025-05-26T01:25:35.743Z  INFO 49210 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2025-05-26T01:25:35.743Z  INFO 49210 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2025-05-26T01:25:35.743Z  INFO 49210 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2025-05-26T01:25:35.743Z  INFO 49210 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2025-05-26T01:25:35.744Z  INFO 49210 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2025-05-26T01:25:35.744Z  INFO 49210 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2025-05-26T01:25:35.744Z  INFO 49210 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2025-05-26T01:25:35.744Z  INFO 49210 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2025-05-26T01:25:35.744Z  INFO 49210 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2025-05-26T01:25:35.744Z  INFO 49210 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2025-05-26T01:25:35.834Z DEBUG 49210 --- [           main] o.s.w.r.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-05-26T01:25:35.920Z  INFO 49210 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-05-26T01:25:35.957Z DEBUG 49210 --- [           main] o.s.w.r.r.m.a.ControllerMethodResolver   : ControllerAdvice beans: none
+2025-05-26T01:25:35.982Z DEBUG 49210 --- [           main] o.s.w.s.adapter.HttpWebHandlerAdapter    : enableLoggingRequestDetails='false': form data and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-05-26T01:25:36.060Z  INFO 49210 --- [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-26T01:25:36.082Z  WARN 49210 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-26T01:25:36.313Z  INFO 49210 --- [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 40185
+2025-05-26T01:25:36.315Z  INFO 49210 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 40185
+2025-05-26T01:25:36.318Z  INFO 49210 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-26T01:25:36.365Z  INFO 49210 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-26T01:25:36.369Z  INFO 49210 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-26T01:25:36.384Z  INFO 49210 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-26T01:25:36.384Z  INFO 49210 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-26T01:25:36.384Z  INFO 49210 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-26T01:25:36.385Z  INFO 49210 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-26T01:25:36.385Z  INFO 49210 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-26T01:25:36.385Z  INFO 49210 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-26T01:25:36.385Z  INFO 49210 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-26T01:25:36.404Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/
+2025-05-26T01:25:36.478Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-05-26T01:25:36.514Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 200 OK
+2025-05-26T01:25:36.515Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-26T01:25:36.531Z  INFO 49210 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-26T01:25:36.533Z  INFO 49210 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-26T01:25:36.535Z  INFO 49210 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-26T01:25:36.539Z  INFO 49210 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1748222736538 with initial instances count: 1
+2025-05-26T01:25:36.540Z  INFO 49210 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application API-GATEWAY with eureka with status UP
+2025-05-26T01:25:36.541Z  INFO 49210 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1748222736541, current=UP, previous=STARTING]
+2025-05-26T01:25:36.542Z  INFO 49210 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/fbdfcfebebefebefccadafadacdfbef-0.fbdfcfebebefebefccadafadacdfbef.ide.svc.cluster.local:api-gateway:0: registering service...
+2025-05-26T01:25:36.545Z DEBUG 49210 --- [nfoReplicator-0] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/API-GATEWAY
+2025-05-26T01:25:36.546Z DEBUG 49210 --- [nfoReplicator-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-05-26T01:25:36.556Z DEBUG 49210 --- [nfoReplicator-0] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = fbdfcfebebefebefccadafadacdfbef-0.fbdfcfebebefebefccadafadacdfbef.ide.svc.cluster.local:api-gateway:0, appName = API-GATEWAY, hostName = localhost, status = UP, ipAddr = 10.244.57.74, port = 40185, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2cc84cde] as "application/json"
+2025-05-26T01:25:36.570Z DEBUG 49210 --- [nfoReplicator-0] o.s.web.client.RestTemplate              : Response 204 NO_CONTENT
+2025-05-26T01:25:36.571Z  INFO 49210 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/fbdfcfebebefebefccadafadacdfbef-0.fbdfcfebebefebefccadafadacdfbef.ide.svc.cluster.local:api-gateway:0 - registration status: 204
+2025-05-26T01:25:36.578Z  INFO 49210 --- [           main] c.e.a.ApigatewayApplicationTests         : Started ApigatewayApplicationTests in 2.471 seconds (process running for 3.295)
+2025-05-26T01:25:36.952Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:40185/api/users/register
+2025-05-26T01:25:36.953Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:36.953Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Writing [{"userId": 1,"email": "demoadmin@gmail.com", "password": "admin@1234", "username": "admin123", "userRole": "Admin", "mobileNumber": "1234567890"}] as "application/json"
+2025-05-26T01:25:37.012Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-1] HTTP POST "/api/users/register"
+2025-05-26T01:25:37.263Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 500 INTERNAL_SERVER_ERROR
+2025-05-26T01:25:37.264Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+2025-05-26T01:25:37.265Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-1] Completed 500 INTERNAL_SERVER_ERROR
 ]]></system-out>
   </testcase>
-  <testcase name="backend_testLoginAdmin" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.28">
-    <system-out><![CDATA[2025-05-25T22:59:19.782Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:33381/api/users/login
-2025-05-25T22:59:19.783Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:19.783Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Writing [{"email": "demoadmin@gmail.com", "password": "admin@1234"}] as "application/json"
-2025-05-25T22:59:19.785Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-2] HTTP POST "/api/users/login"
-2025-05-25T22:59:20.054Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 200 OK
-2025-05-25T22:59:20.055Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
-2025-05-25T22:59:20.055Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-2] Completed 200 OK
+  <testcase name="backend_testLoginAdmin" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.268">
+    <system-out><![CDATA[2025-05-26T01:25:37.286Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:40185/api/users/login
+2025-05-26T01:25:37.286Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:37.286Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Writing [{"email": "demoadmin@gmail.com", "password": "admin@1234"}] as "application/json"
+2025-05-26T01:25:37.288Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-2] HTTP POST "/api/users/login"
+2025-05-26T01:25:37.545Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 200 OK
+2025-05-26T01:25:37.545Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+2025-05-26T01:25:37.545Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-2] Completed 200 OK
 ]]></system-out>
   </testcase>
-  <testcase name="backend_testRegisterLoanManager" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.013">
+  <testcase name="backend_testRegisterLoanManager" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.014">
     <failure message="expected: &lt;201 CREATED&gt; but was: &lt;500 INTERNAL_SERVER_ERROR&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <500 INTERNAL_SERVER_ERROR>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -305,26 +305,26 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.062Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:33381/api/users/register
-2025-05-25T22:59:20.062Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.063Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Writing [{"userId": 2,"email": "demoloanmanager@gmail.com", "password": "manager@1234", "username": "policy123", "userRole": "LoanManager", "mobileNumber": "1234567890"}] as "application/json"
-2025-05-25T22:59:20.064Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-3] HTTP POST "/api/users/register"
-2025-05-25T22:59:20.072Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 500 INTERNAL_SERVER_ERROR
-2025-05-25T22:59:20.072Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
-2025-05-25T22:59:20.072Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-3] Completed 500 INTERNAL_SERVER_ERROR
+    <system-out><![CDATA[2025-05-26T01:25:37.553Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:40185/api/users/register
+2025-05-26T01:25:37.554Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:37.554Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Writing [{"userId": 2,"email": "demoloanmanager@gmail.com", "password": "manager@1234", "username": "policy123", "userRole": "LoanManager", "mobileNumber": "1234567890"}] as "application/json"
+2025-05-26T01:25:37.555Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-3] HTTP POST "/api/users/register"
+2025-05-26T01:25:37.563Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 500 INTERNAL_SERVER_ERROR
+2025-05-26T01:25:37.564Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+2025-05-26T01:25:37.564Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-3] Completed 500 INTERNAL_SERVER_ERROR
 ]]></system-out>
   </testcase>
-  <testcase name="backend_testLoginLoanManager" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.016">
-    <system-out><![CDATA[2025-05-25T22:59:20.077Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:33381/api/users/login
-2025-05-25T22:59:20.077Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.077Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Writing [{"email": "demoloanmanager@gmail.com", "password": "manager@1234"}] as "application/json"
-2025-05-25T22:59:20.078Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-4] HTTP POST "/api/users/login"
-2025-05-25T22:59:20.089Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 200 OK
-2025-05-25T22:59:20.089Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
-2025-05-25T22:59:20.089Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-4] Completed 200 OK
+  <testcase name="backend_testLoginLoanManager" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.017">
+    <system-out><![CDATA[2025-05-26T01:25:37.569Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:40185/api/users/login
+2025-05-26T01:25:37.570Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:37.570Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Writing [{"email": "demoloanmanager@gmail.com", "password": "manager@1234"}] as "application/json"
+2025-05-26T01:25:37.571Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-4] HTTP POST "/api/users/login"
+2025-05-26T01:25:37.582Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 200 OK
+2025-05-26T01:25:37.582Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-4] Completed 200 OK
+2025-05-26T01:25:37.582Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
 ]]></system-out>
   </testcase>
-  <testcase name="backend_testRegisterStudent" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.039">
+  <testcase name="backend_testRegisterStudent" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.046">
     <failure message="expected: &lt;201 CREATED&gt; but was: &lt;500 INTERNAL_SERVER_ERROR&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <500 INTERNAL_SERVER_ERROR>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -405,26 +405,26 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.094Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:33381/api/users/register
-2025-05-25T22:59:20.094Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.094Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Writing [{"userId": 3,"email": "student@gmail.com", "password": "student@1234", "username": "customer123", "userRole": "Student", "mobileNumber": "1234567890"}] as "application/json"
-2025-05-25T22:59:20.096Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-5] HTTP POST "/api/users/register"
-2025-05-25T22:59:20.128Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 500 INTERNAL_SERVER_ERROR
-2025-05-25T22:59:20.128Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
-2025-05-25T22:59:20.128Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-5] Completed 500 INTERNAL_SERVER_ERROR
+    <system-out><![CDATA[2025-05-26T01:25:37.587Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:40185/api/users/register
+2025-05-26T01:25:37.587Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:37.587Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Writing [{"userId": 3,"email": "student@gmail.com", "password": "student@1234", "username": "customer123", "userRole": "Student", "mobileNumber": "1234567890"}] as "application/json"
+2025-05-26T01:25:37.589Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-5] HTTP POST "/api/users/register"
+2025-05-26T01:25:37.629Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 500 INTERNAL_SERVER_ERROR
+2025-05-26T01:25:37.629Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+2025-05-26T01:25:37.629Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-5] Completed 500 INTERNAL_SERVER_ERROR
 ]]></system-out>
   </testcase>
-  <testcase name="backend_testLoginStudent" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.018">
-    <system-out><![CDATA[2025-05-25T22:59:20.134Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:33381/api/users/login
-2025-05-25T22:59:20.134Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.134Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Writing [{"email": "student@gmail.com", "password": "student@1234"}] as "application/json"
-2025-05-25T22:59:20.136Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-6] HTTP POST "/api/users/login"
-2025-05-25T22:59:20.147Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 200 OK
-2025-05-25T22:59:20.147Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-6] Completed 200 OK
-2025-05-25T22:59:20.147Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+  <testcase name="backend_testLoginStudent" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.017">
+    <system-out><![CDATA[2025-05-26T01:25:37.634Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:40185/api/users/login
+2025-05-26T01:25:37.634Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:37.634Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Writing [{"email": "student@gmail.com", "password": "student@1234"}] as "application/json"
+2025-05-26T01:25:37.635Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-6] HTTP POST "/api/users/login"
+2025-05-26T01:25:37.646Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 200 OK
+2025-05-26T01:25:37.647Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-6] Completed 200 OK
+2025-05-26T01:25:37.647Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
 ]]></system-out>
   </testcase>
-  <testcase name="backend_testAddLoanByLoanManager" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.292">
+  <testcase name="backend_testAddLoanByLoanManager" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.288">
     <failure message="expected: &lt;201 CREATED&gt; but was: &lt;401 UNAUTHORIZED&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <401 UNAUTHORIZED>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -505,16 +505,16 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.153Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:33381/api/loans
-2025-05-25T22:59:20.154Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.154Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Writing [{"loanId": 1,"loanType": "Home Loan","interestRate": 5.5,"maxAmount": 5000000,"minAmount": 100000,"minTenureMonths": 120,"maxTenureMonths": 360,"description": "A long-term loan for purchasing or refinancing a home.","status": "Active","processingFee": 5000,"prepaymentPenalty": 1.5,"gracePeriodMonths": 6,"latePaymentFee": 2000}] as "application/json"
-2025-05-25T22:59:20.155Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-7] HTTP POST "/api/loans"
-2025-05-25T22:59:20.438Z  INFO 15280 --- [or-http-epoll-2] c.e.apigateway.filter.JwtRequestFilter   : UNAUTHORIZED user:policy123, role:LoanManager
-2025-05-25T22:59:20.439Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-7] Completed 401 UNAUTHORIZED
-2025-05-25T22:59:20.440Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 401 UNAUTHORIZED
+    <system-out><![CDATA[2025-05-26T01:25:37.651Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:40185/api/loans
+2025-05-26T01:25:37.651Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:37.651Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Writing [{"loanId": 1,"loanType": "Home Loan","interestRate": 5.5,"maxAmount": 5000000,"minAmount": 100000,"minTenureMonths": 120,"maxTenureMonths": 360,"description": "A long-term loan for purchasing or refinancing a home.","status": "Active","processingFee": 5000,"prepaymentPenalty": 1.5,"gracePeriodMonths": 6,"latePaymentFee": 2000}] as "application/json"
+2025-05-26T01:25:37.653Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-7] HTTP POST "/api/loans"
+2025-05-26T01:25:37.933Z  INFO 49210 --- [or-http-epoll-2] c.e.apigateway.filter.JwtRequestFilter   : UNAUTHORIZED user:policy123, role:LoanManager
+2025-05-26T01:25:37.934Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-7] Completed 401 UNAUTHORIZED
+2025-05-26T01:25:37.935Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 401 UNAUTHORIZED
 ]]></system-out>
   </testcase>
-  <testcase name="backend_testAddLoanByAdmin" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.01">
+  <testcase name="backend_testAddLoanByAdmin" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.009">
     <failure message="expected: &lt;403 FORBIDDEN&gt; but was: &lt;401 UNAUTHORIZED&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <401 UNAUTHORIZED>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -595,13 +595,13 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.447Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:33381/api/loans
-2025-05-25T22:59:20.447Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.447Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Writing [{"loanId": 1,"loanType": "Home Loan","interestRate": 5.5,"maxAmount": 5000000,"minAmount": 100000,"minTenureMonths": 120,"maxTenureMonths": 360,"description": "A long-term loan for purchasing or refinancing a home.","status": "Active","processingFee": 5000,"prepaymentPenalty": 1.5,"gracePeriodMonths": 6,"latePaymentFee": 2000}] as "application/json"
-2025-05-25T22:59:20.448Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-8] HTTP POST "/api/loans"
-2025-05-25T22:59:20.451Z  INFO 15280 --- [or-http-epoll-2] c.e.apigateway.filter.JwtRequestFilter   : UNAUTHORIZED user:admin123, role:Admin
-2025-05-25T22:59:20.451Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-8] Completed 401 UNAUTHORIZED
-2025-05-25T22:59:20.452Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 401 UNAUTHORIZED
+    <system-out><![CDATA[2025-05-26T01:25:37.940Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:40185/api/loans
+2025-05-26T01:25:37.940Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:37.940Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Writing [{"loanId": 1,"loanType": "Home Loan","interestRate": 5.5,"maxAmount": 5000000,"minAmount": 100000,"minTenureMonths": 120,"maxTenureMonths": 360,"description": "A long-term loan for purchasing or refinancing a home.","status": "Active","processingFee": 5000,"prepaymentPenalty": 1.5,"gracePeriodMonths": 6,"latePaymentFee": 2000}] as "application/json"
+2025-05-26T01:25:37.942Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-8] HTTP POST "/api/loans"
+2025-05-26T01:25:37.944Z  INFO 49210 --- [or-http-epoll-2] c.e.apigateway.filter.JwtRequestFilter   : UNAUTHORIZED user:admin123, role:Admin
+2025-05-26T01:25:37.944Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-8] Completed 401 UNAUTHORIZED
+2025-05-26T01:25:37.945Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 401 UNAUTHORIZED
 ]]></system-out>
   </testcase>
   <testcase name="backend_testAddLoansByStudent" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.008">
@@ -685,13 +685,13 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.457Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:33381/api/loans
-2025-05-25T22:59:20.457Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.457Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Writing [{"loanId": 1,"loanType": "Home Loan","interestRate": 5.5,"maxAmount": 5000000,"minAmount": 100000,"minTenureMonths": 120,"maxTenureMonths": 360,"description": "A long-term loan for purchasing or refinancing a home.","status": "Active","processingFee": 5000,"prepaymentPenalty": 1.5,"gracePeriodMonths": 6,"latePaymentFee": 2000}] as "application/json"
-2025-05-25T22:59:20.458Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-9] HTTP POST "/api/loans"
-2025-05-25T22:59:20.460Z  INFO 15280 --- [or-http-epoll-2] c.e.apigateway.filter.JwtRequestFilter   : UNAUTHORIZED user:customer123, role:Student
-2025-05-25T22:59:20.461Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-9] Completed 401 UNAUTHORIZED
-2025-05-25T22:59:20.461Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 401 UNAUTHORIZED
+    <system-out><![CDATA[2025-05-26T01:25:37.949Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:40185/api/loans
+2025-05-26T01:25:37.949Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:37.949Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Writing [{"loanId": 1,"loanType": "Home Loan","interestRate": 5.5,"maxAmount": 5000000,"minAmount": 100000,"minTenureMonths": 120,"maxTenureMonths": 360,"description": "A long-term loan for purchasing or refinancing a home.","status": "Active","processingFee": 5000,"prepaymentPenalty": 1.5,"gracePeriodMonths": 6,"latePaymentFee": 2000}] as "application/json"
+2025-05-26T01:25:37.950Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-9] HTTP POST "/api/loans"
+2025-05-26T01:25:37.952Z  INFO 49210 --- [or-http-epoll-2] c.e.apigateway.filter.JwtRequestFilter   : UNAUTHORIZED user:customer123, role:Student
+2025-05-26T01:25:37.953Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-9] Completed 401 UNAUTHORIZED
+2025-05-26T01:25:37.953Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 401 UNAUTHORIZED
 ]]></system-out>
   </testcase>
   <testcase name="backend_testGetAllInsurancesByLoanManager" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.009">
@@ -775,15 +775,15 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.466Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:33381/api/loans
-2025-05-25T22:59:20.466Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.468Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-10] HTTP GET "/api/loans"
-2025-05-25T22:59:20.470Z  INFO 15280 --- [or-http-epoll-2] c.e.apigateway.filter.JwtRequestFilter   : UNAUTHORIZED user:policy123, role:LoanManager
-2025-05-25T22:59:20.470Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-10] Completed 401 UNAUTHORIZED
-2025-05-25T22:59:20.471Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 401 UNAUTHORIZED
+    <system-out><![CDATA[2025-05-26T01:25:37.957Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:40185/api/loans
+2025-05-26T01:25:37.957Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:37.958Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-10] HTTP GET "/api/loans"
+2025-05-26T01:25:37.961Z  INFO 49210 --- [or-http-epoll-2] c.e.apigateway.filter.JwtRequestFilter   : UNAUTHORIZED user:policy123, role:LoanManager
+2025-05-26T01:25:37.961Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-10] Completed 401 UNAUTHORIZED
+2025-05-26T01:25:37.962Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 401 UNAUTHORIZED
 ]]></system-out>
   </testcase>
-  <testcase name="backend_testGetAllLoansByStudent" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.007">
+  <testcase name="backend_testGetAllLoansByStudent" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.008">
     <failure message="expected: &lt;200 OK&gt; but was: &lt;401 UNAUTHORIZED&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <200 OK> but was: <401 UNAUTHORIZED>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -864,12 +864,12 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.475Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:33381/api/loans
-2025-05-25T22:59:20.476Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.477Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-11] HTTP GET "/api/loans"
-2025-05-25T22:59:20.479Z  INFO 15280 --- [or-http-epoll-2] c.e.apigateway.filter.JwtRequestFilter   : UNAUTHORIZED user:customer123, role:Student
-2025-05-25T22:59:20.479Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-11] Completed 401 UNAUTHORIZED
-2025-05-25T22:59:20.479Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 401 UNAUTHORIZED
+    <system-out><![CDATA[2025-05-26T01:25:37.966Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:40185/api/loans
+2025-05-26T01:25:37.966Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:37.967Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-11] HTTP GET "/api/loans"
+2025-05-26T01:25:37.970Z  INFO 49210 --- [or-http-epoll-2] c.e.apigateway.filter.JwtRequestFilter   : UNAUTHORIZED user:customer123, role:Student
+2025-05-26T01:25:37.970Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-11] Completed 401 UNAUTHORIZED
+2025-05-26T01:25:37.971Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 401 UNAUTHORIZED
 ]]></system-out>
   </testcase>
   <testcase name="backend_testGetAllLoansByAdmin" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.007">
@@ -953,15 +953,15 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.484Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:33381/api/loans
-2025-05-25T22:59:20.484Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.485Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-12] HTTP GET "/api/loans"
-2025-05-25T22:59:20.487Z  INFO 15280 --- [or-http-epoll-2] c.e.apigateway.filter.JwtRequestFilter   : UNAUTHORIZED user:admin123, role:Admin
-2025-05-25T22:59:20.487Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-12] Completed 401 UNAUTHORIZED
-2025-05-25T22:59:20.488Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 401 UNAUTHORIZED
+    <system-out><![CDATA[2025-05-26T01:25:37.974Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:40185/api/loans
+2025-05-26T01:25:37.974Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:37.975Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-12] HTTP GET "/api/loans"
+2025-05-26T01:25:37.978Z  INFO 49210 --- [or-http-epoll-2] c.e.apigateway.filter.JwtRequestFilter   : UNAUTHORIZED user:admin123, role:Admin
+2025-05-26T01:25:37.978Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-12] Completed 401 UNAUTHORIZED
+2025-05-26T01:25:37.978Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 401 UNAUTHORIZED
 ]]></system-out>
   </testcase>
-  <testcase name="backend_testGetLoansByIdAsLoanManager" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.009">
+  <testcase name="backend_testGetLoansByIdAsLoanManager" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.008">
     <failure message="expected: &lt;200 OK&gt; but was: &lt;401 UNAUTHORIZED&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <200 OK> but was: <401 UNAUTHORIZED>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -1042,12 +1042,12 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.492Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:33381/api/loans/1
-2025-05-25T22:59:20.492Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.493Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-13] HTTP GET "/api/loans/1"
-2025-05-25T22:59:20.496Z  INFO 15280 --- [or-http-epoll-2] c.e.apigateway.filter.JwtRequestFilter   : UNAUTHORIZED user:policy123, role:LoanManager
-2025-05-25T22:59:20.496Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-13] Completed 401 UNAUTHORIZED
-2025-05-25T22:59:20.497Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 401 UNAUTHORIZED
+    <system-out><![CDATA[2025-05-26T01:25:37.982Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:40185/api/loans/1
+2025-05-26T01:25:37.982Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:37.983Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-13] HTTP GET "/api/loans/1"
+2025-05-26T01:25:37.986Z  INFO 49210 --- [or-http-epoll-2] c.e.apigateway.filter.JwtRequestFilter   : UNAUTHORIZED user:policy123, role:LoanManager
+2025-05-26T01:25:37.986Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-13] Completed 401 UNAUTHORIZED
+2025-05-26T01:25:37.986Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 401 UNAUTHORIZED
 ]]></system-out>
   </testcase>
   <testcase name="backend_testGetLoansByIdAsStudent" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.008">
@@ -1131,15 +1131,15 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.501Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:33381/api/loans/1
-2025-05-25T22:59:20.501Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.502Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-14] HTTP GET "/api/loans/1"
-2025-05-25T22:59:20.504Z  INFO 15280 --- [or-http-epoll-2] c.e.apigateway.filter.JwtRequestFilter   : UNAUTHORIZED user:customer123, role:Student
-2025-05-25T22:59:20.505Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-14] Completed 401 UNAUTHORIZED
-2025-05-25T22:59:20.505Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 401 UNAUTHORIZED
+    <system-out><![CDATA[2025-05-26T01:25:37.990Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:40185/api/loans/1
+2025-05-26T01:25:37.991Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:37.992Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-14] HTTP GET "/api/loans/1"
+2025-05-26T01:25:37.994Z  INFO 49210 --- [or-http-epoll-2] c.e.apigateway.filter.JwtRequestFilter   : UNAUTHORIZED user:customer123, role:Student
+2025-05-26T01:25:37.994Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-14] Completed 401 UNAUTHORIZED
+2025-05-26T01:25:37.995Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 401 UNAUTHORIZED
 ]]></system-out>
   </testcase>
-  <testcase name="backend_testGetLoansByIdAsAdmin" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.021">
+  <testcase name="backend_testGetLoansByIdAsAdmin" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.007">
     <failure message="expected: &lt;403 FORBIDDEN&gt; but was: &lt;401 UNAUTHORIZED&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <401 UNAUTHORIZED>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -1220,15 +1220,15 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.510Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:33381/api/loans/1
-2025-05-25T22:59:20.510Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.511Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-15] HTTP GET "/api/loans/1"
-2025-05-25T22:59:20.526Z  INFO 15280 --- [or-http-epoll-2] c.e.apigateway.filter.JwtRequestFilter   : UNAUTHORIZED user:admin123, role:Admin
-2025-05-25T22:59:20.526Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-15] Completed 401 UNAUTHORIZED
-2025-05-25T22:59:20.527Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 401 UNAUTHORIZED
+    <system-out><![CDATA[2025-05-26T01:25:37.999Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:40185/api/loans/1
+2025-05-26T01:25:37.999Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:38.000Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-15] HTTP GET "/api/loans/1"
+2025-05-26T01:25:38.002Z  INFO 49210 --- [or-http-epoll-2] c.e.apigateway.filter.JwtRequestFilter   : UNAUTHORIZED user:admin123, role:Admin
+2025-05-26T01:25:38.002Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-15] Completed 401 UNAUTHORIZED
+2025-05-26T01:25:38.003Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 401 UNAUTHORIZED
 ]]></system-out>
   </testcase>
-  <testcase name="backend_testAddLoanApplicationByStudent" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.041">
+  <testcase name="backend_testAddLoanApplicationByStudent" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.038">
     <failure message="expected: &lt;201 CREATED&gt; but was: &lt;404 NOT_FOUND&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <404 NOT_FOUND>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -1309,20 +1309,20 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.532Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:33381/api/loanapplications
-2025-05-25T22:59:20.533Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.533Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Writing [{"loanApplicationId": 1,"user": {"userId": 1},"loan": {"loanId": 1},"loanAmount": 200000,"applicationDate": "2024-09-17","loanPurpose": "Home Renovation","status": "Pending","incomeProof": "http://example.com/income-proof.pdf"}] as "application/json"
-2025-05-25T22:59:20.534Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-16] HTTP POST "/api/loanapplications"
-2025-05-25T22:59:20.536Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [501caa27-16] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
-2025-05-25T22:59:20.538Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [501caa27-16] Resource not found
-2025-05-25T22:59:20.554Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-16] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP POST /api/loanapplications
-2025-05-25T22:59:20.563Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-16] Encoding [{timestamp=Sun May 25 22:59:20 UTC 2025, path=/api/loanapplications, status=404, error=Not Found, me (truncated)...]
-2025-05-25T22:59:20.569Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
-2025-05-25T22:59:20.569Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-16] Completed 404 NOT_FOUND
-2025-05-25T22:59:20.569Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+    <system-out><![CDATA[2025-05-26T01:25:38.006Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:40185/api/loanapplications
+2025-05-26T01:25:38.007Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:38.007Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Writing [{"loanApplicationId": 1,"user": {"userId": 1},"loan": {"loanId": 1},"loanAmount": 200000,"applicationDate": "2024-09-17","loanPurpose": "Home Renovation","status": "Pending","incomeProof": "http://example.com/income-proof.pdf"}] as "application/json"
+2025-05-26T01:25:38.008Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-16] HTTP POST "/api/loanapplications"
+2025-05-26T01:25:38.010Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [34955a4a-16] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2025-05-26T01:25:38.012Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [34955a4a-16] Resource not found
+2025-05-26T01:25:38.025Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-16] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP POST /api/loanapplications
+2025-05-26T01:25:38.034Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-16] Encoding [{timestamp=Mon May 26 01:25:38 UTC 2025, path=/api/loanapplications, status=404, error=Not Found, me (truncated)...]
+2025-05-26T01:25:38.040Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-05-26T01:25:38.041Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-16] Completed 404 NOT_FOUND
+2025-05-26T01:25:38.041Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
 ]]></system-out>
   </testcase>
-  <testcase name="backend_testAddLoanApplicationByAdmin" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.009">
+  <testcase name="backend_testAddLoanApplicationByAdmin" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.007">
     <failure message="expected: &lt;403 FORBIDDEN&gt; but was: &lt;404 NOT_FOUND&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <404 NOT_FOUND>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -1403,17 +1403,17 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.574Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:33381/api/loanapplications
-2025-05-25T22:59:20.574Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.574Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Writing [{"loanApplicationId": 1,"user": {"userId": 1},"loan": {"loanId": 1},"loanAmount": 200000,"applicationDate": "2024-09-17","loanPurpose": "Home Renovation","status": "Pending","incomeProof": "http://example.com/income-proof.pdf"}] as "application/json"
-2025-05-25T22:59:20.575Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-17] HTTP POST "/api/loanapplications"
-2025-05-25T22:59:20.576Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [501caa27-17] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
-2025-05-25T22:59:20.577Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [501caa27-17] Resource not found
-2025-05-25T22:59:20.577Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-17] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP POST /api/loanapplications
-2025-05-25T22:59:20.578Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-17] Encoding [{timestamp=Sun May 25 22:59:20 UTC 2025, path=/api/loanapplications, status=404, error=Not Found, me (truncated)...]
-2025-05-25T22:59:20.579Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-17] Completed 404 NOT_FOUND
-2025-05-25T22:59:20.579Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
-2025-05-25T22:59:20.579Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+    <system-out><![CDATA[2025-05-26T01:25:38.045Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:40185/api/loanapplications
+2025-05-26T01:25:38.045Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:38.045Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Writing [{"loanApplicationId": 1,"user": {"userId": 1},"loan": {"loanId": 1},"loanAmount": 200000,"applicationDate": "2024-09-17","loanPurpose": "Home Renovation","status": "Pending","incomeProof": "http://example.com/income-proof.pdf"}] as "application/json"
+2025-05-26T01:25:38.047Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-17] HTTP POST "/api/loanapplications"
+2025-05-26T01:25:38.047Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [34955a4a-17] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2025-05-26T01:25:38.048Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [34955a4a-17] Resource not found
+2025-05-26T01:25:38.048Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-17] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP POST /api/loanapplications
+2025-05-26T01:25:38.049Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-17] Encoding [{timestamp=Mon May 26 01:25:38 UTC 2025, path=/api/loanapplications, status=404, error=Not Found, me (truncated)...]
+2025-05-26T01:25:38.049Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-17] Completed 404 NOT_FOUND
+2025-05-26T01:25:38.049Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-05-26T01:25:38.050Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
 ]]></system-out>
   </testcase>
   <testcase name="backend_testAddLoanApplicationByLoanManager" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.008">
@@ -1497,20 +1497,20 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.583Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:33381/api/loanapplications
-2025-05-25T22:59:20.583Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.583Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Writing [{"loanApplicationId": 1,"user": {"userId": 1},"loan": {"loanId": 1},"loanAmount": 200000,"applicationDate": "2024-09-17","loanPurpose": "Home Renovation","status": "Pending","incomeProof": "http://example.com/income-proof.pdf"}] as "application/json"
-2025-05-25T22:59:20.584Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-18] HTTP POST "/api/loanapplications"
-2025-05-25T22:59:20.585Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [501caa27-18] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
-2025-05-25T22:59:20.585Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [501caa27-18] Resource not found
-2025-05-25T22:59:20.586Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-18] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP POST /api/loanapplications
-2025-05-25T22:59:20.586Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-18] Encoding [{timestamp=Sun May 25 22:59:20 UTC 2025, path=/api/loanapplications, status=404, error=Not Found, me (truncated)...]
-2025-05-25T22:59:20.587Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-18] Completed 404 NOT_FOUND
-2025-05-25T22:59:20.587Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
-2025-05-25T22:59:20.587Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+    <system-out><![CDATA[2025-05-26T01:25:38.053Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:40185/api/loanapplications
+2025-05-26T01:25:38.053Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:38.053Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Writing [{"loanApplicationId": 1,"user": {"userId": 1},"loan": {"loanId": 1},"loanAmount": 200000,"applicationDate": "2024-09-17","loanPurpose": "Home Renovation","status": "Pending","incomeProof": "http://example.com/income-proof.pdf"}] as "application/json"
+2025-05-26T01:25:38.056Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-18] HTTP POST "/api/loanapplications"
+2025-05-26T01:25:38.056Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [34955a4a-18] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2025-05-26T01:25:38.057Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [34955a4a-18] Resource not found
+2025-05-26T01:25:38.057Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-18] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP POST /api/loanapplications
+2025-05-26T01:25:38.058Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-18] Encoding [{timestamp=Mon May 26 01:25:38 UTC 2025, path=/api/loanapplications, status=404, error=Not Found, me (truncated)...]
+2025-05-26T01:25:38.058Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-18] Completed 404 NOT_FOUND
+2025-05-26T01:25:38.058Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-05-26T01:25:38.059Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
 ]]></system-out>
   </testcase>
-  <testcase name="backend_testGetLoanApplicationByUserIdAsLoanManager" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.007">
+  <testcase name="backend_testGetLoanApplicationByUserIdAsLoanManager" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.009">
     <failure message="expected: &lt;403 FORBIDDEN&gt; but was: &lt;404 NOT_FOUND&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <404 NOT_FOUND>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -1591,16 +1591,16 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.591Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:33381/api/loanapplications/user/1
-2025-05-25T22:59:20.591Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.592Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-19] HTTP GET "/api/loanapplications/user/1"
-2025-05-25T22:59:20.593Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [501caa27-19] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
-2025-05-25T22:59:20.593Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [501caa27-19] Resource not found
-2025-05-25T22:59:20.594Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-19] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP GET /api/loanapplications/user/1
-2025-05-25T22:59:20.594Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-19] Encoding [{timestamp=Sun May 25 22:59:20 UTC 2025, path=/api/loanapplications/user/1, status=404, error=Not Fo (truncated)...]
-2025-05-25T22:59:20.595Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-19] Completed 404 NOT_FOUND
-2025-05-25T22:59:20.595Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
-2025-05-25T22:59:20.595Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+    <system-out><![CDATA[2025-05-26T01:25:38.063Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:40185/api/loanapplications/user/1
+2025-05-26T01:25:38.063Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:38.064Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-19] HTTP GET "/api/loanapplications/user/1"
+2025-05-26T01:25:38.065Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [34955a4a-19] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2025-05-26T01:25:38.066Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [34955a4a-19] Resource not found
+2025-05-26T01:25:38.066Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-19] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP GET /api/loanapplications/user/1
+2025-05-26T01:25:38.067Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-19] Encoding [{timestamp=Mon May 26 01:25:38 UTC 2025, path=/api/loanapplications/user/1, status=404, error=Not Fo (truncated)...]
+2025-05-26T01:25:38.068Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-19] Completed 404 NOT_FOUND
+2025-05-26T01:25:38.068Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-05-26T01:25:38.068Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
 ]]></system-out>
   </testcase>
   <testcase name="backend_testGetLoanApplicationByUserIdAsStudent" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.007">
@@ -1684,19 +1684,19 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.599Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:33381/api/loanapplications/user/1
-2025-05-25T22:59:20.599Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.600Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-20] HTTP GET "/api/loanapplications/user/1"
-2025-05-25T22:59:20.600Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [501caa27-20] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
-2025-05-25T22:59:20.601Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [501caa27-20] Resource not found
-2025-05-25T22:59:20.601Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-20] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP GET /api/loanapplications/user/1
-2025-05-25T22:59:20.601Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-20] Encoding [{timestamp=Sun May 25 22:59:20 UTC 2025, path=/api/loanapplications/user/1, status=404, error=Not Fo (truncated)...]
-2025-05-25T22:59:20.602Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-20] Completed 404 NOT_FOUND
-2025-05-25T22:59:20.602Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
-2025-05-25T22:59:20.602Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+    <system-out><![CDATA[2025-05-26T01:25:38.072Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:40185/api/loanapplications/user/1
+2025-05-26T01:25:38.072Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:38.073Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-20] HTTP GET "/api/loanapplications/user/1"
+2025-05-26T01:25:38.074Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [34955a4a-20] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2025-05-26T01:25:38.074Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [34955a4a-20] Resource not found
+2025-05-26T01:25:38.075Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-20] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP GET /api/loanapplications/user/1
+2025-05-26T01:25:38.075Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-20] Encoding [{timestamp=Mon May 26 01:25:38 UTC 2025, path=/api/loanapplications/user/1, status=404, error=Not Fo (truncated)...]
+2025-05-26T01:25:38.076Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-20] Completed 404 NOT_FOUND
+2025-05-26T01:25:38.076Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-05-26T01:25:38.076Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
 ]]></system-out>
   </testcase>
-  <testcase name="backend_testGetLoanApplicationByUserIdAsAdmin" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.007">
+  <testcase name="backend_testGetLoanApplicationByUserIdAsAdmin" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.008">
     <failure message="expected: &lt;200 OK&gt; but was: &lt;404 NOT_FOUND&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <200 OK> but was: <404 NOT_FOUND>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -1777,16 +1777,16 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.606Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:33381/api/loanapplications/user/1
-2025-05-25T22:59:20.606Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.607Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-21] HTTP GET "/api/loanapplications/user/1"
-2025-05-25T22:59:20.608Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [501caa27-21] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
-2025-05-25T22:59:20.608Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [501caa27-21] Resource not found
-2025-05-25T22:59:20.608Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-21] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP GET /api/loanapplications/user/1
-2025-05-25T22:59:20.609Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-21] Encoding [{timestamp=Sun May 25 22:59:20 UTC 2025, path=/api/loanapplications/user/1, status=404, error=Not Fo (truncated)...]
-2025-05-25T22:59:20.609Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-21] Completed 404 NOT_FOUND
-2025-05-25T22:59:20.609Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
-2025-05-25T22:59:20.609Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+    <system-out><![CDATA[2025-05-26T01:25:38.080Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:40185/api/loanapplications/user/1
+2025-05-26T01:25:38.080Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:38.081Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-21] HTTP GET "/api/loanapplications/user/1"
+2025-05-26T01:25:38.082Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [34955a4a-21] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2025-05-26T01:25:38.083Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [34955a4a-21] Resource not found
+2025-05-26T01:25:38.083Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-21] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP GET /api/loanapplications/user/1
+2025-05-26T01:25:38.083Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-21] Encoding [{timestamp=Mon May 26 01:25:38 UTC 2025, path=/api/loanapplications/user/1, status=404, error=Not Fo (truncated)...]
+2025-05-26T01:25:38.084Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-21] Completed 404 NOT_FOUND
+2025-05-26T01:25:38.084Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-05-26T01:25:38.084Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
 ]]></system-out>
   </testcase>
   <testcase name="backend_testAddFeedbackByStudent" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.007">
@@ -1870,20 +1870,20 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.613Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:33381/api/feedback
-2025-05-25T22:59:20.613Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.613Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Writing [{"feedbackId": 1,"feedbackText": "Great application, really user-friendly!","date": "2024-09-15","user": {"userId": 1}}] as "application/json"
-2025-05-25T22:59:20.614Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-22] HTTP POST "/api/feedback"
-2025-05-25T22:59:20.615Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [501caa27-22] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
-2025-05-25T22:59:20.615Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [501caa27-22] Resource not found
-2025-05-25T22:59:20.615Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-22] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP POST /api/feedback
-2025-05-25T22:59:20.616Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-22] Encoding [{timestamp=Sun May 25 22:59:20 UTC 2025, path=/api/feedback, status=404, error=Not Found, message=nu (truncated)...]
-2025-05-25T22:59:20.616Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-22] Completed 404 NOT_FOUND
-2025-05-25T22:59:20.616Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
-2025-05-25T22:59:20.617Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+    <system-out><![CDATA[2025-05-26T01:25:38.088Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:40185/api/feedback
+2025-05-26T01:25:38.088Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:38.088Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Writing [{"feedbackId": 1,"feedbackText": "Great application, really user-friendly!","date": "2024-09-15","user": {"userId": 1}}] as "application/json"
+2025-05-26T01:25:38.089Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-22] HTTP POST "/api/feedback"
+2025-05-26T01:25:38.090Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [34955a4a-22] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2025-05-26T01:25:38.090Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [34955a4a-22] Resource not found
+2025-05-26T01:25:38.091Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-22] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP POST /api/feedback
+2025-05-26T01:25:38.091Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-22] Encoding [{timestamp=Mon May 26 01:25:38 UTC 2025, path=/api/feedback, status=404, error=Not Found, message=nu (truncated)...]
+2025-05-26T01:25:38.092Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-22] Completed 404 NOT_FOUND
+2025-05-26T01:25:38.092Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-05-26T01:25:38.092Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
 ]]></system-out>
   </testcase>
-  <testcase name="backend_testAddFeedbackByPolicyManager" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.007">
+  <testcase name="backend_testAddFeedbackByPolicyManager" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.037">
     <failure message="expected: &lt;403 FORBIDDEN&gt; but was: &lt;404 NOT_FOUND&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <404 NOT_FOUND>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -1964,20 +1964,20 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.620Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:33381/api/feedback
-2025-05-25T22:59:20.620Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.620Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Writing [{"feedbackId": 1,"feedbackText": "Great application, really user-friendly!","date": "2024-09-15","user": {"userId": 1}}] as "application/json"
-2025-05-25T22:59:20.621Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-23] HTTP POST "/api/feedback"
-2025-05-25T22:59:20.622Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [501caa27-23] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
-2025-05-25T22:59:20.623Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [501caa27-23] Resource not found
-2025-05-25T22:59:20.623Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-23] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP POST /api/feedback
-2025-05-25T22:59:20.623Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-23] Encoding [{timestamp=Sun May 25 22:59:20 UTC 2025, path=/api/feedback, status=404, error=Not Found, message=nu (truncated)...]
-2025-05-25T22:59:20.624Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-23] Completed 404 NOT_FOUND
-2025-05-25T22:59:20.624Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
-2025-05-25T22:59:20.624Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+    <system-out><![CDATA[2025-05-26T01:25:38.096Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:40185/api/feedback
+2025-05-26T01:25:38.096Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:38.096Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Writing [{"feedbackId": 1,"feedbackText": "Great application, really user-friendly!","date": "2024-09-15","user": {"userId": 1}}] as "application/json"
+2025-05-26T01:25:38.125Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-23] HTTP POST "/api/feedback"
+2025-05-26T01:25:38.126Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [34955a4a-23] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2025-05-26T01:25:38.127Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [34955a4a-23] Resource not found
+2025-05-26T01:25:38.127Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-23] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP POST /api/feedback
+2025-05-26T01:25:38.128Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-23] Encoding [{timestamp=Mon May 26 01:25:38 UTC 2025, path=/api/feedback, status=404, error=Not Found, message=nu (truncated)...]
+2025-05-26T01:25:38.129Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-23] Completed 404 NOT_FOUND
+2025-05-26T01:25:38.129Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-05-26T01:25:38.129Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
 ]]></system-out>
   </testcase>
-  <testcase name="backend_testAddFeedbackByAdmin" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.007">
+  <testcase name="backend_testAddFeedbackByAdmin" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.006">
     <failure message="expected: &lt;403 FORBIDDEN&gt; but was: &lt;404 NOT_FOUND&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <404 NOT_FOUND>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -2058,20 +2058,20 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.628Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:33381/api/feedback
-2025-05-25T22:59:20.628Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.628Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Writing [{"feedbackId": 1,"feedbackText": "Great application, really user-friendly!","date": "2024-09-15","user": {"userId": 1}}] as "application/json"
-2025-05-25T22:59:20.630Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-24] HTTP POST "/api/feedback"
-2025-05-25T22:59:20.630Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [501caa27-24] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
-2025-05-25T22:59:20.631Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [501caa27-24] Resource not found
-2025-05-25T22:59:20.631Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-24] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP POST /api/feedback
-2025-05-25T22:59:20.631Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-24] Encoding [{timestamp=Sun May 25 22:59:20 UTC 2025, path=/api/feedback, status=404, error=Not Found, message=nu (truncated)...]
-2025-05-25T22:59:20.632Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-24] Completed 404 NOT_FOUND
-2025-05-25T22:59:20.632Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
-2025-05-25T22:59:20.632Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+    <system-out><![CDATA[2025-05-26T01:25:38.133Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:40185/api/feedback
+2025-05-26T01:25:38.133Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:38.133Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Writing [{"feedbackId": 1,"feedbackText": "Great application, really user-friendly!","date": "2024-09-15","user": {"userId": 1}}] as "application/json"
+2025-05-26T01:25:38.134Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-24] HTTP POST "/api/feedback"
+2025-05-26T01:25:38.135Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [34955a4a-24] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2025-05-26T01:25:38.135Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [34955a4a-24] Resource not found
+2025-05-26T01:25:38.136Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-24] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP POST /api/feedback
+2025-05-26T01:25:38.136Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-24] Encoding [{timestamp=Mon May 26 01:25:38 UTC 2025, path=/api/feedback, status=404, error=Not Found, message=nu (truncated)...]
+2025-05-26T01:25:38.137Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-24] Completed 404 NOT_FOUND
+2025-05-26T01:25:38.137Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-05-26T01:25:38.137Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
 ]]></system-out>
   </testcase>
-  <testcase name="backend_testGetAllFeedbackByLoanManager" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.006">
+  <testcase name="backend_testGetAllFeedbackByLoanManager" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.007">
     <failure message="expected: &lt;200 OK&gt; but was: &lt;404 NOT_FOUND&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <200 OK> but was: <404 NOT_FOUND>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -2152,19 +2152,19 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.636Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:33381/api/feedback
-2025-05-25T22:59:20.636Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.637Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-25] HTTP GET "/api/feedback"
-2025-05-25T22:59:20.638Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [501caa27-25] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
-2025-05-25T22:59:20.638Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [501caa27-25] Resource not found
-2025-05-25T22:59:20.638Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-25] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP GET /api/feedback
-2025-05-25T22:59:20.639Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-25] Encoding [{timestamp=Sun May 25 22:59:20 UTC 2025, path=/api/feedback, status=404, error=Not Found, message=nu (truncated)...]
-2025-05-25T22:59:20.639Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-25] Completed 404 NOT_FOUND
-2025-05-25T22:59:20.639Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
-2025-05-25T22:59:20.639Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+    <system-out><![CDATA[2025-05-26T01:25:38.140Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:40185/api/feedback
+2025-05-26T01:25:38.140Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:38.141Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-25] HTTP GET "/api/feedback"
+2025-05-26T01:25:38.142Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [34955a4a-25] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2025-05-26T01:25:38.142Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [34955a4a-25] Resource not found
+2025-05-26T01:25:38.143Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-25] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP GET /api/feedback
+2025-05-26T01:25:38.143Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-25] Encoding [{timestamp=Mon May 26 01:25:38 UTC 2025, path=/api/feedback, status=404, error=Not Found, message=nu (truncated)...]
+2025-05-26T01:25:38.144Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-25] Completed 404 NOT_FOUND
+2025-05-26T01:25:38.144Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-05-26T01:25:38.144Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
 ]]></system-out>
   </testcase>
-  <testcase name="backend_testGetAllFeedbackByAdmin" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.006">
+  <testcase name="backend_testGetAllFeedbackByAdmin" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.008">
     <failure message="expected: &lt;200 OK&gt; but was: &lt;404 NOT_FOUND&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <200 OK> but was: <404 NOT_FOUND>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -2245,16 +2245,16 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.643Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:33381/api/feedback
-2025-05-25T22:59:20.643Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.644Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-26] HTTP GET "/api/feedback"
-2025-05-25T22:59:20.645Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [501caa27-26] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
-2025-05-25T22:59:20.645Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [501caa27-26] Resource not found
-2025-05-25T22:59:20.646Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-26] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP GET /api/feedback
-2025-05-25T22:59:20.646Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-26] Encoding [{timestamp=Sun May 25 22:59:20 UTC 2025, path=/api/feedback, status=404, error=Not Found, message=nu (truncated)...]
-2025-05-25T22:59:20.647Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-26] Completed 404 NOT_FOUND
-2025-05-25T22:59:20.647Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
-2025-05-25T22:59:20.647Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+    <system-out><![CDATA[2025-05-26T01:25:38.151Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:40185/api/feedback
+2025-05-26T01:25:38.152Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:38.153Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-26] HTTP GET "/api/feedback"
+2025-05-26T01:25:38.154Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [34955a4a-26] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2025-05-26T01:25:38.154Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [34955a4a-26] Resource not found
+2025-05-26T01:25:38.155Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-26] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP GET /api/feedback
+2025-05-26T01:25:38.155Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-26] Encoding [{timestamp=Mon May 26 01:25:38 UTC 2025, path=/api/feedback, status=404, error=Not Found, message=nu (truncated)...]
+2025-05-26T01:25:38.156Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-26] Completed 404 NOT_FOUND
+2025-05-26T01:25:38.156Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-05-26T01:25:38.156Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
 ]]></system-out>
   </testcase>
   <testcase name="backend_testGetAllFeedbackByCustomer" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.008">
@@ -2338,19 +2338,19 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.651Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:33381/api/feedback
-2025-05-25T22:59:20.651Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.652Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-27] HTTP GET "/api/feedback"
-2025-05-25T22:59:20.653Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [501caa27-27] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
-2025-05-25T22:59:20.654Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [501caa27-27] Resource not found
-2025-05-25T22:59:20.654Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-27] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP GET /api/feedback
-2025-05-25T22:59:20.655Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-27] Encoding [{timestamp=Sun May 25 22:59:20 UTC 2025, path=/api/feedback, status=404, error=Not Found, message=nu (truncated)...]
-2025-05-25T22:59:20.656Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-27] Completed 404 NOT_FOUND
-2025-05-25T22:59:20.656Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
-2025-05-25T22:59:20.656Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+    <system-out><![CDATA[2025-05-26T01:25:38.160Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:40185/api/feedback
+2025-05-26T01:25:38.160Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:38.161Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-27] HTTP GET "/api/feedback"
+2025-05-26T01:25:38.162Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [34955a4a-27] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2025-05-26T01:25:38.162Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [34955a4a-27] Resource not found
+2025-05-26T01:25:38.163Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-27] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP GET /api/feedback
+2025-05-26T01:25:38.163Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-27] Encoding [{timestamp=Mon May 26 01:25:38 UTC 2025, path=/api/feedback, status=404, error=Not Found, message=nu (truncated)...]
+2025-05-26T01:25:38.164Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-27] Completed 404 NOT_FOUND
+2025-05-26T01:25:38.164Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-05-26T01:25:38.164Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
 ]]></system-out>
   </testcase>
-  <testcase name="backend_testGetFeedbackByUserIdAsStudent" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.008">
+  <testcase name="backend_testGetFeedbackByUserIdAsStudent" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.007">
     <failure message="expected: &lt;200 OK&gt; but was: &lt;404 NOT_FOUND&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <200 OK> but was: <404 NOT_FOUND>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -2431,16 +2431,16 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.659Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:33381/api/feedback/user/1
-2025-05-25T22:59:20.659Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.661Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-28] HTTP GET "/api/feedback/user/1"
-2025-05-25T22:59:20.662Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [501caa27-28] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
-2025-05-25T22:59:20.662Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [501caa27-28] Resource not found
-2025-05-25T22:59:20.663Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-28] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP GET /api/feedback/user/1
-2025-05-25T22:59:20.663Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-28] Encoding [{timestamp=Sun May 25 22:59:20 UTC 2025, path=/api/feedback/user/1, status=404, error=Not Found, mes (truncated)...]
-2025-05-25T22:59:20.664Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-28] Completed 404 NOT_FOUND
-2025-05-25T22:59:20.664Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
-2025-05-25T22:59:20.664Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+    <system-out><![CDATA[2025-05-26T01:25:38.168Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:40185/api/feedback/user/1
+2025-05-26T01:25:38.168Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:38.169Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-28] HTTP GET "/api/feedback/user/1"
+2025-05-26T01:25:38.169Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [34955a4a-28] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2025-05-26T01:25:38.170Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [34955a4a-28] Resource not found
+2025-05-26T01:25:38.171Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-28] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP GET /api/feedback/user/1
+2025-05-26T01:25:38.171Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-28] Encoding [{timestamp=Mon May 26 01:25:38 UTC 2025, path=/api/feedback/user/1, status=404, error=Not Found, mes (truncated)...]
+2025-05-26T01:25:38.172Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-28] Completed 404 NOT_FOUND
+2025-05-26T01:25:38.172Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-05-26T01:25:38.172Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
 ]]></system-out>
   </testcase>
   <testcase name="backend_testGetFeedbackByUserIdAsLoanManager" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.007">
@@ -2524,19 +2524,19 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.668Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:33381/api/feedback/user/1
-2025-05-25T22:59:20.668Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.669Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-29] HTTP GET "/api/feedback/user/1"
-2025-05-25T22:59:20.670Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [501caa27-29] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
-2025-05-25T22:59:20.671Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [501caa27-29] Resource not found
-2025-05-25T22:59:20.671Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-29] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP GET /api/feedback/user/1
-2025-05-25T22:59:20.671Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-29] Encoding [{timestamp=Sun May 25 22:59:20 UTC 2025, path=/api/feedback/user/1, status=404, error=Not Found, mes (truncated)...]
-2025-05-25T22:59:20.672Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-29] Completed 404 NOT_FOUND
-2025-05-25T22:59:20.672Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
-2025-05-25T22:59:20.672Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+    <system-out><![CDATA[2025-05-26T01:25:38.175Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:40185/api/feedback/user/1
+2025-05-26T01:25:38.175Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:38.176Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-29] HTTP GET "/api/feedback/user/1"
+2025-05-26T01:25:38.177Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [34955a4a-29] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2025-05-26T01:25:38.178Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [34955a4a-29] Resource not found
+2025-05-26T01:25:38.178Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-29] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP GET /api/feedback/user/1
+2025-05-26T01:25:38.178Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-29] Encoding [{timestamp=Mon May 26 01:25:38 UTC 2025, path=/api/feedback/user/1, status=404, error=Not Found, mes (truncated)...]
+2025-05-26T01:25:38.179Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-29] Completed 404 NOT_FOUND
+2025-05-26T01:25:38.179Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-05-26T01:25:38.179Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
 ]]></system-out>
   </testcase>
-  <testcase name="backend_testGetFeedbackByUserIdAsAdmin" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.006">
+  <testcase name="backend_testGetFeedbackByUserIdAsAdmin" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.015">
     <failure message="expected: &lt;403 FORBIDDEN&gt; but was: &lt;404 NOT_FOUND&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <404 NOT_FOUND>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -2617,19 +2617,19 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.676Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:33381/api/feedback/user/1
-2025-05-25T22:59:20.676Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.677Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-30] HTTP GET "/api/feedback/user/1"
-2025-05-25T22:59:20.678Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [501caa27-30] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
-2025-05-25T22:59:20.678Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [501caa27-30] Resource not found
-2025-05-25T22:59:20.679Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-30] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP GET /api/feedback/user/1
-2025-05-25T22:59:20.679Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-30] Encoding [{timestamp=Sun May 25 22:59:20 UTC 2025, path=/api/feedback/user/1, status=404, error=Not Found, mes (truncated)...]
-2025-05-25T22:59:20.680Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-30] Completed 404 NOT_FOUND
-2025-05-25T22:59:20.680Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
-2025-05-25T22:59:20.680Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+    <system-out><![CDATA[2025-05-26T01:25:38.183Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:40185/api/feedback/user/1
+2025-05-26T01:25:38.183Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:38.184Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-30] HTTP GET "/api/feedback/user/1"
+2025-05-26T01:25:38.185Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [34955a4a-30] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2025-05-26T01:25:38.185Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [34955a4a-30] Resource not found
+2025-05-26T01:25:38.186Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-30] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP GET /api/feedback/user/1
+2025-05-26T01:25:38.186Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-30] Encoding [{timestamp=Mon May 26 01:25:38 UTC 2025, path=/api/feedback/user/1, status=404, error=Not Found, mes (truncated)...]
+2025-05-26T01:25:38.187Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-30] Completed 404 NOT_FOUND
+2025-05-26T01:25:38.187Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-05-26T01:25:38.187Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
 ]]></system-out>
   </testcase>
-  <testcase name="backend_testAddCollegeByAdmin" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.007">
+  <testcase name="backend_testAddCollegeByAdmin" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.035">
     <failure message="expected: &lt;201 CREATED&gt; but was: &lt;404 NOT_FOUND&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <404 NOT_FOUND>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -2710,20 +2710,20 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.683Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:33381/api/colleges
-2025-05-25T22:59:20.683Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.683Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Writing [{"collegeId": 1,"name": "Springfield University","address": "123 Elm Street, Springfield, IL, 62704","contactNumber": "+1-555-123-4567","email": "info@springfield.edu","website": "http://www.springfield.edu","courses": "Computer Science, Mechanical Engineering, Business Administration","status": "Active"}] as "application/json"
-2025-05-25T22:59:20.684Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-31] HTTP POST "/api/colleges"
-2025-05-25T22:59:20.685Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [501caa27-31] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
-2025-05-25T22:59:20.686Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [501caa27-31] Resource not found
-2025-05-25T22:59:20.686Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-31] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP POST /api/colleges
-2025-05-25T22:59:20.687Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-31] Encoding [{timestamp=Sun May 25 22:59:20 UTC 2025, path=/api/colleges, status=404, error=Not Found, message=nu (truncated)...]
-2025-05-25T22:59:20.688Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-31] Completed 404 NOT_FOUND
-2025-05-25T22:59:20.688Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
-2025-05-25T22:59:20.688Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+    <system-out><![CDATA[2025-05-26T01:25:38.199Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:40185/api/colleges
+2025-05-26T01:25:38.199Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:38.199Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Writing [{"collegeId": 1,"name": "Springfield University","address": "123 Elm Street, Springfield, IL, 62704","contactNumber": "+1-555-123-4567","email": "info@springfield.edu","website": "http://www.springfield.edu","courses": "Computer Science, Mechanical Engineering, Business Administration","status": "Active"}] as "application/json"
+2025-05-26T01:25:38.226Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-31] HTTP POST "/api/colleges"
+2025-05-26T01:25:38.227Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [34955a4a-31] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2025-05-26T01:25:38.228Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [34955a4a-31] Resource not found
+2025-05-26T01:25:38.229Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-31] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP POST /api/colleges
+2025-05-26T01:25:38.229Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-31] Encoding [{timestamp=Mon May 26 01:25:38 UTC 2025, path=/api/colleges, status=404, error=Not Found, message=nu (truncated)...]
+2025-05-26T01:25:38.230Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-31] Completed 404 NOT_FOUND
+2025-05-26T01:25:38.230Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-05-26T01:25:38.230Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
 ]]></system-out>
   </testcase>
-  <testcase name="backend_testAddCollegeByLoanManager" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.006">
+  <testcase name="backend_testAddCollegeByLoanManager" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.008">
     <failure message="expected: &lt;403 FORBIDDEN&gt; but was: &lt;404 NOT_FOUND&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <404 NOT_FOUND>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -2804,17 +2804,17 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.692Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:33381/api/colleges
-2025-05-25T22:59:20.692Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.692Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Writing [{"collegeId": 1,"name": "Springfield University","address": "123 Elm Street, Springfield, IL, 62704","contactNumber": "+1-555-123-4567","email": "info@springfield.edu","website": "http://www.springfield.edu","courses": "Computer Science, Mechanical Engineering, Business Administration","status": "Active"}] as "application/json"
-2025-05-25T22:59:20.693Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-32] HTTP POST "/api/colleges"
-2025-05-25T22:59:20.693Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [501caa27-32] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
-2025-05-25T22:59:20.694Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [501caa27-32] Resource not found
-2025-05-25T22:59:20.694Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-32] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP POST /api/colleges
-2025-05-25T22:59:20.694Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-32] Encoding [{timestamp=Sun May 25 22:59:20 UTC 2025, path=/api/colleges, status=404, error=Not Found, message=nu (truncated)...]
-2025-05-25T22:59:20.695Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-32] Completed 404 NOT_FOUND
-2025-05-25T22:59:20.695Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
-2025-05-25T22:59:20.695Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+    <system-out><![CDATA[2025-05-26T01:25:38.235Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:40185/api/colleges
+2025-05-26T01:25:38.235Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:38.235Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Writing [{"collegeId": 1,"name": "Springfield University","address": "123 Elm Street, Springfield, IL, 62704","contactNumber": "+1-555-123-4567","email": "info@springfield.edu","website": "http://www.springfield.edu","courses": "Computer Science, Mechanical Engineering, Business Administration","status": "Active"}] as "application/json"
+2025-05-26T01:25:38.237Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-32] HTTP POST "/api/colleges"
+2025-05-26T01:25:38.238Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [34955a4a-32] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2025-05-26T01:25:38.238Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [34955a4a-32] Resource not found
+2025-05-26T01:25:38.238Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-32] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP POST /api/colleges
+2025-05-26T01:25:38.239Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-32] Encoding [{timestamp=Mon May 26 01:25:38 UTC 2025, path=/api/colleges, status=404, error=Not Found, message=nu (truncated)...]
+2025-05-26T01:25:38.240Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-32] Completed 404 NOT_FOUND
+2025-05-26T01:25:38.240Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-05-26T01:25:38.240Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
 ]]></system-out>
   </testcase>
   <testcase name="backend_testAddCollegeByStudent" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.006">
@@ -2898,17 +2898,17 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.698Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:33381/api/colleges
-2025-05-25T22:59:20.698Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.698Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Writing [{"collegeId": 1,"name": "Springfield University","address": "123 Elm Street, Springfield, IL, 62704","contactNumber": "+1-555-123-4567","email": "info@springfield.edu","website": "http://www.springfield.edu","courses": "Computer Science, Mechanical Engineering, Business Administration","status": "Active"}] as "application/json"
-2025-05-25T22:59:20.699Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-33] HTTP POST "/api/colleges"
-2025-05-25T22:59:20.700Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [501caa27-33] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
-2025-05-25T22:59:20.700Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [501caa27-33] Resource not found
-2025-05-25T22:59:20.701Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-33] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP POST /api/colleges
-2025-05-25T22:59:20.701Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-33] Encoding [{timestamp=Sun May 25 22:59:20 UTC 2025, path=/api/colleges, status=404, error=Not Found, message=nu (truncated)...]
-2025-05-25T22:59:20.702Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-33] Completed 404 NOT_FOUND
-2025-05-25T22:59:20.702Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
-2025-05-25T22:59:20.702Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+    <system-out><![CDATA[2025-05-26T01:25:38.243Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:40185/api/colleges
+2025-05-26T01:25:38.244Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:38.244Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Writing [{"collegeId": 1,"name": "Springfield University","address": "123 Elm Street, Springfield, IL, 62704","contactNumber": "+1-555-123-4567","email": "info@springfield.edu","website": "http://www.springfield.edu","courses": "Computer Science, Mechanical Engineering, Business Administration","status": "Active"}] as "application/json"
+2025-05-26T01:25:38.245Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-33] HTTP POST "/api/colleges"
+2025-05-26T01:25:38.245Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [34955a4a-33] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2025-05-26T01:25:38.245Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [34955a4a-33] Resource not found
+2025-05-26T01:25:38.246Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-33] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP POST /api/colleges
+2025-05-26T01:25:38.246Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-33] Encoding [{timestamp=Mon May 26 01:25:38 UTC 2025, path=/api/colleges, status=404, error=Not Found, message=nu (truncated)...]
+2025-05-26T01:25:38.247Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-33] Completed 404 NOT_FOUND
+2025-05-26T01:25:38.247Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-05-26T01:25:38.247Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
 ]]></system-out>
   </testcase>
   <testcase name="backend_testGetAllCollegeByAdmin" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.005">
@@ -2992,16 +2992,16 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.705Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:33381/api/colleges
-2025-05-25T22:59:20.705Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.705Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-34] HTTP GET "/api/colleges"
-2025-05-25T22:59:20.706Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [501caa27-34] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
-2025-05-25T22:59:20.707Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [501caa27-34] Resource not found
-2025-05-25T22:59:20.707Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-34] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP GET /api/colleges
-2025-05-25T22:59:20.707Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-34] Encoding [{timestamp=Sun May 25 22:59:20 UTC 2025, path=/api/colleges, status=404, error=Not Found, message=nu (truncated)...]
-2025-05-25T22:59:20.708Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-34] Completed 404 NOT_FOUND
-2025-05-25T22:59:20.708Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
-2025-05-25T22:59:20.708Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+    <system-out><![CDATA[2025-05-26T01:25:38.250Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:40185/api/colleges
+2025-05-26T01:25:38.250Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:38.251Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-34] HTTP GET "/api/colleges"
+2025-05-26T01:25:38.251Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [34955a4a-34] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2025-05-26T01:25:38.252Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [34955a4a-34] Resource not found
+2025-05-26T01:25:38.252Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-34] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP GET /api/colleges
+2025-05-26T01:25:38.252Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-34] Encoding [{timestamp=Mon May 26 01:25:38 UTC 2025, path=/api/colleges, status=404, error=Not Found, message=nu (truncated)...]
+2025-05-26T01:25:38.253Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-34] Completed 404 NOT_FOUND
+2025-05-26T01:25:38.253Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-05-26T01:25:38.253Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
 ]]></system-out>
   </testcase>
   <testcase name="backend_testGetAllCollegeByStudent" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.006">
@@ -3085,19 +3085,19 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.711Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:33381/api/colleges
-2025-05-25T22:59:20.711Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.712Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-35] HTTP GET "/api/colleges"
-2025-05-25T22:59:20.713Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [501caa27-35] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
-2025-05-25T22:59:20.714Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [501caa27-35] Resource not found
-2025-05-25T22:59:20.714Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-35] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP GET /api/colleges
-2025-05-25T22:59:20.714Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-35] Encoding [{timestamp=Sun May 25 22:59:20 UTC 2025, path=/api/colleges, status=404, error=Not Found, message=nu (truncated)...]
-2025-05-25T22:59:20.715Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-35] Completed 404 NOT_FOUND
-2025-05-25T22:59:20.715Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
-2025-05-25T22:59:20.715Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+    <system-out><![CDATA[2025-05-26T01:25:38.257Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:40185/api/colleges
+2025-05-26T01:25:38.257Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:38.258Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-35] HTTP GET "/api/colleges"
+2025-05-26T01:25:38.258Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [34955a4a-35] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2025-05-26T01:25:38.259Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [34955a4a-35] Resource not found
+2025-05-26T01:25:38.259Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-35] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP GET /api/colleges
+2025-05-26T01:25:38.259Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-35] Encoding [{timestamp=Mon May 26 01:25:38 UTC 2025, path=/api/colleges, status=404, error=Not Found, message=nu (truncated)...]
+2025-05-26T01:25:38.260Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-35] Completed 404 NOT_FOUND
+2025-05-26T01:25:38.260Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-05-26T01:25:38.260Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
 ]]></system-out>
   </testcase>
-  <testcase name="backend_testGetAllCollegeByLoanManager" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.013">
+  <testcase name="backend_testGetAllCollegeByLoanManager" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.006">
     <failure message="expected: &lt;403 FORBIDDEN&gt; but was: &lt;404 NOT_FOUND&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <404 NOT_FOUND>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -3178,19 +3178,19 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.726Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:33381/api/colleges
-2025-05-25T22:59:20.726Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.727Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-36] HTTP GET "/api/colleges"
-2025-05-25T22:59:20.727Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [501caa27-36] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
-2025-05-25T22:59:20.727Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [501caa27-36] Resource not found
-2025-05-25T22:59:20.728Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-36] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP GET /api/colleges
-2025-05-25T22:59:20.728Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-36] Encoding [{timestamp=Sun May 25 22:59:20 UTC 2025, path=/api/colleges, status=404, error=Not Found, message=nu (truncated)...]
-2025-05-25T22:59:20.729Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-36] Completed 404 NOT_FOUND
-2025-05-25T22:59:20.729Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
-2025-05-25T22:59:20.729Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+    <system-out><![CDATA[2025-05-26T01:25:38.263Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:40185/api/colleges
+2025-05-26T01:25:38.263Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:38.264Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-36] HTTP GET "/api/colleges"
+2025-05-26T01:25:38.265Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [34955a4a-36] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2025-05-26T01:25:38.265Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [34955a4a-36] Resource not found
+2025-05-26T01:25:38.265Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-36] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP GET /api/colleges
+2025-05-26T01:25:38.266Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-36] Encoding [{timestamp=Mon May 26 01:25:38 UTC 2025, path=/api/colleges, status=404, error=Not Found, message=nu (truncated)...]
+2025-05-26T01:25:38.266Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-36] Completed 404 NOT_FOUND
+2025-05-26T01:25:38.266Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-05-26T01:25:38.266Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
 ]]></system-out>
   </testcase>
-  <testcase name="backend_testGetCollegeByIdAsAdmin" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.005">
+  <testcase name="backend_testGetCollegeByIdAsAdmin" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.006">
     <failure message="expected: &lt;200 OK&gt; but was: &lt;404 NOT_FOUND&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <200 OK> but was: <404 NOT_FOUND>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -3271,16 +3271,16 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.731Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:33381/api/colleges/1
-2025-05-25T22:59:20.732Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.732Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-37] HTTP GET "/api/colleges/1"
-2025-05-25T22:59:20.733Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [501caa27-37] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
-2025-05-25T22:59:20.733Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [501caa27-37] Resource not found
-2025-05-25T22:59:20.734Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-37] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP GET /api/colleges/1
-2025-05-25T22:59:20.734Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-37] Encoding [{timestamp=Sun May 25 22:59:20 UTC 2025, path=/api/colleges/1, status=404, error=Not Found, message= (truncated)...]
-2025-05-25T22:59:20.734Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-37] Completed 404 NOT_FOUND
-2025-05-25T22:59:20.734Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
-2025-05-25T22:59:20.734Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+    <system-out><![CDATA[2025-05-26T01:25:38.270Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:40185/api/colleges/1
+2025-05-26T01:25:38.270Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:38.271Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-37] HTTP GET "/api/colleges/1"
+2025-05-26T01:25:38.271Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [34955a4a-37] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2025-05-26T01:25:38.272Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [34955a4a-37] Resource not found
+2025-05-26T01:25:38.272Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-37] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP GET /api/colleges/1
+2025-05-26T01:25:38.272Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-37] Encoding [{timestamp=Mon May 26 01:25:38 UTC 2025, path=/api/colleges/1, status=404, error=Not Found, message= (truncated)...]
+2025-05-26T01:25:38.273Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-37] Completed 404 NOT_FOUND
+2025-05-26T01:25:38.273Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-05-26T01:25:38.273Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
 ]]></system-out>
   </testcase>
   <testcase name="backend_testGetCollegeByIdAsStudent" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.005">
@@ -3364,16 +3364,16 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.737Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:33381/api/colleges/1
-2025-05-25T22:59:20.737Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.738Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-38] HTTP GET "/api/colleges/1"
-2025-05-25T22:59:20.738Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [501caa27-38] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
-2025-05-25T22:59:20.739Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [501caa27-38] Resource not found
-2025-05-25T22:59:20.739Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-38] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP GET /api/colleges/1
-2025-05-25T22:59:20.739Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-38] Encoding [{timestamp=Sun May 25 22:59:20 UTC 2025, path=/api/colleges/1, status=404, error=Not Found, message= (truncated)...]
-2025-05-25T22:59:20.740Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-38] Completed 404 NOT_FOUND
-2025-05-25T22:59:20.740Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
-2025-05-25T22:59:20.740Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+    <system-out><![CDATA[2025-05-26T01:25:38.276Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:40185/api/colleges/1
+2025-05-26T01:25:38.276Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:38.277Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-38] HTTP GET "/api/colleges/1"
+2025-05-26T01:25:38.277Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [34955a4a-38] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2025-05-26T01:25:38.278Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [34955a4a-38] Resource not found
+2025-05-26T01:25:38.278Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-38] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP GET /api/colleges/1
+2025-05-26T01:25:38.278Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-38] Encoding [{timestamp=Mon May 26 01:25:38 UTC 2025, path=/api/colleges/1, status=404, error=Not Found, message= (truncated)...]
+2025-05-26T01:25:38.279Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-38] Completed 404 NOT_FOUND
+2025-05-26T01:25:38.279Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-05-26T01:25:38.279Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
 ]]></system-out>
   </testcase>
   <testcase name="backend_testGetCollegeByIdAsLoanManager" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.005">
@@ -3457,19 +3457,19 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.742Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:33381/api/colleges/1
-2025-05-25T22:59:20.742Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.743Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-39] HTTP GET "/api/colleges/1"
-2025-05-25T22:59:20.743Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [501caa27-39] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
-2025-05-25T22:59:20.744Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [501caa27-39] Resource not found
-2025-05-25T22:59:20.744Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-39] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP GET /api/colleges/1
-2025-05-25T22:59:20.744Z DEBUG 15280 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [501caa27-39] Encoding [{timestamp=Sun May 25 22:59:20 UTC 2025, path=/api/colleges/1, status=404, error=Not Found, message= (truncated)...]
-2025-05-25T22:59:20.745Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-39] Completed 404 NOT_FOUND
-2025-05-25T22:59:20.745Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
-2025-05-25T22:59:20.745Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+    <system-out><![CDATA[2025-05-26T01:25:38.281Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:40185/api/colleges/1
+2025-05-26T01:25:38.282Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:38.282Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-39] HTTP GET "/api/colleges/1"
+2025-05-26T01:25:38.283Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [34955a4a-39] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2025-05-26T01:25:38.283Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [34955a4a-39] Resource not found
+2025-05-26T01:25:38.283Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-39] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP GET /api/colleges/1
+2025-05-26T01:25:38.284Z DEBUG 49210 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [34955a4a-39] Encoding [{timestamp=Mon May 26 01:25:38 UTC 2025, path=/api/colleges/1, status=404, error=Not Found, message= (truncated)...]
+2025-05-26T01:25:38.284Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-39] Completed 404 NOT_FOUND
+2025-05-26T01:25:38.284Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-05-26T01:25:38.284Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
 ]]></system-out>
   </testcase>
-  <testcase name="backend_testLoginInValidCredential" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.015">
+  <testcase name="backend_testLoginInValidCredential" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.014">
     <failure message="expected: &lt;403 FORBIDDEN&gt; but was: &lt;500 INTERNAL_SERVER_ERROR&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <500 INTERNAL_SERVER_ERROR>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -3550,13 +3550,13 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-25T22:59:20.747Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:33381/api/users/login
-2025-05-25T22:59:20.747Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-25T22:59:20.747Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Writing [{"email": "demoloanmanager@gmail.com", "password": "manager@123weevfdsgfsvfbffdf3324"}] as "application/json"
-2025-05-25T22:59:20.748Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-40] HTTP POST "/api/users/login"
-2025-05-25T22:59:20.759Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Response 500 INTERNAL_SERVER_ERROR
-2025-05-25T22:59:20.759Z DEBUG 15280 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
-2025-05-25T22:59:20.759Z DEBUG 15280 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [501caa27-40] Completed 500 INTERNAL_SERVER_ERROR
+    <system-out><![CDATA[2025-05-26T01:25:38.287Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:40185/api/users/login
+2025-05-26T01:25:38.287Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-26T01:25:38.287Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Writing [{"email": "demoloanmanager@gmail.com", "password": "manager@123weevfdsgfsvfbffdf3324"}] as "application/json"
+2025-05-26T01:25:38.288Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-40] HTTP POST "/api/users/login"
+2025-05-26T01:25:38.298Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Response 500 INTERNAL_SERVER_ERROR
+2025-05-26T01:25:38.298Z DEBUG 49210 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+2025-05-26T01:25:38.298Z DEBUG 49210 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [34955a4a-40] Completed 500 INTERNAL_SERVER_ERROR
 ]]></system-out>
   </testcase>
 </testsuite>
