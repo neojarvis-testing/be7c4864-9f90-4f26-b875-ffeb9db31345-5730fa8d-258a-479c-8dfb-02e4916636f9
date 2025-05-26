@@ -1,9 +1,9 @@
-package com.examly.springloan.exception;
+package com.examly.springapploan.exception;
 
-public class AuthException extends Exception{
+public class AuthException extends RuntimeException{
  
     public AuthException(String message){
-        super(mesage);
+        super(message);
     }
 
 }

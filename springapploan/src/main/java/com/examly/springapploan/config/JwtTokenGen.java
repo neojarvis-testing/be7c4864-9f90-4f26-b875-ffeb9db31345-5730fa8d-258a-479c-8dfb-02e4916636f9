@@ -7,22 +7,21 @@ import org.springframework.stereotype.Component;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import com.examly.springapploan.exception.*;
  
 
-@Component
 public class JwtTokenGen {
 
+    private static final String SECRET_KEY = "mytestkey";
 
-    private final String SECRET_KEY = "mytestkey";
-
-    public String generateToken(String username,String role){
+    public static String generateToken(String username,String role){
         Map<String,Object> claims = new HashMap<>(); 
         claims.put("userId", role); 
         claims.put("role", role);
         return createToken(claims, username);
     }
 
-    private String createToken(Map<String, Object> claims,String subject){
+    private static String createToken(Map<String, Object> claims,String subject){
         return Jwts.builder()
         .setClaims(claims)
         .setSubject(subject) 
@@ -33,31 +32,32 @@ public class JwtTokenGen {
     }
 
     
-    public Claims extractClaims(String token) throws AuthException{
+    private static Claims extractClaims(String token) throws AuthException{
         try{
         return Jwts.parser()
         .setSigningKey(SECRET_KEY)
-        .parseClaimsJws(token)
+        .parseClaimsJws(token.substring(7))
         .getBody();}
         catch(Exception e){
-            throw AuthException("Invalid Token");
+            throw new AuthException("Invalid Token");
         }
     }
 
-    public String getUserName(String jwtToken){
+    public static String getUserName(String jwtToken) throws AuthException{
+    
         return extractClaims(jwtToken).getSubject();
     }
-    public String getUserRole(String jwtToken){
+
+    public static String getUserRole(String jwtToken) throws AuthException{
         return extractClaims(jwtToken).get("role",String.class);
     }
-
-    public String getUserId(String jwtToken) throws AuthException{
+    
+    public static String getUserId(String jwtToken) throws AuthException{
         
-            return extractClaims(jwtToken).get("userId",String.class);
-        
+        return extractClaims(jwtToken).get("userId",String.class);
     }
  
-    public boolean isTokenExpired(String token){
+    public boolean isTokenExpired(String token) throws AuthException{
 
         return extractClaims(token).getExpiration().before(new Date());
     }
