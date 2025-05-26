@@ -1,24 +1,101 @@
 import React,{useState} from 'react'; 
 import './CollegeForm.css'
+// import { freezeDraftable } from '@reduxjs/toolkit/dist/utils';
 const CollegeForm = () => {
+
+    const [formData, setFormData] = useState(
+        {
+            name : '',
+            address : '',
+            contactNumber : '',
+            email : '',
+            website : '',
+            courses : '',
+            status : ''
+        }
+    );
+
+    const [errors, setErrors] = useState(
+        {
+            name : '',
+            address : '',
+            contactNumber : '',
+            email : '',
+            website : '',
+            courses : '',
+            status : ''
+        }
+    );
+
+    const handleChange = (e) =>{
+        const {name, value} = e.target;
+        setFormData((prevData) => ({
+            ...prevData, [name] : value
+        }))
+
+        if(errors[name]){
+            setErrors((prevError) => ({
+                ...prevError,
+                [name] : undefined
+            }))
+        }
+    }
+
+    const validateForm = () => {
+        let newErrors = {};
+        if(!formData.name.trim()){
+            newErrors.name = "College name is required"
+        }
+        if(!formData.address.trim()){
+            newErrors.address = "Address is required"
+        }
+        if(!formData.contactNumber.trim()){
+            newErrors.contactNumber = "Contact number is required"
+        }
+        if(!formData.courses.trim()){
+            newErrors.courses = "Courses are required"
+        }
+        setErrors(newErrors)
+        return Object.keys(newErrors).length === 0;
+    }
+
+    const [check, setCheck] = useState(false);
+
+    const handleSubmit = (e) => {
+        
+        e.preventDefault();
+        setCheck(true)
+        const isValid = validateForm();
+        if(isValid){
+            // logic
+        }else{
+            // logic
+        }
+    }
  
 return (
-
+<>
    <div className='form-container'>
-    <form className='form-box'>
+    {/* {check ? (<div> College name is required Address is required Contact number is required Courses are required</div>) : (<div> d</div>)} */}
+    
+    <form className='form-box' onSubmit={handleSubmit}>
         <h2>Create New College</h2>
-        <input type='text' name='name' placeholder='College Name' required />
-        <input type='text'  name='address' placeholder='College Address' required />
-        <input type='text'  name='contact Number' placeholder='Contact Number' required />
-        <input type='text'  name='email' placeholder='Email' required />
-        <input type='text'  name='website' placeholder='Website' required />
-        <input type='text'  name='courses' placeholder='Courses' required />
-        <input type='text'  name='status' placeholder='Status' required />
+        <input type='text' name='name' placeholder='College Name' value={formData.name} onChange={handleChange} />
+        {errors.name && <div>{errors.name}</div>}
+        <input type='text'  name='address' placeholder='College Address' value={formData.address} onChange={handleChange}  />
+        {errors.address && <div>{errors.address}</div>}
+        <input type='text'  name='contactNumber' placeholder='Contact Number' value={formData.contactNumber} onChange={handleChange}  />
+        {errors.contactNumber && <div>{errors.contactNumber}</div>}
+        <input type='text'  name='email' placeholder='Email' value={formData.email} onChange={handleChange}  />
+        <input type='text'  name='website' placeholder='Website' value={formData.website} onChange={handleChange}  />
+        <input type='text'  name='courses' placeholder='Courses' value={formData.courses} onChange={handleChange}  />
+        {errors.courses && <div>{errors.courses}</div>}
+        <input type='text'  name='status' placeholder='Status' value={formData.status} onChange={handleChange}  />
         <br/>
-        <button type='submit' name="Add College">Add College</button>
+        <button type='submit' name="Add College" role='button'>Add College</button>
     </form>
    </div>
-
+</>
 );
 
 };

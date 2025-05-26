@@ -2,7 +2,9 @@ import React from 'react'
 
 const ViewFeedback = () => {
   return (
-    <div>ViewFeedback</div>
+    <div>
+      <h1>Student Feedbacks</h1>
+    </div>
   )
 }
 
