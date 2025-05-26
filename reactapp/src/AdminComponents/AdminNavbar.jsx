@@ -1,21 +1,39 @@
 import React,{useState} from 'react'; 
-import './AdminNavbar.css'
-const AdminNavbar = () => {
- 
+import {useDispatch} from "react-redux"
+import {useNavigate} from "react-router-dom"
+import '../css/Navbar.css'
+import {logout} from '../userSlice'
+
+
+
+const AdminNavbar = ({username,userRole,setCurrentPage}) => {
+
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        dispatch(logout());
+        navigate("/login");
+    }
+
+
 return (
     <div className='navbar'>
-    <div className='nav-links'>
-        <a href='/home'>Home</a> 
-        <div className='dropdown'>
-            <button className='bropbtn'>College
-            <div className='dropdown-content'>
-                <a href='/college-form'>Add College</a>
-                <a href='/view-college'>View Colleges</a>
+    <div className='nav-menu'>
+       <div className='username'>Welcome {username}!, UserRole: {userRole}</div> 
+       <div className='nav-item' onClick={()=> setCurrentPage('Dashboard')}>Home</div> 
+
+       <div className='nav-item'>
+            Colleges
+            <div className='dropdown'>
+                <div className='dropdown-item' onClick={()=> setCurrentPage('CollegeForm')}>Add College</div>
+                <div  className='dropdown-item' onClick={()=> setCurrentPage('ViewColleges')}>View Colleges</div>
             </div>
-            </button>
-        </div>
-        <a href='/college-approval'>Adminion Approval</a>
-        <a href='/view-feedback'>Feedback</a>
+        </div> 
+      
+        <div  className='nav-item'  onClick={()=> setCurrentPage('CollegeApproval')}> College Approval</div>
+        <div  className='nav-item'  onClick={()=> setCurrentPage('ViewFeedback')}>View Colleges</div>
+        <div  className='nav-item'  onClick={handleLogout}>Logout</div>
     </div>
     </div>
     ); 

@@ -25,9 +25,17 @@ public class JwtRequestFilter implements GatewayFilter{
 
     private final String SECRET_KEY = "mytestkey";
     private static final Logger logger = LoggerFactory.getLogger(JwtRequestFilter.class);
-    private final List<String> studentAccess = List.of("/api/loan/");
-    private final List<String> loanManagerAccess = List.of("/api/loan/");
-    private final List<String> adminAccess = List.of("/api/loan/");
+    private static final List<String> studentAccess = List.of(
+        "/api/loans"
+        );
+
+    private static final List<String> loanManagerAccess = List.of(
+        "/api/loans"
+        );
+        
+    private static final List<String> adminAccess = List.of(
+        "/api/loans"
+        );
 
   
     public Claims extractClaims(String token){
@@ -53,10 +61,9 @@ public class JwtRequestFilter implements GatewayFilter{
             logger.error("Authorization Header Missing:{}",request.getPath());
             response.setStatusCode(HttpStatus.UNAUTHORIZED);
             return response.setComplete();
-        }
-        else{
+        }else{
             String authHeader = request.getHeaders().getOrEmpty("Authorization").get(0);
-
+                logger.info("header{}",authHeader);
             if(!authHeader.startsWith("Bearer ")){
                 logger.error("Authorization header should start with Bearer:{}",authHeader);
                 response.setStatusCode(HttpStatus.UNAUTHORIZED);
@@ -67,27 +74,19 @@ public class JwtRequestFilter implements GatewayFilter{
 
             Claims claims;
 
-            try{
+            try{ 
                 claims = extractClaims(jwtToken);
-                String username =  extractClaims(jwtToken).getSubject();
-                String role = extractClaims(jwtToken).get("role",String.class);
-                
-               if(StringUtils.equals("STUDENT", role) && studentAccess.contains(request.getPath())){
-                logger.info("STUDENT {} GRANTED for {}",username,role);
-                 return chain.filter(exchange);
-               }
-               else if(StringUtils.equals("LOAN_MANAGER", role) && loanManagerAccess.contains(request.getPath())){
-                logger.info("LOAN_MANAGER {} GRANTED for {}",username,role);
-                return chain.filter(exchange);
-               }
-               else if(StringUtils.equals("ADMIN", role) && adminAccess.contains(request.getPath())){
-               logger.info("STUDENT {} ADMIN GRANTED for {}",username,role);
-               return chain.filter(exchange);
-            }else{
-                logger.info("UNAUTHORIZED user:{}, role:{}",username,role);
+                String username =  extractClaims(jwtToken).getSubject(); 
+                String role = extractClaims(jwtToken).get("role",String.class); 
+                logger.info("checking :user{},role:{},path:{}",username,role, request.getPath());
+                if(checkAccess(role, request.getPath().toString())){
+                    logger.info("Permission {} GRANTED for {}",username,role);
+                    return chain.filter(exchange);
+                }else{
+                logger.info("UNAUTHORIZED user:{}, role:{} path:{}",username,role, request.getPath());
                 response.setStatusCode(HttpStatus.UNAUTHORIZED);
                 return response.setComplete();
-                 }   
+                }  
             }catch(Exception e){
                 logger.error("Invalid Token:{}, Error:{}",jwtToken,e.toString());
             }
@@ -97,5 +96,27 @@ public class JwtRequestFilter implements GatewayFilter{
              }   
          }
         
+         private static boolean checkAccess(String role, String path){
+
+            if(role.equals("Student")){
+                for (String savedPath : studentAccess) {
+                    if(path.startsWith(savedPath)){return true;}
+                }
+            }
+
+            if(role.equals("LoanManager")){
+                for (String savedPath : loanManagerAccess) {
+                    if(path.startsWith(savedPath)){return true;}
+                }
+            }
+
+            if(role.equals("Admin")){
+                for (String savedPath : adminAccess) {
+                    if(path.startsWith(savedPath)){return true;}
+                }
+            }
+
+            return false;
+         }
     
 }

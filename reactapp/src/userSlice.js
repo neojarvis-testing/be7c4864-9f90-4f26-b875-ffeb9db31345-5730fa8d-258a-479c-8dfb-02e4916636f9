@@ -20,16 +20,13 @@ const userSlice = createSlice({
             state.userRole =userRole;
             state.userId = userId; 
             state.username =username;
-            state.isAuthenicated = true;
-
-            // console.log(email+" "+state.email);
-            // console.log(token+" "+state.token);
-            // console.log(role+" "+state.userRole);
+            state.isAuthenicated = true; 
             localStorage.setItem("email",email);
             localStorage.setItem("token", token);
             localStorage.setItem("userRole", userRole);
             localStorage.setItem("userId", userId);
             localStorage.setItem("username", username);
+            localStorage.setItem("isAuthenicated", true);
         },
         signUpSuccess: (state, action)=>{
             state.name = action.payload.name; 
@@ -37,9 +34,19 @@ const userSlice = createSlice({
             state.isAuthenicated = false;
         },
         logout: (state)=>{
-            state.email=null;
-            state.token=null;
-            state.isAuthenicated=false;
+            state.email = null;
+            state.token = null; 
+            state.userRole =null;
+            state.userId = null; 
+            state.username =null;
+            state.isAuthenicated = false; 
+ 
+            localStorage.removeItem("email");
+            localStorage.removeItem("token");
+            localStorage.removeItem("userRole");
+            localStorage.removeItem("userId");
+            localStorage.removeItem("username");
+            localStorage.removeItem("isAuthenicated");
         }
     }
 });

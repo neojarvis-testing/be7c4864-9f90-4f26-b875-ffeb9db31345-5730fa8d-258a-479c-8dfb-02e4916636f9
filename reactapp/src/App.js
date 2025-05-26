@@ -24,6 +24,8 @@ const App = () => {
             <Route path="/view-feedback" element={<ViewFeedback />} />
             <Route path="/college-approval" element={<CollegeApproval />} />
 
+            
+
         </Routes>
     </Router>
     );
