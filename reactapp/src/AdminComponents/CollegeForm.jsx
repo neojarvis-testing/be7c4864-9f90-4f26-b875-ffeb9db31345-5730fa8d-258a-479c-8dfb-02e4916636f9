@@ -1,6 +1,6 @@
 import React,{useState} from 'react'; 
 import './CollegeForm.css'
-const CollegeForm = () => {
+const CollegeForm = ({userId}) => {
  
 return (
 
