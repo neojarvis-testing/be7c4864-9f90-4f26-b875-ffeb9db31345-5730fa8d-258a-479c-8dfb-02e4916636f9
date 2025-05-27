@@ -1,51 +1,65 @@
-<<<<<<< HEAD
-=======
-import React,{useState} from 'react'; 
+import React,{useEffect, useState} from 'react'; 
 import axios from 'axios';
 import {baseUrl} from '../apiConfig' 
 import './ViewColleges.css'
-const ViewColleges = () => {
+const ViewColleges = ({token}) => {
  
-    const [loading,setLoading] = useState(false);
-   
+   const [loading,setLoading] = useState(false);
+   const [data,datas] = useState([]);
+  
+useEffect(()=> {
+const fetchData = async () => {
+    
+    setLoading(true);
+    try{
+        const headers = {
+            "Authorization":`Bearer ${token}`,
+            "Content-Type":"application/json"
+        }
+      const response = axios.get(`${baseUrl}/api/colleges`,formData,{ headers });
+      setData(response.data);
+    }catch(error){
+        alert("Failed to Fetch Data:"+error);
+    }
+    finally{
+        setLoading(false);
+    }
+};
+fetchData();
+},[]);
  
-            // Call API
-const headers = {
-    "Authorization":`Bearer ${token}`,
-    "Content-Type":"application/json"
-
-}
-
-
-
 return (
 
     <div className='form-container'>
     <div className='form-box'>
-        <h2>View College</h2>
+        <h2>View College</h2> 
+        {loading?(
+            <p>Loading</p>
+        ) : datas.length ===0 ? (
+            <p>No Data Found</p>
+        ) :
+        (
 
-        <input type='text' name='name' placeholder='College Name' required />
-        <br/>
-        <table>
+            <table>
             <thead>
                 <tr>
-                    <th>head 1</th>
-                    <th>head 2</th>
-                    <th>item 3</th>
-                    <th>item 4</th>
-                    <th>item 5</th>
+                    <th>College Id</th>
+                    <th>College Name</th> 
                 </tr>
             </thead>
             <tbody>
             <tr>
-                    <th>body 1</th>
-                    <th>body 2</th>
-                    <th>body 3</th>
-                    <th>body 4</th>
-                    <th>body 5</th>
+                    <th>{data.collegeId}</th>
+                    <th>{data.collegeName}</th> 
                 </tr>
             </tbody>
         </table>
+
+
+        )
+    }
+    
+
     </div>
    </div>
 
