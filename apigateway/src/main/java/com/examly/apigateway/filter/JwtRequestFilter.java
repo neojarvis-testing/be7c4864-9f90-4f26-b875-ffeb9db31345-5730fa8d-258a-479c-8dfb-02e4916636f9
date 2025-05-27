@@ -26,11 +26,13 @@ public class JwtRequestFilter implements GatewayFilter{
     private final String SECRET_KEY = "mytestkey";
     private static final Logger logger = LoggerFactory.getLogger(JwtRequestFilter.class);
     private static final List<String> studentAccess = List.of(
-        "/api/loans"
+        "/api/loans",
+        "/api/colleges"
         );
 
     private static final List<String> loanManagerAccess = List.of(
-        "/api/loans"
+        "/api/loans",
+        "/api/colleges"
         );
         
     private static final List<String> adminAccess = List.of(
