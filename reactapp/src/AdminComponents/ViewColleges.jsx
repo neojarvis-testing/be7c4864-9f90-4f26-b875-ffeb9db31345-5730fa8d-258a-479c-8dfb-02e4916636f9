@@ -7,12 +7,14 @@ const ViewColleges = () => {
     const [loading,setLoading] = useState(false);
    
  
-            // Call API 
+            // Call API
 const headers = {
     "Authorization":`Bearer ${token}`,
     "Content-Type":"application/json"
 
-} 
+}
+
+
 
 return (
 
