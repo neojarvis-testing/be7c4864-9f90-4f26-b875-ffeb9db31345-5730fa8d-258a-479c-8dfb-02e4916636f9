@@ -52,8 +52,7 @@ public class JwtTokenGen {
         return extractClaims(jwtToken).get("role",String.class);
     }
     
-    public static String getUserId(String jwtToken) throws AuthException{
-        
+    public static String getUserId(String jwtToken) throws AuthException{ 
         return extractClaims(jwtToken).get("userId",String.class);
     }
  
