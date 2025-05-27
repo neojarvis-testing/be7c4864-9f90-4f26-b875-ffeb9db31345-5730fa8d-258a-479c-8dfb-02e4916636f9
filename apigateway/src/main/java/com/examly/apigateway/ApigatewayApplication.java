@@ -12,8 +12,6 @@ public class ApigatewayApplication {
 		SpringApplication.run(ApigatewayApplication.class, args);
 	}
 
-<<<<<<< HEAD
-=======
 	@Bean
 	public RouteLocator apiRouteLocator(RouteLocatorBuilder builder){
 		return builder.routes()
@@ -32,6 +30,5 @@ public class ApigatewayApplication {
 		.build();
 	}
 
->>>>>>> 31f5b23b19564ba6766de4f13bc885fe42bc3612
 }
         
