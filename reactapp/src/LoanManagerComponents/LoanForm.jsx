@@ -71,10 +71,10 @@ const LoanForm = ({token}) => {
     const isValid = validateForm();
     if(isValid){
       // Call API 
-const headers = {
-"Authorization":`Bearer ${token}`,
-"Content-Type":"application/json"
-}
+  const headers = {
+  "Authorization":`Bearer ${token}`,
+  "Content-Type":"application/json"
+  }
       axios.post(`${baseUrl}/api/loans`,formData,{ headers })
       .then((response)=>{
           const {loanId} = response.data; //Loan
