@@ -9,7 +9,7 @@ public interface LoanService {
 
     Loan addLoan(Loan loan);
 
-    Loan getLoan(long loanId);
+    Loan getLoan(Long loanId);
 
     Loan updateLoan(Loan loan, long loanId);
 

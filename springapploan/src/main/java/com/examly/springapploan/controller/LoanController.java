@@ -46,7 +46,7 @@ public class LoanController {
 
     //Get loan by loanId for student and loan manager
     @GetMapping("/{loanId}")
-    public ResponseEntity<Loan> getAllLoan(@PathVariable long loanId){
+    public ResponseEntity<Loan> getAllLoan(@PathVariable Long loanId){
         Loan loan = loanService.getLoan(loanId);
         return new ResponseEntity<>(loan,HttpStatus.OK);
     }

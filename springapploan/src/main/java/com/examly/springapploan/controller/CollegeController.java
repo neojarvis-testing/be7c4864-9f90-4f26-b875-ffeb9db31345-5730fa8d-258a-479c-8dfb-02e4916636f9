@@ -2,11 +2,11 @@ package com.examly.springapploan.controller;
 
 import java.util.List;
 
+import org.apache.commons.codec.binary.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*; 
-import org.springframework.web.service.annotation.DeleteExchange;
+import org.springframework.web.bind.annotation.*;  
 
 import com.examly.springapploan.dto.ResponseDTO;
 import com.examly.springapploan.exception.AuthException;
@@ -42,9 +42,12 @@ public class CollegeController {
 
     //Access for Admin
     @PostMapping
-    public ResponseEntity<College> addCollege(@RequestHeader("token")String token, @RequestBody College college) throws AuthException{
-        
-        String userId = JwtTokenGen.getUserId(token);
+    public ResponseEntity<College> addCollege(
+         @RequestHeader("Authorization")String token,
+         @RequestBody College college) throws AuthException{ 
+     String userId = JwtTokenGen.getUserId(token);  
+
+     
         College savedCollege = collegeService.addCollege(college);
         return new ResponseEntity<>(savedCollege,HttpStatus.CREATED);
     }
