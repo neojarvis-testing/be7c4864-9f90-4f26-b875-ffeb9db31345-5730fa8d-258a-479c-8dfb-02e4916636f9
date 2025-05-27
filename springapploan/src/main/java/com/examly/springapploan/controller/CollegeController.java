@@ -70,8 +70,4 @@ public class CollegeController {
         return new ResponseEntity<>(response,HttpStatus.OK);
     }
 
-
-
-
-    
 }

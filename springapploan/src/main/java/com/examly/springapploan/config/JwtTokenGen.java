@@ -57,7 +57,6 @@ public class JwtTokenGen {
     }
  
     public boolean isTokenExpired(String token) throws AuthException{
-
         return extractClaims(token).getExpiration().before(new Date());
     }
 }

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from "react";
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 import Login from './Components/Login'
@@ -40,4 +38,3 @@ const App = () => {
 };
 
 export default App;
->>>>>>> 31f5b23b19564ba6766de4f13bc885fe42bc3612
