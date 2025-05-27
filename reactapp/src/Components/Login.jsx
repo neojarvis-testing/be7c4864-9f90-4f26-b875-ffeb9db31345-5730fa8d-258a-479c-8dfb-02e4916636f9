@@ -55,6 +55,7 @@ const handleSubmit = (e) => {
        navigate("/home");
 
     }).catch((error)=>{
+        alert(error);
         let message = "";
         if(error?.response?.data.status=="400"){
             message = error?.response?.data.message || "Login Failed";

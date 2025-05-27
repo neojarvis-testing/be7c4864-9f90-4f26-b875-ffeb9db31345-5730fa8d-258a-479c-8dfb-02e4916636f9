@@ -58,6 +58,7 @@ const handleChange = (e) => {
             navigate("/Login");
     
         }).catch((error)=>{
+            alert(error);
             let message = "";
             if(error?.response?.data.status=="400"){
                 message = error?.response?.data.message || "Register Failed";
