@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-
-const LoanForm = () => {
+import axios from 'axios';
+import {baseUrl} from '../apiConfig'
+const LoanForm = ({token}) => {
   const [formData, setFormData] = useState(
     {
       loanType: '',
@@ -77,7 +78,7 @@ const LoanForm = () => {
   }
       axios.post(`${baseUrl}/api/loans`,formData,{ headers })
       .then((response)=>{
-          const {loanId} = response.data; //Loan
+          const {loanId} = response.data; 
           alert("Success !"+loanId);
       }).catch((error)=>{
           let message = "";
@@ -92,6 +93,8 @@ const LoanForm = () => {
       });
   }else{ 
       // logic
+      alert("Validation Error !");
+  }
   
   }
 
