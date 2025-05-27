@@ -12,7 +12,7 @@ const [loading,setLoading] = useState(false);
 
     const [formData, setFormData] = useState(
         {
-            name : '',
+            collegeName : '',
             address : '',
             contactNumber : '',
             email : '',
@@ -50,7 +50,7 @@ const [loading,setLoading] = useState(false);
 
     const validateForm = () => {
         let newErrors = {};
-        if(!formData.name.trim()){
+        if(!formData.collegeName.trim()){
             newErrors.name = "College name is required"
         }
         if(!formData.address.trim()){
@@ -78,7 +78,6 @@ const [loading,setLoading] = useState(false);
 const headers = {
     "Authorization":`Bearer ${token}`,
     "Content-Type":"application/json"
-
 }
             axios.post(`${baseUrl}/api/colleges`,formData,{ headers })
             .then((response)=>{
@@ -112,7 +111,7 @@ return (
     
     <form className='form-box' onSubmit={handleSubmit}>
         <h2>Create New College</h2>
-        <input type='text' name='name' placeholder='College Name' value={formData.name} onChange={handleChange} />
+        <input type='text' name='collegeName' placeholder='College Name' value={formData.collegeName} onChange={handleChange} />
         {errors.name && <div>{errors.name}</div>}
         <input type='text'  name='address' placeholder='College Address' value={formData.address} onChange={handleChange}  />
         {errors.address && <div>{errors.address}</div>}

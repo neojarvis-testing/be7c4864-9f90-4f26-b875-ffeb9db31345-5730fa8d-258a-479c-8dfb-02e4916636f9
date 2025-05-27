@@ -27,7 +27,7 @@ public class JwtRequestFilter implements GatewayFilter{
     private static final Logger logger = LoggerFactory.getLogger(JwtRequestFilter.class);
     private static final List<String> studentAccess = List.of(
         "/api/loans",
-        "/api/colleges"
+        "/api/Feedback"
         );
 
     private static final List<String> loanManagerAccess = List.of(

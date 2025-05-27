@@ -11,7 +11,7 @@ public class GlobalExceptionHandler {
     
     @ExceptionHandler(AuthException.class)
     public ResponseEntity<ErrorDTO> handleAuthException(AuthException e){
-        return new ResponseEntity<>(new ErrorDTO(400,e.getMessage()),HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(new ErrorDTO(403,e.getMessage()),HttpStatus.FORBIDDEN);
     }
 
 
