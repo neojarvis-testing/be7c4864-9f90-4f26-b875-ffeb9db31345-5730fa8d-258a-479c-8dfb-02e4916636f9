@@ -46,7 +46,8 @@ public class CollegeController {
     public ResponseEntity<College> addCollege(
          @RequestHeader("Authorization")String token,
          @RequestBody College college) throws AuthException{ 
-     String userId = JwtTokenGen.getUserId(token);  
+     String userId = JwtTokenGen.getUserId(token);
+     String userRole = JwtTokenGen.getUserRole(token);
 
      
         College savedCollege = collegeService.addCollege(college);
