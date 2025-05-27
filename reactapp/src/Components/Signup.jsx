@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import {useMutation} from '@tanstack/react-query'; 
+// import {useMutation} from '@tanstack/react-query'; 
 import {useDispatch} from 'react-redux';
 import {signUpSuccess} from '../userSlice';
 import {useNavigate} from 'react-router-dom';
@@ -58,6 +58,7 @@ const handleChange = (e) => {
             navigate("/Login");
     
         }).catch((error)=>{
+            alert(error);
             let message = "";
             if(error?.response?.data.status=="400"){
                 message = error?.response?.data.message || "Register Failed";
