@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios';
 import {baseUrl} from '../apiConfig'
 const LoanForm = ({token}) => {
+  const [loading,setLoading] = useState(false);
   const [formData, setFormData] = useState(
     {
       loanType: '',
@@ -127,9 +128,8 @@ const LoanForm = ({token}) => {
         <input type='text' name='latePaymentFee' placeholder='Late Payment Fee' value={formData.name} onChange={handleChange} />
         {errors.latePaymentFee && <div>{errors.name}</div>}
 
-
-
-        <button type='submit' name="Add Loan" role='button'>Add Loan</button>
+        <button type='submit' name="Add Loan" role='button' disabled={loading}>Add Loan</button>
+        {loading ? 'Logging in...' : 'Add Laon'}
       </form>
     </div>
 
