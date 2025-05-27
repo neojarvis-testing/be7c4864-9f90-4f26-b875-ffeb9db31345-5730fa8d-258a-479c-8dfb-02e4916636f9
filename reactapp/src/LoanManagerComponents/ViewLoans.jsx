@@ -4,6 +4,7 @@ const ViewLoans = () => {
   return (
     <>
      <h2>Loans</h2>
+     <h2>Loans</h2>
      <table>
         <thead></thead>
         <tbody></tbody>

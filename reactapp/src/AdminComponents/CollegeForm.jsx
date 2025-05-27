@@ -74,9 +74,7 @@ const [loading,setLoading] = useState(false);
         setCheck(true)
         const isValid = validateForm();
         if(isValid){
-            // Call API
-alert(token);
-
+            // Call API 
 const headers = {
     "Authorization":`Bearer ${token}`,
     "Content-Type":"application/json"
@@ -85,8 +83,8 @@ const headers = {
             axios.post(`${baseUrl}/api/colleges`,formData,{ headers })
             .then((response)=>{
         
-                const {collegeId,collegeName} = response.data;
-                alert("Success !"+collegeId+": "+collegeName);
+                const {collegeId} = response.data;
+                alert("Success !"+collegeId);
             }).catch((error)=>{
                 let message = "";
                 alert(error);

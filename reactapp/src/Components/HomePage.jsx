@@ -66,24 +66,24 @@ const renderPage = () =>{
         //common
         case 'Dashboard': return <Dashboard  username={username} userRole={userRole}  />;
         //Admin
-        case 'CollegeApproval': return <CollegeApproval  username={username} userRole={userRole}  userId={userId}  />;
+        case 'CollegeApproval': return <CollegeApproval  username={username} userRole={userRole}  userId={userId}    token={token}  />;
         case 'CollegeForm': return <CollegeForm  username={username} userRole={userRole}   userId={userId}  token={token} />;
-        case 'ViewColleges': return <ViewColleges  username={username} userRole={userRole}   userId={userId}   />;
-        case 'ViewFeedBack': return <ViewFeedBack  username={username} userRole={userRole}   userId={userId}   />;
+        case 'ViewColleges': return <ViewColleges  username={username} userRole={userRole}   userId={userId}   token={token}    />;
+        case 'ViewFeedBack': return <ViewFeedBack  username={username} userRole={userRole}   userId={userId}   token={token}   />;
 
         //LoanManager 
-        case 'LoanForm': return <LoanForm  username={username} userRole={userRole}  userId={userId}  />;
-        case 'ViewLoans': return <ViewLoans  username={username} userRole={userRole}  userId={userId}  />;
-        case 'LoanRequest': return <LoanRequest  username={username} userRole={userRole}  userId={userId}  />;
-        case 'ViewFeedback': return <ViewFeedback  username={username} userRole={userRole}  userId={userId}  />;
+        case 'LoanForm': return <LoanForm  username={username} userRole={userRole}  userId={userId}    token={token}  />;
+        case 'ViewLoans': return <ViewLoans  username={username} userRole={userRole}  userId={userId}    token={token}  />;
+        case 'LoanRequest': return <LoanRequest  username={username} userRole={userRole}  userId={userId}   token={token}   />;
+        case 'ViewFeedback': return <ViewFeedback  username={username} userRole={userRole}  userId={userId}   token={token}  />;
 
         //Student
-        case 'StudentViewColleges': return <StudentViewColleges  username={username} userRole={userRole}  userId={userId}  />;
-        case 'StudentViewLoans': return <StudentViewLoans  username={username} userRole={userRole}  userId={userId}  />;
-        case 'StudentAppliedColleges': return <StudentAppliedColleges  username={username} userRole={userRole}  userId={userId}  />;
-        case 'StudentAppliedLoans': return <StudentAppliedLoans  username={username} userRole={userRole}  userId={userId}  />;
-        case 'StudentPostFeedBack': return <StudentPostFeedBack  username={username} userRole={userRole}  userId={userId}  />;
-        case 'StudentViewFeedBacks': return <StudentViewFeedBacks  username={username} userRole={userRole}  userId={userId}  />;
+        case 'StudentViewColleges': return <StudentViewColleges  username={username} userRole={userRole}  userId={userId} token={token} />;
+        case 'StudentViewLoans': return <StudentViewLoans  username={username} userRole={userRole}  userId={userId}  token={token}   />;
+        case 'StudentAppliedColleges': return <StudentAppliedColleges  username={username} userRole={userRole}  userId={userId} token={token} />;
+        case 'StudentAppliedLoans': return <StudentAppliedLoans  username={username} userRole={userRole}  userId={userId} token={token} />;
+        case 'StudentPostFeedBack': return <StudentPostFeedBack  username={username} userRole={userRole}  userId={userId} token={token} />;
+        case 'StudentViewFeedBacks': return <StudentViewFeedBacks  username={username} userRole={userRole}  userId={userId} token={token} />;
 
         default:  return <Dashboard  username={username} userRole={userRole}   />;
     }
