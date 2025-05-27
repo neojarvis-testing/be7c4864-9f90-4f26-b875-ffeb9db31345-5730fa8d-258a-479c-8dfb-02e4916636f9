@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import axios from 'axios';
+import {baseUrl} from '../apiConfig' 
 
-const LoanForm = () => {
+const LoanForm = ({token}) => {
   const [formData, setFormData] = useState(
     {
       loanType: '',
@@ -67,11 +69,32 @@ const LoanForm = () => {
     e.preventDefault();
     setCheck(true)
     const isValid = validateForm();
-    if (isValid) {
+    if(isValid){
+      // Call API 
+const headers = {
+"Authorization":`Bearer ${token}`,
+"Content-Type":"application/json"
+}
+      axios.post(`${baseUrl}/api/loans`,formData,{ headers })
+      .then((response)=>{
+          const {loanId} = response.data; //Loan
+          alert("Success !"+loanId);
+      }).catch((error)=>{
+          let message = "";
+          alert(error);
+          if(error?.response?.data.status=="400"){
+              message = error?.response?.data.message ||"Failed";
+          }else{
+          message = error?.response?.data.status || "Failed";}
+   
+      }).finally(()=>{
+          setLoading(false);
+      });
+  }else{
       // logic
-    } else {
-      // logic
-    }
+      alert("Validation Error !");
+  }
+
   }
 
   return (
@@ -102,8 +125,6 @@ const LoanForm = () => {
         {errors.gracePeriod && <div>{errors.name}</div>}
         <input type='text' name='latePaymentFee' placeholder='Late Payment Fee' value={formData.name} onChange={handleChange} />
         {errors.latePaymentFee && <div>{errors.name}</div>}
-
-
 
         <button type='submit' name="Add Loan" role='button'>Add Loan</button>
       </form>

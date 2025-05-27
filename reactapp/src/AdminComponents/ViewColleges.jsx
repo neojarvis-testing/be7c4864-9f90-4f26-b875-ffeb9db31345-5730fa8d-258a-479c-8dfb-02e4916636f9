@@ -39,7 +39,6 @@ return (
             <p>No Data Found</p>
         ) :
         (
-
             <table>
             <thead> 
                 <th>College Id</th>
@@ -52,8 +51,6 @@ return (
                     <th>status</th> 
             </thead>
             <tbody>
-          
-
                 {datas.map((college) => (
                     <tr>
                     <td>{college.collegeId}</td>
@@ -69,8 +66,6 @@ return (
                 }    
             </tbody>
         </table>
-
-
         )
     }
     
