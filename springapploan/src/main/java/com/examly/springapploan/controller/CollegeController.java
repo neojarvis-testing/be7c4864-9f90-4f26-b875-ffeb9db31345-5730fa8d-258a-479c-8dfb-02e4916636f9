@@ -29,6 +29,7 @@ public class CollegeController {
     //Access for Admin and Stundet
     @GetMapping
     public ResponseEntity<List<College>> getAllColleges(){
+
       List<College> collegeList = collegeService.getCollegeList();
       return new ResponseEntity<>(collegeList,HttpStatus.OK);
     }
@@ -70,4 +71,8 @@ public class CollegeController {
         return new ResponseEntity<>(response,HttpStatus.OK);
     }
 
+
+
+
+    
 }

@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
-import axios from 'axios';
-import {baseUrl} from '../apiConfig' 
 
-const LoanForm = ({token}) => {
+const LoanForm = () => {
   const [formData, setFormData] = useState(
     {
       loanType: '',
@@ -69,7 +67,9 @@ const LoanForm = ({token}) => {
     e.preventDefault();
     setCheck(true)
     const isValid = validateForm();
-    if(isValid){
+
+    if (isValid) {
+ 
       // Call API 
   const headers = {
     "Authorization":`Bearer ${token}`,
@@ -90,11 +90,9 @@ const LoanForm = ({token}) => {
       }).finally(()=>{
           setLoading(false);
       });
-  }else{
+  }else{ 
       // logic
-      alert("Validation Error !");
-  }
-
+  
   }
 
   return (
@@ -125,6 +123,8 @@ const LoanForm = ({token}) => {
         {errors.gracePeriod && <div>{errors.name}</div>}
         <input type='text' name='latePaymentFee' placeholder='Late Payment Fee' value={formData.name} onChange={handleChange} />
         {errors.latePaymentFee && <div>{errors.name}</div>}
+
+
 
         <button type='submit' name="Add Loan" role='button'>Add Loan</button>
       </form>
