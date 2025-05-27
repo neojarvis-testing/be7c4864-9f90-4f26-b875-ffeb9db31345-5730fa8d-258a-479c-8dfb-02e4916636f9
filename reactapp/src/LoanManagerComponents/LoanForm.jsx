@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-
-const LoanForm = () => {
+import axios from 'axios';
+import {baseUrl} from '../apiConfig'
+const LoanForm = ({token}) => {
   const [formData, setFormData] = useState(
     {
       loanType: '',
@@ -67,11 +68,34 @@ const LoanForm = () => {
     e.preventDefault();
     setCheck(true)
     const isValid = validateForm();
+
     if (isValid) {
+ 
+      // Call API 
+  const headers = {
+    "Authorization":`Bearer ${token}`,
+    "Content-Type":"application/json"
+  }
+      axios.post(`${baseUrl}/api/loans`,formData,{ headers })
+      .then((response)=>{
+          const {loanId} = response.data; 
+          alert("Success !"+loanId);
+      }).catch((error)=>{
+          let message = "";
+          alert(error);
+          if(error?.response?.data.status=="400"){
+              message = error?.response?.data.message ||"Failed";
+          }else{
+          message = error?.response?.data.status || "Failed";}
+   
+      }).finally(()=>{
+          setLoading(false);
+      });
+  }else{ 
       // logic
-    } else {
-      // logic
-    }
+      alert("Validation Error !");
+  }
+  
   }
 
   return (
