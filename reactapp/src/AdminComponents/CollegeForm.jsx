@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React,{useState} from 'react'; 
 import axios from 'axios';
 import {baseUrl} from '../apiConfig' 
@@ -136,4 +134,3 @@ return (
 };
 
 export default CollegeForm;
->>>>>>> 31f5b23b19564ba6766de4f13bc885fe42bc3612

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React,{useState,useEffect} from 'react'; 
 import {useSelector} from 'react-redux'; 
 import AdminMenu from '../AdminComponents/AdminNavbar'; 
@@ -103,4 +101,3 @@ return (
 };
 
 export default Home;
->>>>>>> 31f5b23b19564ba6766de4f13bc885fe42bc3612
