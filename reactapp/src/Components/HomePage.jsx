@@ -19,8 +19,15 @@ import ViewLoans from "../LoanManagerComponents/ViewLoans";
 import LoanRequest from "../LoanManagerComponents/LoanRequest";
 import ViewFeedback from "../LoanManagerComponents/ViewFeedback";
 
+//student Components
+import StudentViewColleges from "../StudentComponents/ViewAllColleges";
+import StudentViewLoans from "../StudentComponents/ViewAllLoans";
+import StudentAppliedColleges from "../StudentComponents/AppliedColleges";
+import StudentAppliedLoans from "../StudentComponents/AppliedLoans";
+import StudentPostFeedBack from "../StudentComponents/StudentPostFeedback";
+import StudentViewFeedBacks from "../StudentComponents/StudentMyFeedback";
 
-import Dashboard from '../AdminComponents/Dashboard';
+import Dashboard from './Dashboard';
 
 const Home = () => {
 
@@ -34,6 +41,7 @@ const Home = () => {
     let username = user?.username || localStorage.getItem("username");  
     let userId = user?.userId || localStorage.getItem("userId");  
     let isAuthenicated = user?.isAuthenicated || localStorage.getItem("isAuthenicated");  
+    let token = user?.tiken || localStorage.getItem("token");  
 
     //look for not auth!
     useEffect(()=>{
@@ -55,27 +63,27 @@ const Home = () => {
 
 const renderPage = () =>{
     switch(currentPage){
-        //Admin
+        //common
         case 'Dashboard': return <Dashboard  username={username} userRole={userRole}  />;
+        //Admin
         case 'CollegeApproval': return <CollegeApproval  username={username} userRole={userRole}  userId={userId}  />;
-        case 'CollegeForm': return <CollegeForm  username={username} userRole={userRole}   userId={userId}   />;
+        case 'CollegeForm': return <CollegeForm  username={username} userRole={userRole}   userId={userId}  token={token} />;
         case 'ViewColleges': return <ViewColleges  username={username} userRole={userRole}   userId={userId}   />;
         case 'ViewFeedBack': return <ViewFeedBack  username={username} userRole={userRole}   userId={userId}   />;
 
-        //LoanManager
-        case 'Dashboard': return <Dashboard  username={username} userRole={userRole}  />;
+        //LoanManager 
         case 'LoanForm': return <LoanForm  username={username} userRole={userRole}  userId={userId}  />;
         case 'ViewLoans': return <ViewLoans  username={username} userRole={userRole}  userId={userId}  />;
         case 'LoanRequest': return <LoanRequest  username={username} userRole={userRole}  userId={userId}  />;
         case 'ViewFeedback': return <ViewFeedback  username={username} userRole={userRole}  userId={userId}  />;
 
         //Student
-        // case 'Dashboard': return <Dashboard  username={username} userRole={userRole}  />;
-        // case 'LoanForm': return <LoanForm  username={username} userRole={userRole}  userId={userId}  />;
-        // case 'ViewLoans': return <ViewLoans  username={username} userRole={userRole}  userId={userId}  />;
-        // case 'LoanRequest': return <LoanRequest  username={username} userRole={userRole}  userId={userId}  />;
-        // case 'ViewFeedback': return <ViewFeedback  username={username} userRole={userRole}  userId={userId}  />;
-
+        case 'StudentViewColleges': return <StudentViewColleges  username={username} userRole={userRole}  userId={userId}  />;
+        case 'StudentViewLoans': return <StudentViewLoans  username={username} userRole={userRole}  userId={userId}  />;
+        case 'StudentAppliedColleges': return <StudentAppliedColleges  username={username} userRole={userRole}  userId={userId}  />;
+        case 'StudentAppliedLoans': return <StudentAppliedLoans  username={username} userRole={userRole}  userId={userId}  />;
+        case 'StudentPostFeedBack': return <StudentPostFeedBack  username={username} userRole={userRole}  userId={userId}  />;
+        case 'StudentViewFeedBacks': return <StudentViewFeedBacks  username={username} userRole={userRole}  userId={userId}  />;
 
         default:  return <Dashboard  username={username} userRole={userRole}   />;
     }

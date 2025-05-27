@@ -42,9 +42,11 @@ public class CollegeController {
 
     //Access for Admin
     @PostMapping
-    public ResponseEntity<College> addCollege(@RequestHeader("token")String token, @RequestBody College college) throws AuthException{
+    public ResponseEntity<College> addCollege(
+      //  @RequestHeader("token")String token,
+         @RequestBody College college) throws AuthException{
         
-        String userId = JwtTokenGen.getUserId(token);
+       // String userId = JwtTokenGen.getUserId(token);
         College savedCollege = collegeService.addCollege(college);
         return new ResponseEntity<>(savedCollege,HttpStatus.CREATED);
     }

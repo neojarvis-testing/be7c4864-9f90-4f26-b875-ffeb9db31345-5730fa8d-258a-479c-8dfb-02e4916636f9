@@ -32,13 +32,15 @@ public class ApigatewayApplication {
 		.route("user_route",route->route.path("/api/users/**")
 		.uri("lb://USER-SERVICE"))
 
-		.route("user_loans",route->route.path("/api/loans/**")
+		.route("user_loans",route->route.path("/api/loans/**","/api/colleges/**")
 		.filters(token->token.filter(jwtRequestFilter))
 		.uri("lb://LOAN-SERVICE"))
 
 		.route("feedback_service",route->route.path("/api/feedback/**")
 		.filters(token->token.filter(jwtRequestFilter))
 		.uri("lb://FEEDBACK-SERVICE"))
+
+		
 		.build();
 	}
 

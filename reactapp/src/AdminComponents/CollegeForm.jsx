@@ -1,7 +1,14 @@
 import React,{useState} from 'react'; 
+import axios from 'axios';
+import {baseUrl} from '../apiConfig' 
 import './CollegeForm.css'
+
 // import { freezeDraftable } from '@reduxjs/toolkit/dist/utils';
-const CollegeForm = () => {
+const CollegeForm = ({token}) => {
+
+    
+const [loading,setLoading] = useState(false);
+ 
 
     const [formData, setFormData] = useState(
         {
@@ -67,9 +74,35 @@ const CollegeForm = () => {
         setCheck(true)
         const isValid = validateForm();
         if(isValid){
-            // logic
+            // Call API
+alert(token);
+const header = {
+    "Authorization":`Bearer ${token}`,
+    "Content-Type":"application/json"
+
+}
+            axios.post(`${baseUrl}/api/colleges`,formData,{header})
+            .then((response)=>{
+        
+                const {collegeId,collegeName} = response.data;
+                alert("Success !"+collegeId+": "+collegeName);
+            }).catch((error)=>{
+                let message = "";
+                alert(error);
+                if(error?.response?.data.status=="400"){
+                    message = error?.response?.data.message ||"Failed";
+                }else{
+                message = error?.response?.data.status || "Failed";}
+         
+            }).finally(()=>{
+                setLoading(false);
+            });
+
+
+
         }else{
             // logic
+            alert("Validation Error !");
         }
     }
  
@@ -92,7 +125,9 @@ return (
         {errors.courses && <div>{errors.courses}</div>}
         <input type='text'  name='status' placeholder='Status' value={formData.status} onChange={handleChange}  />
         <br/>
-        <button type='submit' name="Add College" role='button'>Add College</button>
+        <button type='submit' name="Add College" role='button'  disabled={loading} >
+        {loading ? 'Logging in...' : 'Add College'}
+        </button>
     </form>
    </div>
 </>

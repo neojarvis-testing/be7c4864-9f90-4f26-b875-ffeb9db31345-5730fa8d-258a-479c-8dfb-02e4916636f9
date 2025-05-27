@@ -34,7 +34,8 @@ public class JwtRequestFilter implements GatewayFilter{
         );
         
     private static final List<String> adminAccess = List.of(
-        "/api/loans"
+        "/api/loans",
+        "/api/colleges"
         );
 
   
