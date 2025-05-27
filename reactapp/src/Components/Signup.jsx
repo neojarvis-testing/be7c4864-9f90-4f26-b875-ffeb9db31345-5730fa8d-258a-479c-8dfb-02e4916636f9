@@ -51,20 +51,20 @@ const handleChange = (e) => {
         //api call
         axios.post(`${baseUrl}/api/users/register`,form)
         .then((response)=>{
-
-            const {name, email} = response.data;  
-            dispatch(signUpSuccess(name,email));
+            console.log(response)
+            const {username, email} = response.data;  
+            dispatch(signUpSuccess(username,email));
             alert('SignUp Successfull!'); 
             navigate("/Login");
     
         }).catch((error)=>{
+            console.log(error);
             alert(error);
             let message = "";
             if(error?.response?.data.status=="400"){
                 message = error?.response?.data.message || "Register Failed";
             }else{
             message = error?.response?.data.status || "Register Failed";}
-        
             setFormError(message);
         }).finally(()=>{
             setLoading(false);

@@ -30,11 +30,10 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    private List<String> allowedRoles = List.of("LoanManager","Admin","Student");
+    private List<String> allowedRoles = List.of("loanManager","admin","student");
 
     @PostMapping(path ="/register", consumes = "application/json", produces = "application/json")
     public ResponseEntity<User> registerUser(@RequestBody User user)  throws UserExistsExeption, InvalidInput{
-
         if(StringUtils.isEmpty(user.getEmail())||
         StringUtils.isEmpty(user.getPassword())){
             throw new InvalidInput("Invalid Input: "+user);
@@ -44,7 +43,7 @@ public class UserController {
             throw new InvalidInput("Invalid Input: "+user);
         }
 
-        if(!allowedRoles.contains(user.getUserRole())){
+        if(!allowedRoles.contains(user.getUserRole().toLowerCase())){
             throw new InvalidInput("Invalid User Type: "+user.getUserRole());
         }
 

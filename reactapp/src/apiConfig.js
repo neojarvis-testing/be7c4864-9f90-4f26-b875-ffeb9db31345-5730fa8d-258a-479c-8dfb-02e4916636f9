@@ -1,1 +1,1 @@
-export const baseUrl = "https://8080-fbdfcfebebefebefccadafadacdfbef.project.examly.io";
+export const baseUrl = "https://8080-bcbdbcdaaebefebefccadafadacdfbef.project.examly.io";

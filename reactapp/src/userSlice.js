@@ -29,7 +29,7 @@ const userSlice = createSlice({
             localStorage.setItem("isAuthenicated", true);
         },
         signUpSuccess: (state, action)=>{
-            state.name = action.payload.name; 
+            state.username = action.payload.username; 
             state.email = action.payload.email; 
             state.isAuthenicated = false;
         },
