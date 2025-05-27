@@ -76,12 +76,13 @@ const [loading,setLoading] = useState(false);
         if(isValid){
             // Call API
 alert(token);
-const header = {
+
+const headers = {
     "Authorization":`Bearer ${token}`,
     "Content-Type":"application/json"
 
 }
-            axios.post(`${baseUrl}/api/colleges`,formData,{header})
+            axios.post(`${baseUrl}/api/colleges`,formData,{ headers })
             .then((response)=>{
         
                 const {collegeId,collegeName} = response.data;
