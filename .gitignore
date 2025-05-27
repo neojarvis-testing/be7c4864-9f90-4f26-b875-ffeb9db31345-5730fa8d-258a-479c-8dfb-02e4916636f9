@@ -13,3 +13,4 @@ springappfeedback/target/classes/com/examly/springappfeedback/controller/Feedbac
 springappfeedback/target/classes/com/examly/springappfeedback/model/Feedback.class
 springappfeedback/target/classes/com/examly/springappfeedback/model/User.class
 springappfeedback/target/classes/com/examly/springappfeedback/repository/FeedbackRepository.class
+springapploan/target/classes/com/examly/springapploan/config/JwtTokenGen.class
