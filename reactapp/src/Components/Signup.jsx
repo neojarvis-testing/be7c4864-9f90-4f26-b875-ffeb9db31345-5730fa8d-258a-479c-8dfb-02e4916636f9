@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React,{useState} from 'react';
 import {useMutation} from '@tanstack/react-query'; 
 import {useDispatch} from 'react-redux';
@@ -112,3 +114,4 @@ return (
 };
 
 export default Signup;
+>>>>>>> 31f5b23b19564ba6766de4f13bc885fe42bc3612

@@ -32,7 +32,7 @@ public class College {
     private String website;
     private String courses;
     private String status;
-     @OneToMany(cascade = CascadeType.ALL,fetch =FetchType.EAGER, mappedBy="collegeApplicationId")
+    @OneToMany(cascade = CascadeType.ALL,fetch =FetchType.EAGER, mappedBy="collegeApplicationId")
     private List<CollegeApplication> collegeApplicationList;
  
 }

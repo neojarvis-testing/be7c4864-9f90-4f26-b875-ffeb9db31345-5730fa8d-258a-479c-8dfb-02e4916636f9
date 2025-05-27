@@ -1,31 +1,19 @@
 package com.examly.apigateway;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.gateway.route.RouteLocator;
-import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
-import org.springframework.context.annotation.Bean;
-
-import com.examly.apigateway.filter.JwtRequestFilter;
-
      
 @SpringBootApplication
 @EnableDiscoveryClient
 public class ApigatewayApplication {
-
-	private JwtRequestFilter jwtRequestFilter;
-
-	@Autowired
-	public ApigatewayApplication(JwtRequestFilter jwtRequestFilter){
-		this.jwtRequestFilter = jwtRequestFilter;
-	}
    
 	public static void main(String[] args) {
 		SpringApplication.run(ApigatewayApplication.class, args);
 	}
 
+<<<<<<< HEAD
+=======
 	@Bean
 	public RouteLocator apiRouteLocator(RouteLocatorBuilder builder){
 		return builder.routes()
@@ -44,5 +32,6 @@ public class ApigatewayApplication {
 		.build();
 	}
 
+>>>>>>> 31f5b23b19564ba6766de4f13bc885fe42bc3612
 }
         

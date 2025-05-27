@@ -11,9 +11,9 @@
     </parent>
 
     <groupId>com.examly</groupId>
-    <artifactId>springapploan</artifactId>
+    <artifactId>springapp</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springapploan</name>
+    <name>springapp</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -31,7 +31,11 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency> 
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -46,8 +50,8 @@
         </dependency>
         
         <dependency>
-			<groupId>org.springframework.kafka</groupId>
-			<artifactId>spring-kafka</artifactId>
+    <groupId>org.springframework.kafka</groupId>
+    <artifactId>spring-kafka</artifactId>
      </dependency>
   
 		<dependency>
@@ -81,7 +85,7 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
- </dependencies>
+	</dependencies>
 <dependencyManagement>
 		<dependencies>
 			<dependency>
