@@ -4,14 +4,10 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
+import com.examly.springappfeedback.config.JwtTokenGen;
 import com.examly.springappfeedback.model.Feedback;
 import com.examly.springappfeedback.service.FeedbackService;
 
@@ -19,11 +15,20 @@ import com.examly.springappfeedback.service.FeedbackService;
 @RequestMapping("/api/feedback")
 public class FeedbackController {
 
-    @Autowired
-    FeedbackService feedbackService;
+    private FeedbackService feedbackService; 
 
-    @GetMapping
-    public ResponseEntity<?> getAllFeedback(){
+    @Autowired
+    private FeedbackController(FeedbackService feedbackService ){
+        this.feedbackService = feedbackService;
+    }
+
+
+    @GetMapping(produces = "application/json")
+    public ResponseEntity<?> getAllFeedback(@RequestHeader("Authorization") String token){
+        String userRole = JwtTokenGen.getUserRole(token);
+        if (userRole == null || userRole.equals("Student")) {
+            return new ResponseEntity<>("Student has no access!", HttpStatus.FORBIDDEN);
+        }
         try {
             List<Feedback> feedbackList = feedbackService.getAllFeedback();
             return new ResponseEntity<>(feedbackList, HttpStatus.OK);
@@ -32,8 +37,16 @@ public class FeedbackController {
         }
     }
 
-    @PostMapping
-    public ResponseEntity<?> createFeedback(@RequestBody Feedback feedback){
+    @PostMapping()
+    public ResponseEntity<?> createFeedback(
+        @RequestBody Feedback feedback,
+        @RequestHeader("Authorization") String token){
+        String userRole = JwtTokenGen.getUserRole(token);
+
+        if (userRole == null || userRole.equals("LoanManager") || userRole.equals("Admin")) {
+            return new ResponseEntity<>("Loan Manager & Admin has no access!", HttpStatus.FORBIDDEN);
+        }
+
         try {
             feedbackService.creatFeedback(feedback);
             return new ResponseEntity<>("Feedback Submitted Successfull", HttpStatus.CREATED);
@@ -44,8 +57,14 @@ public class FeedbackController {
         }
     }
 
-    @GetMapping("/user/{userId}")
-    public ResponseEntity<?> getFeedbackByUserId(@PathVariable int userId){
+    @GetMapping(path = "/user/{userId}",  produces = "application/json")
+    public ResponseEntity<?> getFeedbackByUserId(@PathVariable int userId,
+    @RequestHeader("Authorization") String token){
+        String userRole = JwtTokenGen.getUserRole(token);
+
+        if (userRole == null || userRole.equals("LoanManager") || userRole.equals("Admin")) {
+            return new ResponseEntity<>("Loan Manager & Admin has no access!", HttpStatus.FORBIDDEN);
+        }
         try {
             List<Feedback> feedbackList = feedbackService.getFeedbackByUserId(userId);
             return new ResponseEntity<>(feedbackList, HttpStatus.OK);

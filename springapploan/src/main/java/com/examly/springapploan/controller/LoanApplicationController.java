@@ -37,7 +37,7 @@ public class LoanApplicationController {
     }
 
     //Get Loan Application specific to User access to Student
-    @GetMapping("/users/{userId}")
+    @GetMapping(path = "/users/{userId}", produces = "application/json")
     public ResponseEntity<List<LoanApplication>> getAllLoanApplicationsOfUser(@PathVariable long userId){
         return null;
     }
