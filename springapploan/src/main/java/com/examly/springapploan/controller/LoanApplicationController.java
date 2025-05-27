@@ -29,7 +29,6 @@ public class LoanApplicationController {
         
     }
 
-
     //Get all Loan Applications access LoanManager
     @GetMapping
     public ResponseEntity<List<LoanApplication>> getAllLoanApplications(){
