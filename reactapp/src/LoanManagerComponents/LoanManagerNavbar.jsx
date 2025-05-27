@@ -4,7 +4,7 @@ import {useNavigate} from "react-router-dom"
 import '../css/Navbar.css'
 import {logout} from '../userSlice'
 
-const LoanMangerNavbar = () => {
+const LoanMangerNavbar = ({username,userRole,setCurrentPage}) => {
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -14,31 +14,26 @@ const LoanMangerNavbar = () => {
         navigate("/login");
     }
 
- 
 
 return (
-    <>
-    </>
-    // <div className='navbar'>
-    // <div className='nav-menu'>
-    //    <div className='username'>Welcome {username}!, UserRole: {userRole}</div> 
-    //    <div className='nav-item' onClick={()=> setCurrentPage('Dashboard')}>Home</div> 
+    <div className='navbar'>
+    <div className='nav-menu'>
+       <div className='username'>Welcome {username}!, UserRole: {userRole}</div> 
+       <div className='nav-item' onClick={()=> setCurrentPage('Dashboard')}>Home</div> 
 
-    //    <div className='nav-item'>
-    //         Colleges
-    //         <div className='dropdown'>
-    //             <div className='dropdown-item' onClick={()=> setCurrentPage('CollegeForm')}>Add College</div>
-    //             <div  className='dropdown-item' onClick={()=> setCurrentPage('ViewColleges')}>View Colleges</div>
-    //         </div>
-    //     </div> 
+       <div className='nav-item'>
+            Loan Management
+            <div className='dropdown'>
+                <div className='dropdown-item' onClick={()=> setCurrentPage('LoanForm')}>new Loan</div>
+                <div  className='dropdown-item' onClick={()=> setCurrentPage('ViewLoans')}>View Loans</div>
+            </div>
+        </div> 
       
-    //     <div  className='nav-item'  onClick={()=> setCurrentPage('CollegeApproval')}> College Approval</div>
-    //     <div  className='nav-item'  onClick={()=> setCurrentPage('ViewFeedback')}>View Colleges</div>
-    //     <div  className='nav-item'  onClick={handleLogout}>Logout</div>
-    // </div>
-    // </div>
-    // 
+        <div  className='nav-item'  onClick={()=> setCurrentPage('LoanRequest')}>Loan Requested</div>
+        <div  className='nav-item'  onClick={()=> setCurrentPage('ViewFeedback')}>Feedback</div>
+        <div  className='nav-item'  onClick={handleLogout}>Logout</div>
+    </div>
+    </div>
     ); 
 };
-
 export default LoanMangerNavbar;

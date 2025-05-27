@@ -1,7 +1,19 @@
 import React,{useState} from 'react'; 
+import axios from 'axios';
+import {baseUrl} from '../apiConfig' 
 import './ViewColleges.css'
 const ViewColleges = () => {
  
+    const [loading,setLoading] = useState(false);
+   
+ 
+            // Call API 
+const headers = {
+    "Authorization":`Bearer ${token}`,
+    "Content-Type":"application/json"
+
+} 
+
 return (
 
     <div className='form-container'>

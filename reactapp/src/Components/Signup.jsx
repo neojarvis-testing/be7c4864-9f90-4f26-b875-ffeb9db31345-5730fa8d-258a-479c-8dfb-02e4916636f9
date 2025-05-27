@@ -75,7 +75,7 @@ const handleChange = (e) => {
 return (
     <div className='form-container'>
     <form onSubmit={handleSubmit} className='form-box'>
-    {<Errorpage message={formError} />}
+     
     <h2>Signup</h2>
      <div>  
            {FieldError.email && <p className='error'>{FieldError.email}</p>}
@@ -103,6 +103,10 @@ return (
                 {loading ? 'Logging in...' : 'Submit'}
                 </button>
             </div>
+            <br/>
+            
+             <a href='/'>Want to Login?<b>Login</b></a> 
+
             </form>
     </div>); 
 };

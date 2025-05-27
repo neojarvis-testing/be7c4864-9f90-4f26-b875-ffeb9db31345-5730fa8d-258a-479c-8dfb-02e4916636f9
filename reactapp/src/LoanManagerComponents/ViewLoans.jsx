@@ -4,7 +4,7 @@ const ViewLoans = () => {
   return (
     <>
      <h2>Loans</h2>
-     <h1>Loans</h1>
+     <h2>Loans</h2>
      <table>
         <thead></thead>
         <tbody></tbody>
@@ -14,4 +14,4 @@ const ViewLoans = () => {
   )
 }
 
-export default ViewLoans
+export default ViewLoans;

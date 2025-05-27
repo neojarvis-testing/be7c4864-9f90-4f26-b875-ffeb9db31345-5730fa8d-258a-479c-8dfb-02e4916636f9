@@ -6,12 +6,28 @@ import StudentMenu from '../StudentComponents/StudentNavbar';
 import {useNavigate} from "react-router-dom"
 import {useDispatch} from "react-redux"
 import {logout} from '../userSlice'
+import ErrorPage from "./ErrorPage"
 
 import CollegeApproval from '../AdminComponents/CollegeApproval';
 import CollegeForm from '../AdminComponents/CollegeForm';
 import ViewColleges from '../AdminComponents/ViewColleges';
 import ViewFeedBack from '../AdminComponents/ViewFeedback';
-import Dashboard from '../AdminComponents/Dashboard';
+
+//loan Components
+import LoanForm from "../LoanManagerComponents/LoanForm";
+import ViewLoans from "../LoanManagerComponents/ViewLoans";
+import LoanRequest from "../LoanManagerComponents/LoanRequest";
+import ViewFeedback from "../LoanManagerComponents/ViewFeedback";
+
+//student Components
+import StudentViewColleges from "../StudentComponents/ViewAllColleges";
+import StudentViewLoans from "../StudentComponents/ViewAllLoans";
+import StudentAppliedColleges from "../StudentComponents/AppliedColleges";
+import StudentAppliedLoans from "../StudentComponents/AppliedLoans";
+import StudentPostFeedBack from "../StudentComponents/StudentPostFeedback";
+import StudentViewFeedBacks from "../StudentComponents/StudentMyFeedback";
+
+import Dashboard from './Dashboard';
 
 const Home = () => {
 
@@ -25,6 +41,7 @@ const Home = () => {
     let username = user?.username || localStorage.getItem("username");  
     let userId = user?.userId || localStorage.getItem("userId");  
     let isAuthenicated = user?.isAuthenicated || localStorage.getItem("isAuthenicated");  
+    let token = user?.tiken || localStorage.getItem("token");  
 
     //look for not auth!
     useEffect(()=>{
@@ -37,19 +54,37 @@ const Home = () => {
 
     var selectedMenuBar = null;
 
-    if(userRole==="ADMIN"){selectedMenuBar = <AdminMenu username={username} userRole={userRole} setCurrentPage={setCurrentPage} />}
-    else if(userRole==="LOAN_MANAGER"){selectedMenuBar = <LoanManagerMenu username={username} userRole={userRole} setCurrentPage={setCurrentPage} />}
-    else if(userRole==="STUDENT"){selectedMenuBar = <StudentMenu username={username} userRole={userRole} setCurrentPage={setCurrentPage}  />}
+    if(userRole==="Admin"){selectedMenuBar = <AdminMenu username={username} userRole={userRole} setCurrentPage={setCurrentPage} />}
+    else if(userRole==="LoanManager"){selectedMenuBar = <LoanManagerMenu username={username} userRole={userRole} setCurrentPage={setCurrentPage} />}
+    else if(userRole==="Student"){selectedMenuBar = <StudentMenu username={username} userRole={userRole} setCurrentPage={setCurrentPage}  />}
     else{ 
+        <ErrorPage message="UNAUTHORIZED !" />
     };
 
 const renderPage = () =>{
     switch(currentPage){
+        //common
         case 'Dashboard': return <Dashboard  username={username} userRole={userRole}  />;
-        case 'CollegeApproval': return <CollegeApproval  username={username} userRole={userRole}  userId={userId}  />;
-        case 'CollegeForm': return <CollegeForm  username={username} userRole={userRole}   userId={userId}   />;
-        case 'ViewColleges': return <ViewColleges  username={username} userRole={userRole}   userId={userId}   />;
-        case 'ViewFeedBack': return <ViewFeedBack  username={username} userRole={userRole}   userId={userId}   />;
+        //Admin
+        case 'CollegeApproval': return <CollegeApproval  username={username} userRole={userRole}  userId={userId}    token={token}  />;
+        case 'CollegeForm': return <CollegeForm  username={username} userRole={userRole}   userId={userId}  token={token} />;
+        case 'ViewColleges': return <ViewColleges  username={username} userRole={userRole}   userId={userId}   token={token}    />;
+        case 'ViewFeedBack': return <ViewFeedBack  username={username} userRole={userRole}   userId={userId}   token={token}   />;
+
+        //LoanManager 
+        case 'LoanForm': return <LoanForm  username={username} userRole={userRole}  userId={userId}    token={token}  />;
+        case 'ViewLoans': return <ViewLoans  username={username} userRole={userRole}  userId={userId}    token={token}  />;
+        case 'LoanRequest': return <LoanRequest  username={username} userRole={userRole}  userId={userId}   token={token}   />;
+        case 'ViewFeedback': return <ViewFeedback  username={username} userRole={userRole}  userId={userId}   token={token}  />;
+
+        //Student
+        case 'StudentViewColleges': return <StudentViewColleges  username={username} userRole={userRole}  userId={userId} token={token} />;
+        case 'StudentViewLoans': return <StudentViewLoans  username={username} userRole={userRole}  userId={userId}  token={token}   />;
+        case 'StudentAppliedColleges': return <StudentAppliedColleges  username={username} userRole={userRole}  userId={userId} token={token} />;
+        case 'StudentAppliedLoans': return <StudentAppliedLoans  username={username} userRole={userRole}  userId={userId} token={token} />;
+        case 'StudentPostFeedBack': return <StudentPostFeedBack  username={username} userRole={userRole}  userId={userId} token={token} />;
+        case 'StudentViewFeedBacks': return <StudentViewFeedBacks  username={username} userRole={userRole}  userId={userId} token={token} />;
+
         default:  return <Dashboard  username={username} userRole={userRole}   />;
     }
 };

@@ -1,0 +1,15 @@
+springappuser/target/* 
+springappfeedback/target/springapp-0.0.1-SNAPSHOT.jar
+springapploan/target/*
+springappserver/target/*
+springappfeedback/target/*
+springappfeedback/target
+springappfeedback/target/classes/com/examly/springappfeedback/controller/FeedbackController.class
+springappfeedback/target/classes/com/examly/springappfeedback/service/FeedbackServiceImpl.class
+springappfeedback/target/classes/com/examly/springappfeedback/service/FeedbackService.class
+springappfeedback/target/classes/com/examly/springappfeedback/repository/UserRepository.class
+springappfeedback/target/classes/com/examly/springappfeedback/repository/FeedbackRepository.class
+springappfeedback/target/classes/com/examly/springappfeedback/controller/FeedbackController.class
+springappfeedback/target/classes/com/examly/springappfeedback/model/Feedback.class
+springappfeedback/target/classes/com/examly/springappfeedback/model/User.class
+springappfeedback/target/classes/com/examly/springappfeedback/repository/FeedbackRepository.class

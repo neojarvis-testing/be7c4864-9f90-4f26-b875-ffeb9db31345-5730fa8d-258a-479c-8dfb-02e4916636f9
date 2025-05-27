@@ -71,7 +71,7 @@ const handleSubmit = (e) => {
         <div className='form-container'>
           
            <form onSubmit={handleSubmit} className='form-box'>
-           {<Errorpage message={formError} />}
+           
            <h2>Login</h2>
             <div>  
             <input type="email" name="email" value={form.email} onChange={handleChange}  placeholder="Enter Email" />
@@ -83,6 +83,8 @@ const handleSubmit = (e) => {
             <button type="submit"  disabled={loading} >
                 {loading ? 'Logging in...' : 'Login'}
                 </button>
+                <br/>
+             <a href='/signup'>Want to Register ? <b>SignUp</b></a> 
             </div>
             </form> 
         </div>);
