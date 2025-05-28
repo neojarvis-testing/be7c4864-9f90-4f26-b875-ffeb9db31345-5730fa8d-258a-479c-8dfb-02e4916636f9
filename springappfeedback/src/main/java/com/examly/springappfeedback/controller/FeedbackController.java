@@ -24,7 +24,8 @@ public class FeedbackController {
 
 
     @GetMapping(produces = "application/json")
-    public ResponseEntity<?> getAllFeedback(@RequestHeader("Authorization") String token){
+    public ResponseEntity<?> getAllFeedback(
+        @RequestHeader("Authorization") String token){
         String userRole = JwtTokenGen.getUserRole(token);
         if (userRole == null || userRole.equals("Student")) {
             return new ResponseEntity<>("Student has no access!", HttpStatus.FORBIDDEN);

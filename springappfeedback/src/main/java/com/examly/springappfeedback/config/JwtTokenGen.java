@@ -6,8 +6,8 @@ import java.util.Map;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
-import com.examly.springappfeedback.exception.*;
 
+import com.examly.springappfeedback.exception.AuthException;
  
 
 public class JwtTokenGen {
