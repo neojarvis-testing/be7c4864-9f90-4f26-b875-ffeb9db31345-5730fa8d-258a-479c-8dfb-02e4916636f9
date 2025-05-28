@@ -18,7 +18,6 @@ public class CollegeServiceImpl implements CollegeService {
 
     }
 
-    
     @Autowired
     public CollegeServiceImpl(CollegeRepository collegeRepository) {
         this.collegeRepository = collegeRepository;

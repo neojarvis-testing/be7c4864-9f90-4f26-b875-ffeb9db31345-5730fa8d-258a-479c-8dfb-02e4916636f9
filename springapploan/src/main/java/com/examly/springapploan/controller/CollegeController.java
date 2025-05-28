@@ -56,7 +56,6 @@ public class CollegeController {
     public ResponseEntity<College> addCollege(
             @RequestHeader("Authorization") String token,
             @RequestBody College college) throws AuthException {
-        // String userId = JwtTokenGen.getUserId(token);
         String userRole = JwtTokenGen.getUserRole(token);
 
         if (userRole == null || userRole.equals("LoanManager") || userRole.equals("Student")) {

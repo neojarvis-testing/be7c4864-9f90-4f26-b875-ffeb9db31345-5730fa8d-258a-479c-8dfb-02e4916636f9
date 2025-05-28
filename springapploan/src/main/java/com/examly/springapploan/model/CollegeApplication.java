@@ -29,7 +29,7 @@ public class CollegeApplication {
     private String school12th;
     @Column(name="application_status")
     private String status;
-    private int userId;
+    private long userId;
     @ManyToOne
     @JoinColumn(name = "college_id")
     private College college;

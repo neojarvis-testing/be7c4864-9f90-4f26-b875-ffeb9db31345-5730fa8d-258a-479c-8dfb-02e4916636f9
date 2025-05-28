@@ -5,7 +5,6 @@ import java.util.Optional;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.examly.springappuser.config.JwtTokenGen;
 import com.examly.springappuser.dto.LoginRequest;
 import com.examly.springappuser.dto.LoginResponse;
@@ -19,7 +18,6 @@ import com.examly.springappuser.service.UserService;
 @Service
 public class UserServiceImpl implements UserService{
     
-
     private UserRepository userRepository;
     private JwtTokenGen jwtUtil;
 
@@ -31,7 +29,6 @@ public class UserServiceImpl implements UserService{
     
 
     public User registerUser(User user) throws UserExistsExeption{
-
         Optional<User> existingUserOptional = userRepository.findEmailAndUsername(user.getEmail(),user.getUsername());
 
             if(existingUserOptional.isPresent()){
@@ -51,7 +48,7 @@ public class UserServiceImpl implements UserService{
 
     if(StringUtils.equals(loginRequest.getPassword(), user.getPassword())){
         //generate token
-        String token = jwtUtil.generateToken(user.getUsername(), user.getUserRole());
+        String token = jwtUtil.generateToken(user.getUsername(), user.getUserRole(),user.getUserId());
         //return response
 
         return LoginResponse.builder()

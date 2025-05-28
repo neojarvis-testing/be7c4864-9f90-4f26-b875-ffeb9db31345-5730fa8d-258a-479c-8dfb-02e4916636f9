@@ -11,13 +11,13 @@ import io.jsonwebtoken.SignatureAlgorithm;
 @Component
 public class JwtTokenGen {
 
-
     private final String SECRET_KEY = "mytestkey";
 
-    public String generateToken(String username,String role){
+    public String generateToken(String username,String role,long userId){
         Map<String,Object> claims = new HashMap<>(); 
-        claims.put("userId", role); 
+        claims.put("username", username); 
         claims.put("role", role);
+        claims.put("userId", userId);
         return createToken(claims, username);
     }
 
@@ -33,7 +33,6 @@ public class JwtTokenGen {
 
     
     public Claims extractClaims(String token){
-
         return Jwts.parser()
         .setSigningKey(SECRET_KEY)
         .parseClaimsJws(token)

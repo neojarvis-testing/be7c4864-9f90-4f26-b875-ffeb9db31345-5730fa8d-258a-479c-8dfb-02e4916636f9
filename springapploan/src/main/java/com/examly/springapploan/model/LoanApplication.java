@@ -30,6 +30,6 @@ public class LoanApplication {
     private String accountHolder;
     private String accountNumber;
     private String iFSCCode;
-    // private User user;
+    private long userId;
     private Loan loan;
 }

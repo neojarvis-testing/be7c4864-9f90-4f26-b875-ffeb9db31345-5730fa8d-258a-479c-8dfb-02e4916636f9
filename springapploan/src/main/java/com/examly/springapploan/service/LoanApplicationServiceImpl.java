@@ -27,7 +27,8 @@ public class LoanApplicationServiceImpl implements LoanApplicationService {
 
     @Override
     public LoanApplication getLoanApplication(long userId) {
-        return null;
+        return loanApplicationRepository.findById(userId)
+        .orElseThrow(()-> new LoanApplicationNotFound("Loan Application Not found with UserId "+userId));
     }
 
     @Override
@@ -40,12 +41,15 @@ public class LoanApplicationServiceImpl implements LoanApplicationService {
 
     @Override
     public void deleteLoanApplication(long loanApplicationId) {
-       // return null;
+       LoanApplication loanApplication = loanApplicationRepository.findById(loanApplicationId)
+       .orElseThrow(()-> new LoanApplicationNotFound(loanApplicationId));
+       loanApplicationRepository.delete(loanApplication);
     }
 
     @Override
-    public LoanApplication addLoanApplication(LoanApplication loanApplication) {
-        return null;
+    public LoanApplication addLoanApplication(LoanApplication loanApplication, Long userId) {
+        loanApplication.setUserId(userId);
+        return loanApplicationRepository.save(loanApplication);
     }
     
 }

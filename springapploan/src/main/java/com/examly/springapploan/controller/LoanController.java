@@ -35,7 +35,7 @@ public class LoanController {
     @GetMapping(produces = "application/json" )
     public ResponseEntity<?> getAllLoans(@RequestHeader("Authorization") String token){
         String userRole = JwtTokenGen.getUserRole(token);
-        if (userRole == null || userRole.equals("Admin")) {
+        if (userRole == null || userRole.equalsIgnoreCase("Admin")) {
             return new ResponseEntity<>("Admin has no access!", HttpStatus.FORBIDDEN);
         }
         List<Loan> loans = loanService.getAllLoans();
@@ -49,7 +49,7 @@ public class LoanController {
     @RequestBody Loan loan){
         String userRole = JwtTokenGen.getUserRole(token);
 
-        if (userRole == null || userRole.equals("Admin") || userRole.equals("Student")) {
+        if (userRole == null || userRole.equalsIgnoreCase("Admin") || userRole.equalsIgnoreCase("Student")) {
             return new ResponseEntity<>("Student & Admin has no access!", HttpStatus.FORBIDDEN);
         }
         Loan savedLoan = loanService.addLoan(loan);
@@ -61,8 +61,8 @@ public class LoanController {
     public ResponseEntity<?> getAllLoan(@PathVariable Long loanId,@RequestHeader("Authorization") String token){
         String userRole = JwtTokenGen.getUserRole(token);
 
-        if (userRole == null || userRole.equals("Admin") || userRole.equals("Student")) {
-            return new ResponseEntity<>("Student & Admin has no access!", HttpStatus.FORBIDDEN);
+        if (userRole == null || userRole.equalsIgnoreCase("Admin")) {
+            return new ResponseEntity<>("Admin has no access!", HttpStatus.FORBIDDEN);
         }
         Loan loan = loanService.getLoan(loanId);
         return new ResponseEntity<>(loan,HttpStatus.OK);
@@ -70,21 +70,27 @@ public class LoanController {
 
     //update loan  for loan manager
     @PutMapping("/{loanId}")
-    public ResponseEntity<Loan> updateLoan(@RequestBody Loan loan, @PathVariable long loanId){
+    public ResponseEntity<?> updateLoan(@RequestHeader("Authorization") String token, @RequestBody Loan loan, @PathVariable long loanId){
+        String userRole = JwtTokenGen.getUserRole(token);
+        if (userRole == null || userRole.equalsIgnoreCase("Admin") || userRole.equalsIgnoreCase("Student")) {
+            return new ResponseEntity<>("Student & Admin has no access!", HttpStatus.FORBIDDEN);
+        }
         Loan updatedLoan = loanService.updateLoan(loan,loanId);
         return new ResponseEntity<>(updatedLoan,HttpStatus.OK);
     }
 
     //delete Loan for Loan Manager
     @DeleteMapping("/{loanId}")
-    public ResponseEntity<ResponseDTO> deleteLoan(@PathVariable long loanId){
+    public ResponseEntity<?> deleteLoan(@RequestHeader("Authorization") String token,@PathVariable long loanId){
+        String userRole = JwtTokenGen.getUserRole(token);
+        if (userRole == null || userRole.equalsIgnoreCase("Admin") || userRole.equalsIgnoreCase("Student")) {
+            return new ResponseEntity<>("Student & Admin has no access!", HttpStatus.FORBIDDEN);
+        }
         loanService.deleteLoan(loanId);
         ResponseDTO loanReponse = new ResponseDTO();
         loanReponse.setStatus(true);
         loanReponse.setMessage("Laon successfully deleted");
         return new ResponseEntity<>(loanReponse,HttpStatus.OK);
     }
-
-
-     
+    
 }
