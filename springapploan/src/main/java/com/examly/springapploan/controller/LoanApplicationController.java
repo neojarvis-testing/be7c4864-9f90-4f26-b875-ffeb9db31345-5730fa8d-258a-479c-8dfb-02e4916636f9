@@ -9,12 +9,16 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.examly.springapploan.config.JwtTokenGen;
 import com.examly.springapploan.model.LoanApplication;
+import com.examly.springapploan.model.LoanApplicationRequest;
 import com.examly.springapploan.service.LoanApplicationService;
 
 @RestController
@@ -36,16 +40,38 @@ public class LoanApplicationController {
         return new ResponseEntity<>(loanApplications,HttpStatus.OK);
     }
 
+    @PostMapping
+    public ResponseEntity<?> addLoanApplication(
+        @RequestHeader("Authorization") String token,
+        @RequestBody LoanApplicationRequest loanApplication
+    ){  
+        String userRole = JwtTokenGen.getUserRole(token);
+        if (userRole == null || userRole.equals("LoanManager") || userRole.equals("Admin")) {
+            return new ResponseEntity<>("Loan Manager & Admin has no access!", HttpStatus.FORBIDDEN);
+        }
+        long userIdToken = JwtTokenGen.getUserIdToken(token);
+        LoanApplication updLoanApplication = loanApplicationService.addLoanApplication(loanApplication, userIdToken);
+        return new ResponseEntity(updLoanApplication, HttpStatus.CREATED);
+
+    }
+
     //Get Loan Application specific to User access to Student
-    @GetMapping(path = "/users/{userId}", produces = "application/json")
-    public ResponseEntity<List<LoanApplication>> getAllLoanApplicationsOfUser(@PathVariable long userId){
-        return null;
+    @GetMapping(path = "/user/{userId}", produces = "application/json")
+    public ResponseEntity<?> getAllLoanApplicationsOfUser(
+        @RequestHeader("Authorization") String token,    
+    @PathVariable long userId){
+        String userRole = JwtTokenGen.getUserRole(token);
+        if (userRole == null || userRole.equals("LoanManager")) {
+            return new ResponseEntity<>("Loan Manager & Admin has no access!", HttpStatus.FORBIDDEN);
+        }
+        List<LoanApplication> result = loanApplicationService.getLoanApplication(userId);
+        return new ResponseEntity(result, HttpStatus.OK);
     }
 
     //Get Loan Application by Id access to Loan Manager and Student
     @GetMapping("/{loanApplicationId}")
     public ResponseEntity<LoanApplication> getLoanApplication(@PathVariable long loanApplicationId){
-        LoanApplication loanApplication = loanApplicationService.getLoanApplication(loanApplicationId);
+        LoanApplication loanApplication = loanApplicationService.getApplication(loanApplicationId);
         return new ResponseEntity<>(loanApplication,HttpStatus.OK);
     }
 

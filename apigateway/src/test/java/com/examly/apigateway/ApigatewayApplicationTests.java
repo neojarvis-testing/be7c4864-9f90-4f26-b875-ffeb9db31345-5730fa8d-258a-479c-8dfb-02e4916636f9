@@ -419,7 +419,7 @@ class ApigatewayApplicationTests {
 		headers.set("Authorization", "Bearer " + loanmanagertoken);
 
 		ResponseEntity<String> response = restTemplate.exchange(
-				"/api/loanapplications/user/" + 1, // Adjust the userId as necessary for your test
+				"/api/loanapplications/user/" + 3, // Adjust the userId as necessary for your test
 				HttpMethod.GET,
 				new HttpEntity<>(headers),
 				String.class);
@@ -437,7 +437,7 @@ class ApigatewayApplicationTests {
 		headers.set("Authorization", "Bearer " + studenttoken);
 
 		ResponseEntity<String> response = restTemplate.exchange(
-				"/api/loanapplications/user/" + 1, // Adjust the userId as necessary for your test
+				"/api/loanapplications/user/" + 3, // Adjust the userId as necessary for your test
 				HttpMethod.GET,
 				new HttpEntity<>(headers),
 				String.class);
@@ -455,7 +455,7 @@ class ApigatewayApplicationTests {
 		headers.set("Authorization", "Bearer " + studenttoken);
 
 		ResponseEntity<String> response = restTemplate.exchange(
-				"/api/loanapplications/user/" + 1, // Adjust the userId as necessary for your test
+				"/api/loanapplications/user/" + 3, // Adjust the userId as necessary for your test
 				HttpMethod.GET,
 				new HttpEntity<>(headers),
 				String.class);

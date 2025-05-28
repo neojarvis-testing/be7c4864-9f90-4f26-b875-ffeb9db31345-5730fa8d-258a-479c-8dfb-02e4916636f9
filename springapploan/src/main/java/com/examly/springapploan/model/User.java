@@ -1,4 +1,4 @@
-package com.examly.springappfeedback.model;
+package com.examly.springapploan.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
