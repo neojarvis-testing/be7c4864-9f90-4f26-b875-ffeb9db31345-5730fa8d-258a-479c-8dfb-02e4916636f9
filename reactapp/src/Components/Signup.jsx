@@ -52,8 +52,7 @@ const handleChange = (e) => {
         axios.post(`${baseUrl}/api/users/register`,form)
         .then((response)=>{
 
-            const {name, email} = response.data;  
-            dispatch(signUpSuccess(name,email));
+            const {name, email} = response.data;   
             alert('SignUp Successfull!'); 
             navigate("/Login");
     
@@ -90,15 +89,15 @@ return (
             <input type="password" name="password"   value={form.password} onChange={handleChange} placeholder="Password" />
             
             {FieldError.confirmPassword && <p className='error'>{FieldError.confirmPassword}</p>}
-            <input type="passowrd" name="confirmPassword"   value={form.confirmPassword} onChange={handleChange} placeholder="Confirm Password" />
+            <input type="password" name="confirmPassword"   value={form.confirmPassword} onChange={handleChange} placeholder="Confirm Password" />
             
             {FieldError.mobileNumber && <p className='error'>{FieldError.mobileNumber}</p>}
             <input type="text" name="mobileNumber"   value={form.mobileNumber} onChange={handleChange} placeholder="Enter Mobilenumber" />
             
            <select id='userRole'  value={form.userRole}   name='userRole' onChange={handleChange}>
-            <option value="STUDENT" selected>STUDENT</option>
-            <option value="LOAN_MANAGER">LOAN_MANAGER</option>
-            <option value="ADMIN">ADMIN</option>
+            <option value="Student" selected>Student</option>
+            <option value="LoanManager">LoanManager</option>
+            <option value="Admin">Admin</option>
            </select>
            <button type="submit"  disabled={loading} >
                 {loading ? 'Logging in...' : 'Submit'}
