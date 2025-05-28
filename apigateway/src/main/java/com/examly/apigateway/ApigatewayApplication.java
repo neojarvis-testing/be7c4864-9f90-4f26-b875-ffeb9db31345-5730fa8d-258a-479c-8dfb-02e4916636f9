@@ -31,7 +31,7 @@ public class ApigatewayApplication {
 		.route("user_route",route->route.path("/api/users/**")
 		.uri("lb://USER-SERVICE"))
 
-		.route("user_loans",route->route.path("/api/loans/**","/api/colleges/**")
+		.route("user_loans",route->route.path("/api/loans/**","/api/colleges/**","/api/loanapplications/**")
 		.filters(token->token.filter(jwtRequestFilter))
 		.uri("lb://LOAN-SERVICE"))
 

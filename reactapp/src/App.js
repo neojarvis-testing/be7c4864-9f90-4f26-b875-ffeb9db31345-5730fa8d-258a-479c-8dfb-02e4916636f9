@@ -8,7 +8,7 @@ import ViewColleges from './AdminComponents/ViewColleges'
 import CollegeForm from './AdminComponents/CollegeForm'
 import ViewFeedback from './AdminComponents/ViewFeedback'
 import CollegeApproval from './AdminComponents/CollegeApproval'
-//loan
+// loan
 import LoanForm from './LoanManagerComponents/LoanForm'
 // import LoanRequest from '../LoanManagerComponents/LoanRequest';
 // import ViewLoans from '../LoanManagerComponents/ViewLoans';
@@ -31,6 +31,13 @@ const App = () => {
             <Route path='/loan-form' element={<LoanForm/>} />
             {/* <Route path='/loan-request' element={<LoanRequest/>}/>
             <Route path='/view-loans' element={<ViewLoans/>}/> */}
+
+            <Route path='/applied-loans' element={<AppliedLoans/>}/>
+            <Route path='/student-postfeedback' element={<StudentPostFeedback/>}/>
+            <Route path='/loan-application' element={<LoanApplicationForm/>}/>
+            <Route path='/view-allloans' element={<ViewAllLoans/>}/>
+            
+            
 
         </Routes>
     </Router>
