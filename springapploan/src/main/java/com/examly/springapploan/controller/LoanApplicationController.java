@@ -29,8 +29,7 @@ public class LoanApplicationController {
  
     @Autowired
     public LoanApplicationController(LoanApplicationService loanApplicationService){
-        this.loanApplicationService=loanApplicationService;
-        
+        this.loanApplicationService=loanApplicationService;  
     }
 
     //Get all Loan Applications access LoanManager
@@ -44,7 +43,7 @@ public class LoanApplicationController {
         return new ResponseEntity<>(loanApplications,HttpStatus.OK);
     }
 
-    @PostMapping()
+    @PostMapping
     public ResponseEntity<?> addLoanApplication(@RequestHeader("Authorization") String token,@RequestBody LoanApplication laonApplication){
         String userRole = JwtTokenGen.getUserRole(token);
         if (userRole == null || !(userRole.equalsIgnoreCase("LoanManager"))) {
@@ -57,9 +56,13 @@ public class LoanApplicationController {
 
     //Get Loan Application specific to User access to Student
     @GetMapping(path = "/users/{userId}", produces = "application/json")
-    public ResponseEntity<List<LoanApplication>> getAllLoanApplicationsOfUser(@PathVariable long userId){
-        
-        return null;
+    public ResponseEntity<?> getAllLoanApplicationsOfUser(@RequestHeader("Authorization") String token,@PathVariable long userId){
+        String userRole = JwtTokenGen.getUserRole(token);
+        if (userRole == null || !(userRole.equalsIgnoreCase("student"))) {
+            return new ResponseEntity<>("No Access!", HttpStatus.FORBIDDEN);
+        }
+        LoanApplication loanApplications = loanApplicationService.getLoanApplication(userId);
+        return new ResponseEntity<>(loanApplications, HttpStatus.OK);
     }
 
     //Get Loan Application by Id access to Loan Manager and Student
