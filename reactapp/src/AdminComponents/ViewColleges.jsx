@@ -1,35 +1,82 @@
-import React,{useState} from 'react'; 
+import React,{useEffect, useState} from 'react'; 
+import axios from 'axios';
+import {baseUrl} from '../apiConfig' 
 import './ViewColleges.css'
-const ViewColleges = () => {
+const ViewColleges = ({token}) => {
+ 
+   const [loading,setLoading] = useState(false);
+   const [datas,setData] = useState([]);
+  
+useEffect(()=> {
+const fetchData = async () => {
+    
+    setLoading(true);
+    try{
+        const headers = {
+            "Authorization":`Bearer ${token}`,
+            "Content-Type":"application/json"
+        }
+      const response = await axios.get(`${baseUrl}/api/colleges`,{ headers });
+      setData(response.data);
+    }catch(error){
+        alert("Failed to Fetch Data:"+error);
+    }
+    finally{
+        setLoading(false);
+    }
+};
+
+//fetch 
+fetchData();
+},[token]);
  
 return (
 
     <div className='form-container'>
     <div className='form-box'>
-        <h2>View College</h2>
+        <h2>View College</h2> 
+        {loading?(
+            <p>Loading</p>
+        ) : datas.length === 0 ? (
+            <p>No Data Found</p>
+        ) :
+        (
 
-        <input type='text' name='name' placeholder='College Name' required />
-        <br/>
-        <table>
-            <thead>
-                <tr>
-                    <th>head 1</th>
-                    <th>head 2</th>
-                    <th>item 3</th>
-                    <th>item 4</th>
-                    <th>item 5</th>
-                </tr>
+            <table>
+            <thead> 
+                <th>College Id</th>
+                    <th>College Name</th>  
+                    <th>Address</th>   
+                    <th>Contact Number</th> 
+                    <th>Email</th> 
+                    <th>website</th> 
+                    <th>courses</th> 
+                    <th>status</th> 
             </thead>
             <tbody>
-            <tr>
-                    <th>body 1</th>
-                    <th>body 2</th>
-                    <th>body 3</th>
-                    <th>body 4</th>
-                    <th>body 5</th>
-                </tr>
+          
+
+                {datas.map((college) => (
+                    <tr>
+                    <td>{college.collegeId}</td>
+                    <td>{college.collegeName}</td> 
+                    <td>{college.address}</td> 
+                    <td>{college.contactNumber}</td> 
+                    <td>{college.email}</td> 
+                    <td>{college.website}</td>
+                    <td>{college.courses}</td>
+                    <td>{college.status}</td>
+                    </tr>
+                ))
+                }    
             </tbody>
         </table>
+
+
+        )
+    }
+    
+
     </div>
    </div>
 
