@@ -107,7 +107,7 @@ const headers = {
 return (
 <>
    <div className='form-container'>
-    {/* {check ? (<div> College name is required Address is required Contact number is required Courses are required</div>) : (<div> d</div>)} */}
+    {check ? (<div> College name is required Address is required Contact number is required Courses are required</div>) : (<div> d</div>)}
     
     <form className='form-box' onSubmit={handleSubmit}>
         <h2>Create New College</h2>

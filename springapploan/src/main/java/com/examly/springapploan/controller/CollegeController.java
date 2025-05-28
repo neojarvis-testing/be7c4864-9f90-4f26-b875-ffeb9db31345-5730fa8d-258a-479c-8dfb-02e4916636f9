@@ -6,13 +6,13 @@ import org.apache.commons.codec.binary.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;  
+import org.springframework.web.bind.annotation.*;
 
 import com.examly.springapploan.dto.ResponseDTO;
 import com.examly.springapploan.exception.AuthException;
 import com.examly.springapploan.exception.CollegeNotFoundException;
 import com.examly.springapploan.model.College;
-import com.examly.springapploan.service.CollegeService; 
+import com.examly.springapploan.service.CollegeService;
 import com.examly.springapploan.config.JwtTokenGen;
 
 @RestController
@@ -26,53 +26,63 @@ public class CollegeController {
         this.collegeService = collegeService;
     }
 
-    //Access for Admin and Stundet
-    @GetMapping
-    public ResponseEntity<List<College>> getAllColleges(){
+    // Access for Admin and Stundet
+    @GetMapping(produces = "application/json")
+    public ResponseEntity<?> getAllColleges(@RequestHeader("Authorization") String token) {
+        String userRole = JwtTokenGen.getUserRole(token);
 
-      List<College> collegeList = collegeService.getCollegeList();
-      return new ResponseEntity<>(collegeList,HttpStatus.OK);
+        if (userRole == null || userRole.equals("LoanManager")) {
+            return new ResponseEntity<>("Loan Manager has no access!", HttpStatus.FORBIDDEN);
+        }
+        List<College> collegeList = collegeService.getCollegeList();
+        return new ResponseEntity<>(collegeList, HttpStatus.OK);
     }
 
-    //Access for Admin
-    @GetMapping("/{collegeId}")
-    public ResponseEntity<College> getCollege(@PathVariable int collegeId) throws CollegeNotFoundException{
+    // Access for Admin
+    @GetMapping(path = "/{collegeId}" , produces = "application/json" )
+    public ResponseEntity<?> getCollege(@RequestHeader("Authorization") String token,
+            @PathVariable int collegeId) throws CollegeNotFoundException {
+        String userRole = JwtTokenGen.getUserRole(token);
+
+        if (userRole == null || userRole.equals("LoanManager") || userRole.equals("Student")) {
+            return new ResponseEntity<>("Student & Loan Manager has no access!", HttpStatus.FORBIDDEN);
+        }
         College college = collegeService.getCollege(collegeId);
-        return new ResponseEntity<>(college,HttpStatus.OK);
+        return new ResponseEntity<>(college, HttpStatus.OK);
     }
 
-    //Access for Admin
+    // Access for Admin
     @PostMapping
     public ResponseEntity<College> addCollege(
-         @RequestHeader("Authorization")String token,
-         @RequestBody College college) throws AuthException{ 
-     String userId = JwtTokenGen.getUserId(token);
-     String userRole = JwtTokenGen.getUserRole(token);
+            @RequestHeader("Authorization") String token,
+            @RequestBody College college) throws AuthException {
+        // String userId = JwtTokenGen.getUserId(token);
+        String userRole = JwtTokenGen.getUserRole(token);
 
-     
+        if (userRole == null || userRole.equals("LoanManager") || userRole.equals("Student")) {
+            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+        }
+
         College savedCollege = collegeService.addCollege(college);
-        return new ResponseEntity<>(savedCollege,HttpStatus.CREATED);
+        return new ResponseEntity<>(savedCollege, HttpStatus.CREATED);
     }
 
-    //Access for Admin
+    // Access for Admin
     @PutMapping("/{collegeId}")
-    public ResponseEntity<College> updateCollege(@RequestBody College college,@PathVariable int collegeId) throws CollegeNotFoundException{
+    public ResponseEntity<College> updateCollege(@RequestBody College college, @PathVariable int collegeId)
+            throws CollegeNotFoundException {
         College updatedCollege = collegeService.updateCollege(college, collegeId);
         return new ResponseEntity<>(updatedCollege, HttpStatus.OK);
     }
 
-    //Access for Admin
+    // Access for Admin
     @DeleteMapping("/{collegeId}")
-    public ResponseEntity<ResponseDTO> deleteCollege(@PathVariable int collegeId) throws CollegeNotFoundException{
+    public ResponseEntity<ResponseDTO> deleteCollege(@PathVariable int collegeId) throws CollegeNotFoundException {
         collegeService.deleteCollege(collegeId);
-       ResponseDTO response = new ResponseDTO();
-       response.setStatus(true);
-       response.setMessage("Laon successfully deleted");
-        return new ResponseEntity<>(response,HttpStatus.OK);
+        ResponseDTO response = new ResponseDTO();
+        response.setStatus(true);
+        response.setMessage("Laon successfully deleted");
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
-
-
-
-    
 }
