@@ -12,6 +12,10 @@ import CollegeApproval from './AdminComponents/CollegeApproval'
 import LoanForm from './LoanManagerComponents/LoanForm'
 // import LoanRequest from '../LoanManagerComponents/LoanRequest';
 // import ViewLoans from '../LoanManagerComponents/ViewLoans';
+import ViewAllLoans from './StudentComponents/ViewAllLoans';
+import LoanApplicationForm from './StudentComponents/LoanApplicationForm';
+import StudentPostFeedback from './StudentComponents/StudentPostFeedback';
+import AppliedLoans from './StudentComponents/AppliedLoans';
 
 const App = () => {
     return(
