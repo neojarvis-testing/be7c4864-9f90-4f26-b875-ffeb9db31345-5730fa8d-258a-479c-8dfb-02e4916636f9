@@ -21,7 +21,7 @@ return (
     <div className='nav-menu'>
        <div className='username'>Welcome {username}!, UserRole: {userRole}</div> 
        <div className='nav-item' onClick={()=> setCurrentPage('Dashboard')}>Home</div> 
-       <div  className='nav-item'  onClick={()=> setCurrentPage('StudentColleges')}>Colleges</div>
+       <div  className='nav-item'  onClick={()=> setCurrentPage('ViewAllColleges')}>Colleges</div>
        <div  className='nav-item'  onClick={()=> setCurrentPage('StudentLoans')}>Student Loans</div>
        <div className='nav-item'>
             Applied
