@@ -44,8 +44,19 @@ public class LoanApplicationServiceImpl implements LoanApplicationService {
     public LoanApplication updateLoanApplication(LoanApplication loanApplication, long loanApplicationId) {
         LoanApplication existingLoanApplication = loanApplicationRepository
         .findById(loanApplicationId).orElseThrow(()-> new LoanApplicationNotFound(loanApplicationId));
-       existingLoanApplication.setApplicationStatus(loanApplication.getApplicationStatus());
-       return existingLoanApplication;
+        
+        existingLoanApplication.setApplicationStatus(loanApplication.getApplicationStatus());
+        return loanApplicationRepository.save(existingLoanApplication);
+   
+    }
+
+    @Override
+    public LoanApplication updateLoanApplicationStatus(ApproveRequest status,long loanApplicationId){
+        LoanApplication existingLoanApplication = loanApplicationRepository
+        .findById(loanApplicationId).orElseThrow(()-> new LoanApplicationNotFound(loanApplicationId));
+        
+        existingLoanApplication.setApplicationStatus(status.getStatus());
+        return loanApplicationRepository.save(existingLoanApplication);
     }
 
     public LoanApplication getApplication (long applicationId){
