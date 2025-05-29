@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.examly.springapploan.exception.LoanApplicationNotFound;
+
+import com.examly.springapploan.dto.ApproveRequest;
+import com.examly.springapploan.exception.LoanApplicationNotFound; 
 import com.examly.springapploan.model.LoanApplication;
 import com.examly.springapploan.model.LoanApplicationRequest;
 import com.examly.springapploan.repository.LoanApplicationRepository;
@@ -42,8 +44,24 @@ public class LoanApplicationServiceImpl implements LoanApplicationService {
     public LoanApplication updateLoanApplication(LoanApplication loanApplication, long loanApplicationId) {
         LoanApplication existingLoanApplication = loanApplicationRepository
         .findById(loanApplicationId).orElseThrow(()-> new LoanApplicationNotFound(loanApplicationId));
+<<<<<<< HEAD
        existingLoanApplication.setApplicationStatus(loanApplication.getApplicationStatus());
        return null;
+=======
+        
+        existingLoanApplication.setApplicationStatus(loanApplication.getApplicationStatus());
+        return loanApplicationRepository.save(existingLoanApplication);
+   
+    }
+
+    @Override
+    public LoanApplication updateLoanApplicationStatus(ApproveRequest status,long loanApplicationId){
+        LoanApplication existingLoanApplication = loanApplicationRepository
+        .findById(loanApplicationId).orElseThrow(()-> new LoanApplicationNotFound(loanApplicationId));
+        
+        existingLoanApplication.setApplicationStatus(status.getStatus());
+        return loanApplicationRepository.save(existingLoanApplication);
+>>>>>>> 16cfda88a01848a034f8d85d422337f0ee7f99a0
     }
 
     public LoanApplication getApplication (long applicationId){
