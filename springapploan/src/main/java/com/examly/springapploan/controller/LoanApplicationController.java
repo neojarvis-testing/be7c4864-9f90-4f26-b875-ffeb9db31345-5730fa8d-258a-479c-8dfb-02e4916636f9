@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.examly.springapploan.config.JwtTokenGen;
 import com.examly.springapploan.dto.ApproveRequest;
+import com.examly.springapploan.dto.ResponseDTO;
 import com.examly.springapploan.model.LoanApplication;
 import com.examly.springapploan.model.LoanApplicationRequest;
 import com.examly.springapploan.service.LoanApplicationService;
@@ -81,16 +82,8 @@ public class LoanApplicationController {
 
     //update Loan Application obj for Loan Manager
     @PutMapping("/{loanApplicationId}")
-<<<<<<< HEAD
-    public ResponseEntity<?> updateLoanApplication(@RequestHeader("Authorization") String token,@RequestBody LoanApplication laonApplication, @PathVariable long loanApplicationId){
-        String userRole = JwtTokenGen.getUserRole(token);
-        if (userRole == null || !(userRole.equalsIgnoreCase("LoanManager"))) {
-            return new ResponseEntity<>("No Access!", HttpStatus.FORBIDDEN);
-        }
-=======
     public ResponseEntity<LoanApplication> updateLoanApplication(@RequestBody LoanApplication laonApplication, @PathVariable long loanApplicationId){
       
->>>>>>> 16cfda88a01848a034f8d85d422337f0ee7f99a0
         LoanApplication updatedLoanApplication = loanApplicationService.updateLoanApplication(laonApplication,loanApplicationId);
         return new ResponseEntity<>(updatedLoanApplication,HttpStatus.OK);
     }

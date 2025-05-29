@@ -44,24 +44,8 @@ public class LoanApplicationServiceImpl implements LoanApplicationService {
     public LoanApplication updateLoanApplication(LoanApplication loanApplication, long loanApplicationId) {
         LoanApplication existingLoanApplication = loanApplicationRepository
         .findById(loanApplicationId).orElseThrow(()-> new LoanApplicationNotFound(loanApplicationId));
-<<<<<<< HEAD
        existingLoanApplication.setApplicationStatus(loanApplication.getApplicationStatus());
-       return null;
-=======
-        
-        existingLoanApplication.setApplicationStatus(loanApplication.getApplicationStatus());
-        return loanApplicationRepository.save(existingLoanApplication);
-   
-    }
-
-    @Override
-    public LoanApplication updateLoanApplicationStatus(ApproveRequest status,long loanApplicationId){
-        LoanApplication existingLoanApplication = loanApplicationRepository
-        .findById(loanApplicationId).orElseThrow(()-> new LoanApplicationNotFound(loanApplicationId));
-        
-        existingLoanApplication.setApplicationStatus(status.getStatus());
-        return loanApplicationRepository.save(existingLoanApplication);
->>>>>>> 16cfda88a01848a034f8d85d422337f0ee7f99a0
+       return existingLoanApplication;
     }
 
     public LoanApplication getApplication (long applicationId){
@@ -85,6 +69,12 @@ public class LoanApplicationServiceImpl implements LoanApplicationService {
         loanApplication.setApplicationDate(loanApplicationReq.getApplicationDate());
         loanApplication.setApplicationStatus(loanApplicationReq.getStatus());
         return loanApplicationRepository.save(loanApplication);
+    }
+
+    @Override
+    public LoanApplication updateLoanApplicationStatus(ApproveRequest status, long loanApplicationId) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'updateLoanApplicationStatus'");
     }
     
 }
