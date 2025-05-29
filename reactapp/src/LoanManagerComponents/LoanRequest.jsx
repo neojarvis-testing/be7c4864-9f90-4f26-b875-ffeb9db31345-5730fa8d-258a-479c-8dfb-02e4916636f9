@@ -41,12 +41,13 @@ const handleApprove = async(id) => {
     try{
         const headers = {
             "Authorization":`Bearer ${token}`,
-            "Content-Type":"application/json",
-            "status":"Rejected"
+            "Content-Type":"application/json"
         }
-        alert(headers.Authorization);
+        const body = {
+            "Status": "Accepted"
+        }
       //Please Put Approve 
-      const response = await axios.put(`${baseUrl}/api/loanapplications/${id}`,{ headers });
+      const response = await axios.put(`${baseUrl}/api/status/loanapplications/${id}`,body,{ headers });
       setData(response.data);
     }catch(error){
         alert("Failed to Fetch Data:"+error);
@@ -64,8 +65,11 @@ const handleApprove = async(id) => {
             "Authorization":`Bearer ${token}`,
             "Content-Type":"application/json"
         }
+        const body = {
+            "Status": "Rejected"
+        }
       //Please Put Approve 
-      const response = await axios.put(`${baseUrl}/api/loanapplications/${id}`,{ headers });
+      const response = await axios.put(`${baseUrl}/api/status/loanapplications/${id}`,body,{ headers });
       setData(response.data);
     }catch(error){
         alert("Failed to Fetch Data:"+error);

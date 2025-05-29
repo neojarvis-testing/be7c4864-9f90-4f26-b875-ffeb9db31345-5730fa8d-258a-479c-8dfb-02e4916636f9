@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.examly.springapploan.dto.ApproveRequest;
 import com.examly.springapploan.exception.LoanApplicationNotFound; 
 import com.examly.springapploan.model.LoanApplication;
 import com.examly.springapploan.model.LoanApplicationRequest;
@@ -48,6 +49,15 @@ public class LoanApplicationServiceImpl implements LoanApplicationService {
         existingLoanApplication.setApplicationStatus(loanApplication.getApplicationStatus());
         return loanApplicationRepository.save(existingLoanApplication);
    
+    }
+
+    @Override
+    public LoanApplication updateLoanApplicationStatus(ApproveRequest status,long loanApplicationId){
+        LoanApplication existingLoanApplication = loanApplicationRepository
+        .findById(loanApplicationId).orElseThrow(()-> new LoanApplicationNotFound(loanApplicationId));
+        
+        existingLoanApplication.setApplicationStatus(status.getStatus());
+        return loanApplicationRepository.save(existingLoanApplication);
     }
 
     public LoanApplication getApplication (long applicationId){
