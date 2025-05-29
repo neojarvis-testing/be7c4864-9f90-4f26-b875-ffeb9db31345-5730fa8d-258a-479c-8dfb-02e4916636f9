@@ -2,12 +2,9 @@ package com.examly.springapploan.service;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.examly.springapploan.exception.LoanApplicationNotFound;
-import com.examly.springapploan.model.Loan;
 import com.examly.springapploan.model.LoanApplication;
 import com.examly.springapploan.model.LoanApplicationRequest;
 import com.examly.springapploan.repository.LoanApplicationRepository;
@@ -45,7 +42,7 @@ public class LoanApplicationServiceImpl implements LoanApplicationService {
     public LoanApplication updateLoanApplication(LoanApplication loanApplication, long loanApplicationId) {
         LoanApplication existingLoanApplication = loanApplicationRepository
         .findById(loanApplicationId).orElseThrow(()-> new LoanApplicationNotFound(loanApplicationId));
-       existingLoanApplication.setEmploymentStatus(loanApplication.getEmploymentStatus());
+       existingLoanApplication.setApplicationStatus(loanApplication.getApplicationStatus());
        return null;
     }
 
