@@ -7,31 +7,35 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 
-@Entity
-public class Feedback {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+public class FeedbackRequest {
+
     private int feedbackId;
     private String feedbackText;
     private Date date;
-    private long userId;
-
+    private User user;
     
-    public Feedback() {
-    }
 
-    public Feedback(int feedbackId, String feedbackText, Date date, long userId) {
+    public FeedbackRequest() {
+    }
+    public FeedbackRequest(int feedbackId, String feedbackText, Date date, User user) {
         this.feedbackId = feedbackId;
         this.feedbackText = feedbackText;
         this.date = date;
-        this.userId = userId;
+        this.user = user;
     }
-
+    
     public int getFeedbackId() {
         return feedbackId;
     }
     public void setFeedbackId(int feedbackId) {
         this.feedbackId = feedbackId;
+    }
+    public User getUser() {
+        return user;
+    }
+    public void setUser(User user) {
+        this.user = user;
     }
     public String getFeedbackText() {
         return feedbackText;
@@ -45,13 +49,4 @@ public class Feedback {
     public void setDate(Date date) {
         this.date = date;
     }
-    public long getUserId() {
-        return userId;
-    }
-    public void setUserId(long userId) {
-        this.userId = userId;
-    }
-    
-
-
 }

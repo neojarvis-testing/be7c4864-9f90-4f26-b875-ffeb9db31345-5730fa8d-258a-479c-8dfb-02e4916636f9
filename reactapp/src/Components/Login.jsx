@@ -72,8 +72,8 @@ const handleSubmit = (e) => {
         <div className='form-container'>
           
            <form onSubmit={handleSubmit} className='form-box'>
-           
-           <h2>Login</h2>
+           <h2>Login</h2> 
+           {formError && <p className='error'>{formError}</p>}
             <div>  
             <input type="email" name="email" value={form.email} onChange={handleChange}  placeholder="Enter Email" />
             {FieldError.email && <p className='error'>{FieldError.email}</p>}

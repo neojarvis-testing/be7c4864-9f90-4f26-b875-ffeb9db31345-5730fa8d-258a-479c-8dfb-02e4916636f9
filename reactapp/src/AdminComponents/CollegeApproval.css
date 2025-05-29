@@ -1,0 +1,44 @@
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: beige;
+}
+
+.form-box{
+    background-color: bisque;
+    padding: 30px 40px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.form-box h2{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-box input,
+.form-box select{
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid grey;
+    border-radius: 8px;
+}
+
+
+.form-box button{
+    align-self: center;
+    width: 20%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid grey;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+
+.form-box button:hover{
+  background-color: aqua;
+}

@@ -13,11 +13,11 @@ public class JwtTokenGen {
 
     private final String SECRET_KEY = "mytestkey";
 
-    public String generateToken(String username,String role,long userId){
+    public String generateToken(String username,String role, long userId){
         Map<String,Object> claims = new HashMap<>(); 
-        claims.put("username", username); 
+        claims.put("userId", username); 
         claims.put("role", role);
-        claims.put("userId", userId);
+        claims.put("userName", userId);
         return createToken(claims, username);
     }
 
@@ -48,7 +48,10 @@ public class JwtTokenGen {
     public String getUserId(String jwtToken){
         return extractClaims(jwtToken).get("userId",String.class);
     }
- 
+    public long getUserIdToken(String jwtToken){
+        return extractClaims(jwtToken).get("userName",Long.class);
+    }
+    
     public boolean isTokenExpired(String token){
 
         return extractClaims(token).getExpiration().before(new Date());

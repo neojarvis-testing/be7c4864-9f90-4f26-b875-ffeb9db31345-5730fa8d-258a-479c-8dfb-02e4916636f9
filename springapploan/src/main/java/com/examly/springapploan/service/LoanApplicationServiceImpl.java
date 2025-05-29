@@ -1,12 +1,15 @@
 package com.examly.springapploan.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.examly.springapploan.exception.LoanApplicationNotFound;
+import com.examly.springapploan.model.Loan;
 import com.examly.springapploan.model.LoanApplication;
+import com.examly.springapploan.model.LoanApplicationRequest;
 import com.examly.springapploan.repository.LoanApplicationRepository;
 
 
@@ -26,9 +29,16 @@ public class LoanApplicationServiceImpl implements LoanApplicationService {
     }
 
     @Override
-    public LoanApplication getLoanApplication(long userId) {
-        return loanApplicationRepository.findById(userId)
-        .orElseThrow(()-> new LoanApplicationNotFound("Loan Application Not found with UserId "+userId));
+    public List<LoanApplication> getLoanApplication(long userId) {
+        List<LoanApplication> loanApplications = loanApplicationRepository.findAll();
+        List<LoanApplication> result = new ArrayList<>();
+        for(LoanApplication loanApplication : loanApplications){
+            if(loanApplication.getUserId() == userId){
+                result.add(loanApplication);
+            }
+            
+        }
+        return result;
     }
 
     @Override
@@ -39,6 +49,11 @@ public class LoanApplicationServiceImpl implements LoanApplicationService {
        return null;
     }
 
+    public LoanApplication getApplication (long applicationId){
+        return loanApplicationRepository
+        .findById(applicationId).orElseThrow(()-> new LoanApplicationNotFound(applicationId));
+    }
+
     @Override
     public void deleteLoanApplication(long loanApplicationId) {
        LoanApplication loanApplication = loanApplicationRepository.findById(loanApplicationId)
@@ -47,8 +62,13 @@ public class LoanApplicationServiceImpl implements LoanApplicationService {
     }
 
     @Override
-    public LoanApplication addLoanApplication(LoanApplication loanApplication, Long userId) {
+    public LoanApplication addLoanApplication(LoanApplicationRequest loanApplicationReq, long userId) {
+        LoanApplication loanApplication = new LoanApplication();
         loanApplication.setUserId(userId);
+        loanApplication.setLoanId(loanApplicationReq.getLoan().getLoanId());
+        loanApplication.setLoanAmount(loanApplicationReq.getLoanAmount());
+        loanApplication.setApplicationDate(loanApplicationReq.getApplicationDate());
+        loanApplication.setApplicationStatus(loanApplicationReq.getStatus());
         return loanApplicationRepository.save(loanApplication);
     }
     

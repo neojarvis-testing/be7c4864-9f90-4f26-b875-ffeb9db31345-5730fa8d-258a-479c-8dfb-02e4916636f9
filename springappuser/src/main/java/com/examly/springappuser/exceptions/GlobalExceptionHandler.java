@@ -20,7 +20,7 @@ public class GlobalExceptionHandler {
     }
     @ExceptionHandler(InvalidCredintials.class)
     public ResponseEntity<?> invalidCredintialsExeption(InvalidCredintials exception){
-        return new ResponseEntity<>(new ErrorDto(400, "Incorrect Password !"),HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(new ErrorDto(400, "Incorrect Password !"),HttpStatus.FORBIDDEN);
     }
     @ExceptionHandler(InvalidInput.class)
     public ResponseEntity<?> invalidInputException(InvalidInput exception){

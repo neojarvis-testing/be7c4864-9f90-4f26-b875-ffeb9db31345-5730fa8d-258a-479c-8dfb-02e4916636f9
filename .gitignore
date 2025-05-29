@@ -37,3 +37,12 @@ springappfeedback/target/classes/com/examly/springappfeedback/service/FeedbackSe
 springappfeedback/target/classes/com/examly/springappfeedback/service/FeedbackServiceImpl.class
 springapploan/target/classes/com/examly/springapploan/SpringapploanApplication.class
 springapploan/target/classes/com/examly/springapploan/config/JwtTokenGen.class
+springappfeedback/target/classes/com/examly/springappfeedback/controller/FeedbackController.class
+springappfeedback/target/classes/com/examly/springappfeedback/model/Feedback.class
+springappfeedback/target/classes/com/examly/springappfeedback/model/User.class
+springappfeedback/target/classes/com/examly/springappfeedback/repository/FeedbackRepository.class
+springappfeedback/target/classes/com/examly/springappfeedback/repository/UserRepository.class
+springappfeedback/target/classes/com/examly/springappfeedback/service/FeedbackService.class
+springappfeedback/target/classes/com/examly/springappfeedback/service/FeedbackServiceImpl.class
+springapploan/target/classes/com/examly/springapploan/SpringapploanApplication.class
+springapploan/target/classes/com/examly/springapploan/config/JwtTokenGen.class

@@ -55,6 +55,11 @@ public class JwtTokenGen {
     public static long getUserId(String jwtToken) throws AuthException{
         return extractClaims(jwtToken).get("userId",Long.class);
     }
+    
+    public static long getUserIdToken(String jwtToken){
+        return extractClaims(jwtToken).get("userName",Long.class);
+    }
+ 
  
     public boolean isTokenExpired(String token) throws AuthException{
 

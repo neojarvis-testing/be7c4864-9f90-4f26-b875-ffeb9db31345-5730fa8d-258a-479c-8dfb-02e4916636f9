@@ -78,10 +78,11 @@ return (
     <form onSubmit={handleSubmit} className='form-box'>
      
     <h2>Signup</h2>
+    
+    {formError && <p className='error'>{formError}</p>}
      <div>  
            {FieldError.email && <p className='error'>{FieldError.email}</p>}
            <input type="email" name="email"   value={form.email} onChange={handleChange} placeholder="Enter Email" />
-            
 
            {FieldError.username && <p className='error'>{FieldError.username}</p>}
             <input type="text" name="username"    value={form.username} onChange={handleChange} placeholder="Enter Name" />

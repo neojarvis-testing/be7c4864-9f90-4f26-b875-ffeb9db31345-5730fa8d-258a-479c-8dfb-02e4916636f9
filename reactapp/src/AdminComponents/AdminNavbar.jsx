@@ -32,7 +32,7 @@ return (
         </div> 
       
         <div  className='nav-item'  onClick={()=> setCurrentPage('CollegeApproval')}> College Approval</div>
-        <div  className='nav-item'  onClick={()=> setCurrentPage('ViewFeedback')}>Student Feedbacks</div>
+        <div  className='nav-item'  onClick={()=> setCurrentPage('AdminViewFeedBack')}>Student Feedbacks</div>
         <div  className='nav-item'  onClick={handleLogout}>Logout</div>
     </div>
     </div>

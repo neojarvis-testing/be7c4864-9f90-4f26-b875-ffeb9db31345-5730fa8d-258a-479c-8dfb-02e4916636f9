@@ -2,7 +2,9 @@ import React,{useEffect, useState} from 'react';
 import axios from 'axios';
 import {baseUrl} from '../apiConfig' 
 import './ViewAllColleges.css'
-const ViewAllColleges = ({token}) => {
+
+
+const ViewAllStudentColleges = ({token}) => {
  
    const [loading,setLoading] = useState(false);
    const [datas,setData] = useState([]);
@@ -34,7 +36,7 @@ return (
 
     <div className='form-container'>
     <div className='form-box'>
-        <h2>View College</h2> 
+        <h2>View All Colleges</h2> 
         {loading?(
             <p>Loading</p>
         ) : datas.length === 0 ? (
@@ -84,4 +86,4 @@ return (
 
 };
 
-export default ViewAllColleges;
+export default ViewAllStudentColleges;

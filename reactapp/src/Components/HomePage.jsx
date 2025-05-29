@@ -11,7 +11,7 @@ import ErrorPage from "./ErrorPage"
 import CollegeApproval from '../AdminComponents/CollegeApproval';
 import CollegeForm from '../AdminComponents/CollegeForm';
 import ViewColleges from '../AdminComponents/ViewColleges';
-import ViewFeedBack from '../AdminComponents/ViewFeedback';
+import AdminViewFeedBack from '../AdminComponents/ViewFeedback';
 
 //loan Components
 import LoanForm from "../LoanManagerComponents/LoanForm";
@@ -20,12 +20,12 @@ import LoanRequest from "../LoanManagerComponents/LoanRequest";
 import ViewFeedback from "../LoanManagerComponents/ViewFeedback";
 
 //student Components
-import StudentViewColleges from "../StudentComponents/ViewAllColleges";
-import StudentViewLoans from "../StudentComponents/ViewAllLoans";
+import ViewAllStudentColleges from "../StudentComponents/ViewAllColleges";
+import ViewAllStudentLoans from "../StudentComponents/ViewAllLoans";
 import StudentAppliedColleges from "../StudentComponents/AppliedColleges";
 import StudentAppliedLoans from "../StudentComponents/AppliedLoans";
-import StudentPostFeedBack from "../StudentComponents/StudentPostFeedback";
-import StudentViewFeedBacks from "../StudentComponents/StudentMyFeedback";
+import StudentPostFeedback from "../StudentComponents/StudentPostFeedback";
+import StudentMyFeedback from "../StudentComponents/StudentMyFeedback";
 
 import Dashboard from './Dashboard';
 
@@ -46,7 +46,7 @@ const Home = () => {
     //look for not auth!
     useEffect(()=>{
         if(!isAuthenicated){
-            dispatch(logout());
+            //dispatch(logout());  //temp for ease in dev
             navigate("/login");
     }
     },[isAuthenicated,navigate]);
@@ -69,7 +69,7 @@ const renderPage = () =>{
         case 'CollegeApproval': return <CollegeApproval  username={username} userRole={userRole}  userId={userId}    token={token}  />;
         case 'CollegeForm': return <CollegeForm  username={username} userRole={userRole}   userId={userId}  token={token} />;
         case 'ViewColleges': return <ViewColleges  username={username} userRole={userRole}   userId={userId}   token={token}    />;
-        case 'ViewFeedBack': return <ViewFeedBack  username={username} userRole={userRole}   userId={userId}   token={token}   />;
+        case 'AdminViewFeedBack': return <AdminViewFeedBack  username={username} userRole={userRole}   userId={userId}   token={token}   />;
 
         //LoanManager 
         case 'LoanForm': return <LoanForm  username={username} userRole={userRole}  userId={userId}    token={token}  />;
@@ -78,12 +78,12 @@ const renderPage = () =>{
         case 'ViewFeedback': return <ViewFeedback  username={username} userRole={userRole}  userId={userId}   token={token}  />;
 
         //Student
-        case 'StudentViewColleges': return <StudentViewColleges  username={username} userRole={userRole}  userId={userId} token={token} />;
-        case 'StudentViewLoans': return <StudentViewLoans  username={username} userRole={userRole}  userId={userId}  token={token}   />;
+        case 'ViewAllStudentColleges': return <ViewAllStudentColleges  username={username} userRole={userRole}  userId={userId} token={token} />;
+        case 'ViewAllStudentLoans': return <ViewAllStudentLoans  username={username} userRole={userRole}  userId={userId}  token={token}   />;
         case 'StudentAppliedColleges': return <StudentAppliedColleges  username={username} userRole={userRole}  userId={userId} token={token} />;
         case 'StudentAppliedLoans': return <StudentAppliedLoans  username={username} userRole={userRole}  userId={userId} token={token} />;
-        case 'StudentPostFeedBack': return <StudentPostFeedBack  username={username} userRole={userRole}  userId={userId} token={token} />;
-        case 'StudentViewFeedBacks': return <StudentViewFeedBacks  username={username} userRole={userRole}  userId={userId} token={token} />;
+        case 'StudentPostFeedback': return <StudentPostFeedback  username={username} userRole={userRole}  userId={userId} token={token} />;
+        case 'StudentMyFeedback': return <StudentMyFeedback  username={username} userRole={userRole}  userId={userId} token={token} />;
 
         default:  return <Dashboard  username={username} userRole={userRole}   />;
     }
@@ -93,9 +93,12 @@ return (
     <div>
         {selectedMenuBar}
         <div className='page-content'>
-            <h1>EDUINVESTOR</h1>
-            <h1>Contact Us</h1>
+         
             {renderPage()}
+            <div>
+            <h1>EDUINVESTOR</h1> |  <h1>Contact Us</h1>
+            </div>
+          
         </div>
     </div>); 
 };

@@ -30,7 +30,7 @@ return (
         </div> 
       
         <div  className='nav-item'  onClick={()=> setCurrentPage('LoanRequest')}>Loan Requested</div>
-        <div  className='nav-item'  onClick={()=> setCurrentPage('ViewFeedback')}>Feedback</div>
+        <div  className='nav-item'  onClick={()=> setCurrentPage('ViewFeedback')}>Feedbacks</div>
         <div  className='nav-item'  onClick={handleLogout}>Logout</div>
     </div>
     </div>
