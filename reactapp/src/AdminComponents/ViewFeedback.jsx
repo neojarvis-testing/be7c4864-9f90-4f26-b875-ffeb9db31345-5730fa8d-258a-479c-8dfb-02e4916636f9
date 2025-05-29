@@ -3,7 +3,7 @@ import axios from 'axios';
 import {baseUrl} from '../apiConfig' 
 import './ViewFeedback.css'
 
-const ViewFeedback = ({token}) => {
+const AdminViewFeedBack = ({token}) => {
  
    const [loading,setLoading] = useState(false);
    const [datas,setData] = useState([]);
@@ -17,6 +17,7 @@ const fetchData = async () => {
             "Authorization":`Bearer ${token}`,
             "Content-Type":"application/json"
         }
+        //update url and params 
       const response = await axios.get(`${baseUrl}/api/feeback`,{ headers });
       setData(response.data);
     }catch(error){
@@ -44,11 +45,10 @@ return (
             <table>
             <thead> 
                 <th>Feedback Id</th>
-                    <th>Feedback Name</th>  
+                    <th>Feedback Name</th>
 
             </thead>
             <tbody>
-          
 
                 {datas.map((data) => (
                     <tr>
@@ -72,4 +72,4 @@ return (
 
 };
 
-export default ViewFeedback;
+export default AdminViewFeedBack;
