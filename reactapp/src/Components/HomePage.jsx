@@ -20,12 +20,12 @@ import LoanRequest from "../LoanManagerComponents/LoanRequest";
 import ViewFeedback from "../LoanManagerComponents/ViewFeedback";
 
 //student Components
-import StudentViewColleges from "../StudentComponents/ViewAllColleges";
-import StudentViewLoans from "../StudentComponents/ViewAllLoans";
+import ViewAllStudentColleges from "../StudentComponents/ViewAllColleges";
+import ViewAllStudentLoans from "../StudentComponents/ViewAllLoans";
 import StudentAppliedColleges from "../StudentComponents/AppliedColleges";
 import StudentAppliedLoans from "../StudentComponents/AppliedLoans";
-import StudentPostFeedBack from "../StudentComponents/StudentPostFeedback";
-import StudentViewFeedBacks from "../StudentComponents/StudentMyFeedback";
+import StudentPostFeedback from "../StudentComponents/StudentPostFeedback";
+import StudentMyFeedback from "../StudentComponents/StudentMyFeedback";
 
 import Dashboard from './Dashboard';
 
@@ -78,12 +78,12 @@ const renderPage = () =>{
         case 'ViewFeedback': return <ViewFeedback  username={username} userRole={userRole}  userId={userId}   token={token}  />;
 
         //Student
-        case 'StudentViewColleges': return <StudentViewColleges  username={username} userRole={userRole}  userId={userId} token={token} />;
-        case 'StudentViewLoans': return <StudentViewLoans  username={username} userRole={userRole}  userId={userId}  token={token}   />;
+        case 'ViewAllStudentColleges': return <ViewAllStudentColleges  username={username} userRole={userRole}  userId={userId} token={token} />;
+        case 'ViewAllStudentLoans': return <ViewAllStudentLoans  username={username} userRole={userRole}  userId={userId}  token={token}   />;
         case 'StudentAppliedColleges': return <StudentAppliedColleges  username={username} userRole={userRole}  userId={userId} token={token} />;
         case 'StudentAppliedLoans': return <StudentAppliedLoans  username={username} userRole={userRole}  userId={userId} token={token} />;
-        case 'StudentPostFeedBack': return <StudentPostFeedBack  username={username} userRole={userRole}  userId={userId} token={token} />;
-        case 'StudentViewFeedBacks': return <StudentViewFeedBacks  username={username} userRole={userRole}  userId={userId} token={token} />;
+        case 'StudentPostFeedback': return <StudentPostFeedback  username={username} userRole={userRole}  userId={userId} token={token} />;
+        case 'StudentMyFeedback': return <StudentMyFeedback  username={username} userRole={userRole}  userId={userId} token={token} />;
 
         default:  return <Dashboard  username={username} userRole={userRole}   />;
     }
