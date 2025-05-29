@@ -46,7 +46,7 @@ const Home = () => {
     //look for not auth!
     useEffect(()=>{
         if(!isAuthenicated){
-            //dispatch(logout());  //temp for ease in dev
+            dispatch(logout());  //temp for ease in dev
             navigate("/login");
     }
     },[isAuthenicated,navigate]);
