@@ -2,7 +2,6 @@ package com.examly.springapploan.controller;
 
 import java.util.List;
 
-import org.apache.commons.codec.binary.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -57,11 +56,9 @@ public class CollegeController {
             @RequestHeader("Authorization") String token,
             @RequestBody College college) throws AuthException {
         String userRole = JwtTokenGen.getUserRole(token);
-
         if (userRole == null || userRole.equals("LoanManager") || userRole.equals("Student")) {
             return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         }
-
         College savedCollege = collegeService.addCollege(college);
         return new ResponseEntity<>(savedCollege, HttpStatus.CREATED);
     }

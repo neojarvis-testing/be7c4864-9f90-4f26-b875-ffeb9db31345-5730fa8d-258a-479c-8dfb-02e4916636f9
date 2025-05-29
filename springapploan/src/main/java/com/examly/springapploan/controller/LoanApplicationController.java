@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.examly.springapploan.config.JwtTokenGen;
+import com.examly.springapploan.dto.ResponseDTO;
 import com.examly.springapploan.model.LoanApplication;
 import com.examly.springapploan.model.LoanApplicationRequest;
 import com.examly.springapploan.service.LoanApplicationService;

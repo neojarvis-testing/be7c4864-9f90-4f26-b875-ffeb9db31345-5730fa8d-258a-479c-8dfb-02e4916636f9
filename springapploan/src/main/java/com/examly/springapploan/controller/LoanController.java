@@ -61,7 +61,7 @@ public class LoanController {
     public ResponseEntity<?> getAllLoan(@PathVariable Long loanId,@RequestHeader("Authorization") String token){
         String userRole = JwtTokenGen.getUserRole(token);
 
-        if (userRole == null || userRole.equalsIgnoreCase("Admin")) {
+        if (userRole == null || userRole.equalsIgnoreCase("Admin") || userRole.equalsIgnoreCase("Student")) {
             return new ResponseEntity<>("Admin has no access!", HttpStatus.FORBIDDEN);
         }
         Loan loan = loanService.getLoan(loanId);

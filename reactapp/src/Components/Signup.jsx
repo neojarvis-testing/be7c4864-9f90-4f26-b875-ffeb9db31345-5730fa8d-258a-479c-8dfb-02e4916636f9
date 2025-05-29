@@ -51,14 +51,11 @@ const handleChange = (e) => {
         //api call
         axios.post(`${baseUrl}/api/users/register`,form)
         .then((response)=>{
-            console.log(response)
-            const {username, email} = response.data;  
-            dispatch(signUpSuccess(username,email));
+            const {name, email} = response.data;  
             alert('SignUp Successfull!'); 
             navigate("/Login");
     
         }).catch((error)=>{
-            console.log(error);
             alert(error);
             let message = "";
             if(error?.response?.data.status=="400"){
