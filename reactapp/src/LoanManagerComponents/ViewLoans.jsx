@@ -16,7 +16,7 @@ const fetchData = async () => {
             "Authorization":`Bearer ${token}`,
             "Content-Type":"application/json"
         }
-      const response = await axios.get(`${baseUrl}/api/colleges`,{ headers });
+      const response = await axios.get(`${baseUrl}/api/loans`,{ headers });
       setData(response.data);
     }catch(error){
         alert("Failed to Fetch Data:"+error);
@@ -38,31 +38,34 @@ return (
         <h2>View Loans</h2>  
             <table>
             <thead> 
-                <th>Loan Id</th>
-                    <th>Loan Name</th>  
-                    <th>x</th>   
-                    <th>fill data</th> 
-                    <th>fill data</th> 
-                    <th>fill data</th> 
-                    <th>fill data</th> 
-                    <th>status</th> 
+ 
+                <th>Loan Type</th>
+                    <th>description</th>  
+                    <th>interestRate</th>   
+                    <th>maximumAmount</th> 
+                    <th>minimumAmount</th> 
+                    <th>minimumTenure</th> 
+                    <th>processingFee</th> 
+                    <th>gracePeriod</th> 
+                    <th>latePaymentFee</th> 
             </thead>
             <tbody>
           
-
-                {datas.map((college) => (
+                {datas.map((loan) => (
                     <tr>
-                    <td>{college.collegeId}</td>
-                    <td>{college.collegeName}</td> 
-                    <td>{college.address}</td> 
-                    <td>{college.contactNumber}</td> 
-                    <td>{college.email}</td> 
-                    <td>{college.website}</td>
-                    <td>{college.courses}</td>
-                    <td>{college.status}</td>
+                    <td>{loan.loanType}</td>
+                    <td>{loan.description}</td> 
+                    <td>{loan.interestRate}</td> 
+                    <td>{loan.maximumAmount}</td> 
+                    <td>{loan.minimumAmount}</td> 
+                    <td>{loan.processingFee}</td>
+                    <td>{loan.prepaymentPenalty}</td>
+                    <td>{loan.gracePeriod}</td>
+                    <td>{loan.latePaymentFee}</td>
                     </tr>
                 ))
-                }    
+                }
+
             </tbody>
         </table>
       

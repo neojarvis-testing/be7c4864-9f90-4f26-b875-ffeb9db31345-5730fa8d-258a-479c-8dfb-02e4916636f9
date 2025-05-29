@@ -124,7 +124,7 @@ return (
         <input type='text'  name='status' placeholder='Status' value={formData.status} onChange={handleChange}  />
         <br/>
         <button type='submit' name="Add College" role='button'  disabled={loading} >
-        {loading ? 'Logging in...' : 'Add College'}
+        {loading ? 'Loading in...' : 'Add College'}
         </button>
     </form>
    </div>
