@@ -21,16 +21,22 @@ return (
     <div className='nav-menu'>
        <div className='username'>Welcome {username}!, UserRole: {userRole}</div> 
        <div className='nav-item' onClick={()=> setCurrentPage('Dashboard')}>Home</div> 
-       <div  className='nav-item'  onClick={()=> setCurrentPage('ViewAllColleges')}>Colleges</div>
-       <div  className='nav-item'  onClick={()=> setCurrentPage('StudentLoans')}>Student Loans</div>
+       <div  className='nav-item'  onClick={()=> setCurrentPage('ViewAllStudentColleges')}>Colleges</div>
+       <div  className='nav-item'  onClick={()=> setCurrentPage('ViewAllStudentLoans')}>Student Loans</div>
        <div className='nav-item'>
             Applied
             <div className='dropdown'>
-                <div className='dropdown-item' onClick={()=> setCurrentPage('AppliedColleges')}>Applied Colleges</div>
-                <div  className='dropdown-item' onClick={()=> setCurrentPage('AppliedLoans')}>Applied Loans</div>
+                <div className='dropdown-item' onClick={()=> setCurrentPage('StudentAppliedColleges')}>Applied Colleges</div>
+                <div  className='dropdown-item' onClick={()=> setCurrentPage('StudentAppliedLoans')}>Applied Loans</div>
             </div>
         </div> 
-        <div  className='nav-item'  onClick={()=> setCurrentPage('StudentFeedback')}>Feedback</div>
+        <div  className='nav-item'>
+            Feedback
+             <div className='dropdown'>
+                <div className='dropdown-item' onClick={()=> setCurrentPage('StudentMyFeedback')}>My Feedbacks</div>
+                <div  className='dropdown-item' onClick={()=> setCurrentPage('StudentPostFeedback')}>Post Feedback</div>
+            </div>
+        </div>
         <div  className='nav-item'  onClick={handleLogout}>Logout</div>
     </div>
     </div>
