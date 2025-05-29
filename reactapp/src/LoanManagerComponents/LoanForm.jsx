@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import axios from 'axios';
 import {baseUrl} from '../apiConfig'
+import './LoanForm.css'
+
 const LoanForm = ({token}) => {
   const [loading,setLoading] = useState(false);
   const [formData, setFormData] = useState(

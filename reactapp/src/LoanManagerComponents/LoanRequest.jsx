@@ -1,7 +1,7 @@
 import React,{useEffect, useState} from 'react';
 import axios from 'axios';
 import {baseUrl} from '../apiConfig' 
-import './CollegeApproval.css'
+import './LoanRequest.css'
 
 const LoanRequest = ({token}) => {
  
