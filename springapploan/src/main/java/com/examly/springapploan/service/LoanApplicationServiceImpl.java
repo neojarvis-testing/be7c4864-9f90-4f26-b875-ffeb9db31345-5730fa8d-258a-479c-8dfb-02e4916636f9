@@ -70,11 +70,5 @@ public class LoanApplicationServiceImpl implements LoanApplicationService {
         loanApplication.setApplicationStatus(loanApplicationReq.getStatus());
         return loanApplicationRepository.save(loanApplication);
     }
-
-    @Override
-    public LoanApplication updateLoanApplicationStatus(ApproveRequest status, long loanApplicationId) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'updateLoanApplicationStatus'");
-    }
     
 }
