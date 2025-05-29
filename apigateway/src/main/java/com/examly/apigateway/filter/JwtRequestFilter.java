@@ -65,6 +65,7 @@ public class JwtRequestFilter implements GatewayFilter{
          
         ServerHttpRequest request = exchange.getRequest();
         ServerHttpResponse response = exchange.getResponse();
+        logger.info("info {}",request.getHeaders());
         //validate path 
         if (!request.getHeaders().containsKey("Authorization")) {
             logger.error("Authorization Header Missing:{}",request.getPath());

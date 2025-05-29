@@ -77,7 +77,8 @@ public class LoanApplicationController {
 
     //update Loan Application access for Loan Manager
     @PutMapping("/{loanApplicationId}")
-    public ResponseEntity<LoanApplication> updateLoanApplication(@RequestBody LoanApplication laonApplication, @PathVariable long loanApplicationId){
+    public ResponseEntity<LoanApplication> updateLoanApplication(@RequestHeader("status")String status,@RequestBody LoanApplication laonApplication, @PathVariable long loanApplicationId){
+        laonApplication.setApplicationStatus(status);
         LoanApplication updatedLoanApplication = loanApplicationService.updateLoanApplication(laonApplication,loanApplicationId);
         return new ResponseEntity<>(updatedLoanApplication,HttpStatus.OK);
     }
