@@ -11,7 +11,7 @@ import ErrorPage from "./ErrorPage"
 import CollegeApproval from '../AdminComponents/CollegeApproval';
 import CollegeForm from '../AdminComponents/CollegeForm';
 import ViewColleges from '../AdminComponents/ViewColleges';
-import ViewFeedBack from '../AdminComponents/ViewFeedback';
+import AdminViewFeedBack from '../AdminComponents/ViewFeedback';
 
 //loan Components
 import LoanForm from "../LoanManagerComponents/LoanForm";
@@ -46,7 +46,7 @@ const Home = () => {
     //look for not auth!
     useEffect(()=>{
         if(!isAuthenicated){
-            dispatch(logout());
+            //dispatch(logout());  //temp for ease in dev
             navigate("/login");
     }
     },[isAuthenicated,navigate]);
@@ -69,7 +69,7 @@ const renderPage = () =>{
         case 'CollegeApproval': return <CollegeApproval  username={username} userRole={userRole}  userId={userId}    token={token}  />;
         case 'CollegeForm': return <CollegeForm  username={username} userRole={userRole}   userId={userId}  token={token} />;
         case 'ViewColleges': return <ViewColleges  username={username} userRole={userRole}   userId={userId}   token={token}    />;
-        case 'ViewFeedBack': return <ViewFeedBack  username={username} userRole={userRole}   userId={userId}   token={token}   />;
+        case 'AdminViewFeedBack': return <AdminViewFeedBack  username={username} userRole={userRole}   userId={userId}   token={token}   />;
 
         //LoanManager 
         case 'LoanForm': return <LoanForm  username={username} userRole={userRole}  userId={userId}    token={token}  />;
@@ -93,9 +93,12 @@ return (
     <div>
         {selectedMenuBar}
         <div className='page-content'>
-            <h1>EDUINVESTOR</h1>
-            <h1>Contact Us</h1>
+         
             {renderPage()}
+            <div>
+            <h1>EDUINVESTOR</h1> |  <h1>Contact Us</h1>
+            </div>
+          
         </div>
     </div>); 
 };
