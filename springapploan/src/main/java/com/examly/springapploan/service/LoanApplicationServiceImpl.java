@@ -34,8 +34,7 @@ public class LoanApplicationServiceImpl implements LoanApplicationService {
         for(LoanApplication loanApplication : loanApplications){
             if(loanApplication.getUserId() == userId){
                 result.add(loanApplication);
-            }
-            
+            }    
         }
         return result;
     }
