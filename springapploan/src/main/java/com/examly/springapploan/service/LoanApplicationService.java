@@ -2,6 +2,7 @@ package com.examly.springapploan.service;
 
 import java.util.List;
 
+import com.examly.springapploan.dto.ApproveRequest;
 import com.examly.springapploan.model.LoanApplication;
 import com.examly.springapploan.model.LoanApplicationRequest;
 
@@ -15,9 +16,12 @@ public interface LoanApplicationService {
 
     LoanApplication updateLoanApplication(LoanApplication loanApplication,long loanApplicationId);
 
+    LoanApplication updateLoanApplicationStatus(ApproveRequest status, long loanApplicationId); 
+
     void deleteLoanApplication(long loanApplicationId);
 
     LoanApplication getApplication (long applicationId);
+
 
 
 

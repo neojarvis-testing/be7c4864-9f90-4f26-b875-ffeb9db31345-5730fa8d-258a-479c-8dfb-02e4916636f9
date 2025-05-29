@@ -7,6 +7,7 @@ const LoanRequest = ({token}) => {
  
     const [loading,setLoading] = useState(false);
     const [datas,setData] = useState([]);
+
 //load Data
  useEffect(()=> {
  const fetchData = async () => {
@@ -15,8 +16,10 @@ const LoanRequest = ({token}) => {
      try{
          const headers = {
              "Authorization":`Bearer ${token}`,
-             "Content-Type":"application/json"
+             "Content-Type":"application/json",
+             "status":"Approved"
          }
+
        //Please Put Approve 
        const response = await axios.get(`${baseUrl}/api/loanapplications`,{ headers });
        setData(response.data);
@@ -40,8 +43,11 @@ const handleApprove = async(id) => {
             "Authorization":`Bearer ${token}`,
             "Content-Type":"application/json"
         }
+        const body = {
+            "Status": "Accepted"
+        }
       //Please Put Approve 
-      const response = await axios.put(`${baseUrl}/api/collegeApproveUrl?id=${token}`,{ headers });
+      const response = await axios.put(`${baseUrl}/api/status/loanapplications/${id}`,body,{ headers });
       setData(response.data);
     }catch(error){
         alert("Failed to Fetch Data:"+error);
@@ -59,8 +65,11 @@ const handleApprove = async(id) => {
             "Authorization":`Bearer ${token}`,
             "Content-Type":"application/json"
         }
+        const body = {
+            "Status": "Rejected"
+        }
       //Please Put Approve 
-      const response = await axios.put(`${baseUrl}/api/collegeApproveUrl?id=${token}`,{ headers });
+      const response = await axios.put(`${baseUrl}/api/status/loanapplications/${id}`,body,{ headers });
       setData(response.data);
     }catch(error){
         alert("Failed to Fetch Data:"+error);
@@ -101,8 +110,8 @@ const handleApprove = async(id) => {
                      <td>{college.loanAmount}</td> 
                      <td>{college.tenureMonths}</td> 
                      <td>{college.employmentStatus}</td>
-                     <td><button onClick={()=>handleApprove(college.collegeId)} value="Approve">Approve</button></td>
-                     <td><button onClick={()=>handleReject(college.collegeId)}  value="Reject">Reject</button></td>
+                     <td><button onClick={()=>handleApprove(college.loanApplicationId)} value="Approve">Approve</button></td>
+                     <td><button onClick={()=>handleReject(college.loanApplicationId)}  value="Reject">Reject</button></td>
                      </tr>
                  ))
                  }    
