@@ -1,7 +1,7 @@
 import React,{useEffect, useState} from 'react';
 import axios from 'axios';
 import {baseUrl} from '../apiConfig' 
-import './CollegeApproval.css'
+import './LoanRequest.css'
 
 const LoanRequest = ({token}) => {
  
@@ -18,7 +18,7 @@ const LoanRequest = ({token}) => {
              "Content-Type":"application/json"
          }
        //Please Put Approve 
-       const response = await axios.get(`${baseUrl}/api/colleges`,{ headers });
+       const response = await axios.get(`${baseUrl}/api/loanapplications`,{ headers });
        setData(response.data);
      }catch(error){
          alert("Failed to Fetch Data:"+error);
@@ -79,14 +79,13 @@ const handleApprove = async(id) => {
          
              <table>
              <thead> 
-                 <th>College Id</th>
-                     <th>Application Name</th>  
-                     <th>Applied College</th>   
-                     <th>x</th> 
-                     <th>y</th> 
-                     <th>z</th> 
-                     <th>c</th> 
-                     <th>status</th>
+                 <th>Loan Application Id</th>
+                     <th>Applied Date</th>  
+                     <th>Student Id</th>  
+                     <th>Account Holder Name</th>   
+                     <th>Loan Amount</th>  
+                     <th>Tenure Months</th>  
+                     <th>Employment Status</th>  
                      <th>#</th> 
                      <th>#</th> 
              </thead>
@@ -95,14 +94,13 @@ const handleApprove = async(id) => {
  
                  {datas.map((college) => (
                      <tr>
-                     <td>{college.collegeId}</td>
-                     <td>{college.collegeName}</td> 
-                     <td>{college.address}</td> 
-                     <td>{college.contactNumber}</td> 
-                     <td>{college.email}</td> 
-                     <td>{college.website}</td>
-                     <td>{college.courses}</td>
-                     <td>{college.status}</td>
+                     <td>{college.loanApplicationId}</td>
+                     <td>{college.applicationDate}</td> 
+                     <td>{college.userId}</td>
+                     <td>{college.accountHolder}</td> 
+                     <td>{college.loanAmount}</td> 
+                     <td>{college.tenureMonths}</td> 
+                     <td>{college.employmentStatus}</td>
                      <td><button onClick={()=>handleApprove(college.collegeId)} value="Approve">Approve</button></td>
                      <td><button onClick={()=>handleReject(college.collegeId)}  value="Reject">Reject</button></td>
                      </tr>

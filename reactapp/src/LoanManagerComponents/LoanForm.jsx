@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import axios from 'axios';
 import {baseUrl} from '../apiConfig'
+import './LoanForm.css'
+
 const LoanForm = ({token}) => {
   const [loading,setLoading] = useState(false);
   const [formData, setFormData] = useState(
@@ -24,13 +26,15 @@ const LoanForm = ({token}) => {
       loanType: '',
       description: '',
       interestRate: '',
-      maximumAmount: '',
-      minimumAmount: '',
-      minimumTenure: '',
+      maxAmount: '',
+      minAmount: '',
+      minTenureMonths: '',
+      maxTenureMonths: '',
       processingFee: '',
       prepaymentPenalty: '',
-      gracePeriod: '',
+      gracePeriodMonths: '',
       latePaymentFee: '',
+      status: '',
     }
   );
 
@@ -51,13 +55,13 @@ const LoanForm = ({token}) => {
 
   const validateForm = () => {
     let newErrors = {};
+
     if (!formData.loanType.trim()) {
       newErrors.loanType = "Loan type is required"
     }
     if (!formData.description.trim()) {
       newErrors.description = "Description is required"
     }
-
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0;
   }
@@ -101,35 +105,51 @@ const LoanForm = ({token}) => {
 
   return (
     <div className='form-container'>
-
-      {check ? <div>Loan type is required Description is required</div> : "" }
       
 
       <form className='form-box' onSubmit={handleSubmit}>
         <h2>Create New Loan</h2>
+  
+      {errors.loanType && <div>{errors.loanType}</div>}
         <input type='text' name='loanType' placeholder='Loan Type' value={formData.loanType} onChange={handleChange} />
-        {errors.loanType && <div>{errors.name}</div>}
+       
+        {errors.description && <div>{errors.description}</div>}
         <input type='text' name='description' placeholder='Description' value={formData.description} onChange={handleChange} />
-        {errors.description && <div>{errors.name}</div>}
-        <input type='text' name='interestRate' placeholder='Interest Rate' value={formData.name} onChange={handleChange} />
-        {errors.interestRate && <div>{errors.name}</div>}
-        <input type='text' name='maximumAmount' placeholder='Maximum Amount' value={formData.name} onChange={handleChange} />
-        {errors.maximumAmount && <div>{errors.name}</div>}
-        <input type='text' name='minimumAmount' placeholder='Minimum Amount' value={formData.name} onChange={handleChange} />
-        {errors.minimumAmount && <div>{errors.name}</div>}
-        <input type='text' name='minimumTenure' placeholder='Minimum Tenure' value={formData.name} onChange={handleChange} />
-        {errors.minimumTenure && <div>{errors.name}</div>}
-        <input type='text' name='processingFee' placeholder='Processing Fee' value={formData.name} onChange={handleChange} />
-        {errors.processingFee && <div>{errors.name}</div>}
-        <input type='text' name='prepaymentPenalty' placeholder='Prepayment Penalty' value={formData.name} onChange={handleChange} />
-        {errors.prepaymentPenalty && <div>{errors.name}</div>}
-        <input type='text' name='gracePeriod' placeholder='Grace Period' value={formData.name} onChange={handleChange} />
-        {errors.gracePeriod && <div>{errors.name}</div>}
-        <input type='text' name='latePaymentFee' placeholder='Late Payment Fee' value={formData.name} onChange={handleChange} />
-        {errors.latePaymentFee && <div>{errors.name}</div>}
+        
 
-        <button type='submit' name="Add Loan" role='button' disabled={loading}>Add Loan</button>
-        {loading ? 'Logging in...' : 'Add Laon'}
+        <input type='text' name='interestRate' placeholder='Interest Rate' value={formData.interestRate} onChange={handleChange} />
+        {errors.interestRate && <div>{errors.interestRate}</div>}
+
+        {errors.maxAmount && <div>{errors.maxAmount}</div>}
+        <input type='text' name='maxAmount' placeholder='Maximum Amount' value={formData.maxAmount} onChange={handleChange} />
+
+        {errors.minAmount && <div>{errors.minAmount}</div>}
+        <input type='text' name='minAmount' placeholder='Minimum Amount' value={formData.minAmount} onChange={handleChange} />
+        
+        {errors.minTenureMonths && <div>{errors.minTenureMonths}</div>}
+        <input type='text' name='minTenureMonths' placeholder='Minimum Tenure' value={formData.minTenureMonths} onChange={handleChange} />
+
+        {errors.maxTenureMonths && <div>{errors.maxTenureMonths}</div>}
+        <input type='text' name='maxTenureMonths' placeholder='Processing Fee' value={formData.maxTenureMonths} onChange={handleChange} />
+
+        {errors.prepaymentPenalty && <div>{errors.prepaymentPenalty}</div>}
+        <input type='text' name='prepaymentPenalty' placeholder='Prepayment Penalty' value={formData.prepaymentPenalty} onChange={handleChange} />
+
+        {errors.processingFee && <div>{errors.processingFee}</div>}
+        <input type='text' name='processingFee' placeholder='processing Fee' value={formData.processingFee} onChange={handleChange} />
+
+        {errors.gracePeriodMonths && <div>{errors.gracePeriodMonths}</div>}
+        <input type='text' name='gracePeriodMonths' placeholder='Late Payment Fee' value={formData.gracePeriodMonths} onChange={handleChange} />
+        
+        {errors.latePaymentFee && <div>{errors.latePaymentFee}</div>}
+        <input type='text' name='latePaymentFee' placeholder='Late Payment Fee' value={formData.latePaymentFee} onChange={handleChange} />
+
+        {errors.status && <div>{errors.status}</div>}
+        <input type='hidden' name='status' placeholder='Late Payment Fee' value="Active" onChange={handleChange} />
+        
+        <button type='submit'  name="Add Loan" role='button' disabled={loading}>
+        {loading ? 'Logging in...' : 'Add Loan'}
+        </button>
       </form>
     </div>
 
