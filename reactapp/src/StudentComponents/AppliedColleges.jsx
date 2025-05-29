@@ -36,13 +36,6 @@ return (
     <div className='form-container'>
     <div className='form-box'>
         <h2>View Applied Colleges</h2> 
-        {loading?(
-            <p>Loading</p>
-        ) : datas.length === 0 ? (
-            <p>No Data Found</p>
-        ) :
-        (
-
             <table>
             <thead> 
                 <th>College Id</th>
@@ -72,8 +65,7 @@ return (
                 }    
             </tbody>
         </table>
-        )
-    }
+    
     </div>
    </div>
 

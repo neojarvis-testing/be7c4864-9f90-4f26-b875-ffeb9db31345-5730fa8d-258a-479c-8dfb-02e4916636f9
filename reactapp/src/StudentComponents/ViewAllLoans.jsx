@@ -34,14 +34,7 @@ return (
 
     <div className='form-container'>
     <div className='form-box'>
-        <h2>View All Loans</h2> 
-        {loading?(
-            <p>Loading</p>
-        ) : datas.length === 0 ? (
-            <p>No Data Found</p>
-        ) :
-        (
-
+        <h2>Available Loans</h2> 
             <table>
             <thead> 
                 <th>College Id</th>
@@ -71,12 +64,6 @@ return (
                 }    
             </tbody>
         </table>
-
-
-        )
-    }
-    
-
     </div>
    </div>
 

@@ -116,8 +116,8 @@ return (
         {errors.address && <div>{errors.address}</div>}
         
         <br/>
-        <button type='submit' name="Add Feedback" role='button'  disabled={loading} >
-        {loading ? 'Logging in...' : 'Add Feedback'}
+        <button type='submit' name="Submit Your Feedback" role='button'  disabled={loading} >
+        {loading ? 'Logging in...' : 'Submit Your Feedback'}
         </button>
     </form>
    </div>

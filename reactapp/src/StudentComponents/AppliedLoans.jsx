@@ -34,15 +34,9 @@ fetchData();
 return (
 
     <div className='form-container'>
-    <div className='form-box'>
-        <h2>View Applied Loans</h2> 
-        {loading?(
-            <p>Loading</p>
-        ) : datas.length === 0 ? (
-            <p>No Data Found</p>
-        ) :
-        (
-
+    <div className='form-box'> 
+            <h2>Student Applied Loans</h2> 
+            <h2>Student Applied Loans</h2> 
             <table>
             <thead> 
                 <th>Id</th>
@@ -54,9 +48,7 @@ return (
                     <th>fill</th> 
                     <th>status</th> 
             </thead>
-            <tbody>
-          
-
+            <tbody> 
                 {datas.map((loan) => (
                     <tr>
                     <td>{loan.collegeId}</td>
@@ -72,8 +64,6 @@ return (
                 }    
             </tbody>
         </table>
-        )
-    }
     </div>
    </div>
 
