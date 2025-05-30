@@ -28,7 +28,7 @@ public class ApigatewayApplication {
 	@Bean
 	public RouteLocator apiRouteLocator(RouteLocatorBuilder builder){
 		return builder.routes()
-		.route("user_route",route->route.path("/api/users/**")
+		.route("user_route",route->route.path("/api/users/**","/users/api-docs")
 		.uri("lb://USER-SERVICE"))
 
 		.route("user_loans",route->route.path("/api/loans/**","/api/colleges/**","/api/loanapplications/**")

@@ -95,9 +95,6 @@ const headers = {
             }).finally(()=>{
                 setLoading(false);
             });
-
-
-
         }else{
             // logic
             alert("Validation Error !");

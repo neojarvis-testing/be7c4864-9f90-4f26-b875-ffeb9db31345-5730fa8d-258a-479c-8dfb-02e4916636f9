@@ -56,13 +56,13 @@ public class JwtRequestFilter implements GatewayFilter{
     }
  
     public boolean isTokenExpired(String token){
-
+        logger.error("Token Expired !");
         return extractClaims(token).getExpiration().before(new Date());
     }
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-         
+        logger.info("Start Filtering Process.");
         ServerHttpRequest request = exchange.getRequest();
         ServerHttpResponse response = exchange.getResponse();
         logger.info("info {}",request.getHeaders());

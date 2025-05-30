@@ -1,4 +1,5 @@
 import React,{useEffect, useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
 import {baseUrl} from '../apiConfig' 
 import './CollegeApproval.css'
@@ -7,8 +8,9 @@ const CollegeApproval = ({token}) => {
  
     const [loading,setLoading] = useState(false);
     const [datas,setData] = useState([]);
+    const navigate = useNavigate();
 //load Data
- useEffect(()=> {
+ 
  const fetchData = async () => {
      
      setLoading(true);
@@ -17,7 +19,7 @@ const CollegeApproval = ({token}) => {
              "Authorization":`Bearer ${token}`,
              "Content-Type":"application/json"
          }
-       //Please Put Approve 
+       
        const response = await axios.get(`${baseUrl}/api/colleges`,{ headers });
        setData(response.data);
      }catch(error){
@@ -29,8 +31,9 @@ const CollegeApproval = ({token}) => {
  };
  
  //fetch 
- fetchData();
- },[token]);
+ useEffect(()=> {fetchData();},[token]);
+
+ 
   
 
  //approve data
@@ -38,11 +41,13 @@ const handleApprove = async(id) => {
     try{
         const headers = {
             "Authorization":`Bearer ${token}`,
-            "Content-Type":"application/json"
+            "Content-Type":"application/json",
+            "status":"Active"
         }
-      //Please Put Approve 
-      const response = await axios.put(`${baseUrl}/api/collegeApproveUrl?id=${token}`,{ headers });
-      setData(response.data);
+        const body = {} 
+        await axios.put(`${baseUrl}/api/colleges/${id}/approve`,{body},{ headers });
+      alert("Approve Success !");
+      await fetchData();
     }catch(error){
         alert("Failed to Fetch Data:"+error);
     }
@@ -57,11 +62,15 @@ const handleApprove = async(id) => {
     try{
         const headers = {
             "Authorization":`Bearer ${token}`,
-            "Content-Type":"application/json"
+            "Content-Type":"application/json",
+            "status":"Rejected"
         }
-      //Please Put Approve 
-      const response = await axios.put(`${baseUrl}/api/collegeApproveUrl?id=${token}`,{ headers });
-      setData(response.data);
+
+        const body = {}
+ 
+      const response = await axios.put(`${baseUrl}/api/colleges/${id}/approve`,body,{ headers });
+      alert("Reject Success !");
+      await fetchData();
     }catch(error){
         alert("Failed to Fetch Data:"+error);
     }
@@ -71,8 +80,30 @@ const handleApprove = async(id) => {
 }
 
 
- return (
- 
+//delete data
+
+ //reject data
+ const handleDelete = async(id) => {
+    try{
+        const headers = {
+            "Authorization":`Bearer ${token}`,
+            "Content-Type":"application/json",
+            "status":"Rejected"
+        } 
+
+      const response = await axios.delete(`${baseUrl}/api/colleges/${id}`,{ headers });
+      alert("Delete Success !");
+      await fetchData();
+    }catch(error){
+        alert("Failed to Fetch Data:"+error);
+    }
+    finally{
+        setLoading(false);
+    }
+}
+
+
+ return ( 
      <div className='form-container'>
      <div className='form-box'>
          <h2>College Approval page</h2> 
@@ -86,14 +117,14 @@ const handleApprove = async(id) => {
              <table>
              <thead> 
                  <th>College Id</th>
-                     <th>Application Name</th>  
-                     <th>Applied College</th>   
-                     <th>x</th> 
-                     <th>y</th> 
-                     <th>z</th> 
-                     <th>c</th> 
+                     <th>College Name</th>  
+                     <th>Adderss</th>   
+                     <th>Contact Number</th> 
+                     <th>Email</th> 
+                     <th>Web Address</th> 
+                     <th>Course</th> 
                      <th>status</th>
-                     <th>#</th> 
+                     <th>Status</th> 
                      <th>#</th> 
              </thead>
              <tbody>
@@ -111,6 +142,7 @@ const handleApprove = async(id) => {
                      <td>{college.status}</td>
                      <td><button onClick={()=>handleApprove(college.collegeId)} value="Approve">Approve</button></td>
                      <td><button onClick={()=>handleReject(college.collegeId)}  value="Reject">Reject</button></td>
+                     <td><button onClick={()=>handleDelete(college.collegeId)}  value="Reject">Delete</button></td>
                      </tr>
                  ))
                  }    

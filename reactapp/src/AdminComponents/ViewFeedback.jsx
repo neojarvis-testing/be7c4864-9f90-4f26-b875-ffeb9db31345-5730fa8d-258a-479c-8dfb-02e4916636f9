@@ -45,15 +45,19 @@ return (
             <table>
             <thead> 
                 <th>Feedback Id</th>
-                    <th>Feedback Name</th>
+                    <th>User Id</th>
+                <th>Date</th>
+                    <th>Feedback Text</th>
 
             </thead>
             <tbody>
 
                 {datas.map((data) => (
                     <tr>
-                    <td>{data.collegeId}</td>
-                    <td>{data.collegeName}</td>  
+                    <td>{data.feedbackId}</td>
+                    <td>{data.userId}</td>  
+                    <td>{data.date}</td>  
+                    <td>{data.feedbackText}</td>  
                     </tr>
                 ))
                 }    

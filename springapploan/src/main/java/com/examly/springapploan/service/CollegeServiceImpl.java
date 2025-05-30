@@ -55,6 +55,13 @@ public class CollegeServiceImpl implements CollegeService {
     }
 
     @Override
+    public College updateCollegeStatus(String  status, int collegeId) throws CollegeNotFoundException {
+        College existingCollege = collegeRepository.findById(collegeId).orElseThrow(()-> new CollegeNotFoundException(collegeId));
+        existingCollege.setStatus(status); 
+        return collegeRepository.save(existingCollege);
+
+    }
+    @Override
     public void deleteCollege(int collegeId) throws CollegeNotFoundException {
         College college = collegeRepository.findById(collegeId).orElseThrow(()-> new CollegeNotFoundException(collegeId));
         collegeRepository.delete(college);

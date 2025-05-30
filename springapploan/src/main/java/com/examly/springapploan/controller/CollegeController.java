@@ -2,10 +2,11 @@ package com.examly.springapploan.controller;
 
 import java.util.List;
 
-import org.apache.commons.codec.binary.StringUtils;
+import org.apache.commons.codec.binary.StringUtils; 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.messaging.handler.annotation.Header;
 import org.springframework.web.bind.annotation.*;
 
 import com.examly.springapploan.dto.ResponseDTO;
@@ -30,7 +31,7 @@ public class CollegeController {
     @GetMapping(produces = "application/json")
     public ResponseEntity<?> getAllColleges(@RequestHeader("Authorization") String token) {
         String userRole = JwtTokenGen.getUserRole(token);
-
+        
         if (userRole == null || userRole.equals("LoanManager")) {
             return new ResponseEntity<>("Loan Manager has no access!", HttpStatus.FORBIDDEN);
         }
@@ -72,6 +73,14 @@ public class CollegeController {
     public ResponseEntity<College> updateCollege(@RequestBody College college, @PathVariable int collegeId)
             throws CollegeNotFoundException {
         College updatedCollege = collegeService.updateCollege(college, collegeId);
+        return new ResponseEntity<>(updatedCollege, HttpStatus.OK);
+    }
+
+    // Access for Admin
+    @PutMapping("/{collegeId}/approve")
+    public ResponseEntity<College> updateCollegeStatus(@RequestHeader("status") String status, @PathVariable int collegeId)
+            throws CollegeNotFoundException {
+        College updatedCollege = collegeService.updateCollegeStatus(status, collegeId);
         return new ResponseEntity<>(updatedCollege, HttpStatus.OK);
     }
 
