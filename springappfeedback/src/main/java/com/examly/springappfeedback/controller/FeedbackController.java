@@ -19,7 +19,7 @@ import com.examly.springappfeedback.service.FeedbackService;
 public class FeedbackController {
 
     private FeedbackService feedbackService; 
-    private static final Logger logger = LogManager.getLogger(FeedbackController.class);
+    private static final Logger logger = LogManager.getLogger(FeedbackService.class);
 
     @Autowired
     private FeedbackController(FeedbackService feedbackService ){
@@ -52,19 +52,17 @@ public class FeedbackController {
     public ResponseEntity<?> createFeedback(
         @RequestBody FeedbackRequest feedback,
         @RequestHeader("Authorization") String token){
+            logger.info("token{}",token);
         String userRole = JwtTokenGen.getUserRole(token);
-
         if (userRole == null || userRole.equals("LoanManager") || userRole.equals("Admin")) {
             return new ResponseEntity<>("Loan Manager & Admin has no access!", HttpStatus.FORBIDDEN);
         }
-
         try {
-            long userIdToken = JwtTokenGen.getUserIdToken(token);
-            feedbackService.createFeedback(feedback, userIdToken);
+            feedbackService.createFeedback(feedback, feedback.getUser().getUserId());
             return new ResponseEntity<>("Feedback Submitted Successfull", HttpStatus.CREATED);
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException e) {e.printStackTrace();
             return new ResponseEntity<>("Provide Feedback Data properly", HttpStatus.BAD_REQUEST); 
-        } catch (Exception e){
+        } catch (Exception e){e.printStackTrace();
             return new ResponseEntity<>("An error occured while submitting request!", HttpStatus.INTERNAL_SERVER_ERROR); 
         }
     }

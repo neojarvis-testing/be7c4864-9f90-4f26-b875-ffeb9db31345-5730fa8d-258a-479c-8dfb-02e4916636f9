@@ -6,7 +6,7 @@ import './StudentMyFeedback.css'
 // import { freezeDraftable } from '@reduxjs/toolkit/dist/utils';
 
 
-const StudentPostFeedback = ({token}) => {
+const StudentPostFeedback = ({token,userId}) => {
     
 const [loading,setLoading] = useState(false);
  
@@ -60,7 +60,15 @@ const headers = {
     "Authorization":`Bearer ${token}`,
     "Content-Type":"application/json"
 }
-            axios.post(`${baseUrl}/api/feedback`,formData,{ headers })
+
+const body = {
+    "feedbackText": `${formData.feedbackText}`,
+    "user": {
+        "userId": `${userId}`
+    }
+}
+
+            axios.post(`${baseUrl}/api/feedback`,body,{ headers })
             .then((response)=>{
         
                 const {feedbackId} = response.data;

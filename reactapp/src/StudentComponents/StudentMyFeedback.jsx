@@ -4,7 +4,7 @@ import {baseUrl} from '../apiConfig'
 import './StudentMyFeedback.css'
 
 
-const StudentMyFeedback = ({token}) => {
+const StudentMyFeedback = ({token,userId}) => {
  
    const [loading,setLoading] = useState(false);
    const [datas,setData] = useState([]);
@@ -18,7 +18,7 @@ const fetchData = async () => {
             "Authorization":`Bearer ${token}`,
             "Content-Type":"application/json"
         }
-      const response = await axios.get(`${baseUrl}/api/colleges`,{ headers });
+      const response = await axios.get(`${baseUrl}/api/feedback/user/${userId}`,{ headers });
       setData(response.data);
     }catch(error){
         alert("Failed to Fetch Data:"+error);
@@ -30,13 +30,13 @@ const fetchData = async () => {
 
 //fetch 
 fetchData();
-},[token]);
+},[token,userId]);
  
 return (
 
     <div className='form-container'>
     <div className='form-box'>
-        <h2>View My Feedbacks</h2> 
+        <h2>View Feedback Page</h2> 
         {loading?(
             <p>Loading</p>
         ) : datas.length === 0 ? (
@@ -46,28 +46,22 @@ return (
 
             <table>
             <thead> 
-                <th>College Id</th>
-                    <th>College Name</th>  
-                    <th>Address</th>   
-                    <th>Contact Number</th> 
-                    <th>Email</th> 
-                    <th>website</th> 
-                    <th>courses</th> 
-                    <th>status</th> 
+                <th>Feedback Id</th>
+                    <th>User Id</th>
+                <th>Date</th>
+                    <th>Feedback Text</th>
+
             </thead>
             <tbody>
-          
 
-                {datas.map((loan) => (
+                {datas
+              //  .filter(val=>val.userId===userId)
+                .map((data) => (
                     <tr>
-                    <td>{loan.collegeId}</td>
-                    <td>{loan.collegeName}</td> 
-                    <td>{loan.address}</td> 
-                    <td>{loan.contactNumber}</td> 
-                    <td>{loan.email}</td> 
-                    <td>{loan.website}</td>
-                    <td>{loan.courses}</td>
-                    <td>{loan.status}</td>
+                    <td>{data.feedbackId}</td>
+                    <td>{data.userId}</td>  
+                    <td>{data.date}</td>  
+                    <td>{data.feedbackText}</td>  
                     </tr>
                 ))
                 }    
