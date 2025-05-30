@@ -52,13 +52,14 @@ return (
                     <th>Contact Number</th> 
                     <th>Email</th> 
                     <th>website</th> 
-                    <th>courses</th> 
-                    <th>status</th> 
+                    <th>courses</th>  
             </thead>
             <tbody>
           
 
-                {datas.map((college) => (
+                {datas
+                .filter(s=>s.status==="Active")
+                .map((college) => (
                     <tr>
                     <td>{college.collegeId}</td>
                     <td>{college.collegeName}</td> 
@@ -66,8 +67,7 @@ return (
                     <td>{college.contactNumber}</td> 
                     <td>{college.email}</td> 
                     <td>{college.website}</td>
-                    <td>{college.courses}</td>
-                    <td>{college.status}</td>
+                    <td>{college.courses}</td> 
                     </tr>
                 ))
                 }    

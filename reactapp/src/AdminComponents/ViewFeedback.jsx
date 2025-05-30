@@ -18,7 +18,7 @@ const fetchData = async () => {
             "Content-Type":"application/json"
         }
         //update url and params 
-      const response = await axios.get(`${baseUrl}/api/feeback`,{ headers });
+      const response = await axios.get(`${baseUrl}/api/feedback`,{ headers });
       setData(response.data);
     }catch(error){
         alert("Failed to Fetch Data:"+error);
@@ -45,15 +45,19 @@ return (
             <table>
             <thead> 
                 <th>Feedback Id</th>
-                    <th>Feedback Name</th>
+                    <th>User Id</th>
+                <th>Date</th>
+                    <th>Feedback Text</th>
 
             </thead>
             <tbody>
 
                 {datas.map((data) => (
                     <tr>
-                    <td>{data.collegeId}</td>
-                    <td>{data.collegeName}</td>  
+                    <td>{data.feedbackId}</td>
+                    <td>{data.userId}</td>  
+                    <td>{data.date}</td>  
+                    <td>{data.feedbackText}</td>  
                     </tr>
                 ))
                 }    

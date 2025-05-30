@@ -14,7 +14,7 @@ public interface CollegeService {
     College addCollege(College college);
 
     College updateCollege(College college, int collegeId)  throws CollegeNotFoundException;
-
+    College updateCollegeStatus(String  status, int collegeId) throws CollegeNotFoundException;
     void deleteCollege(int collegeId) throws CollegeNotFoundException;
 
 

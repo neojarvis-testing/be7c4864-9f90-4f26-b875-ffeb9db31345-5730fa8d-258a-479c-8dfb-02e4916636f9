@@ -83,7 +83,7 @@ const headers = {
             .then((response)=>{
         
                 const {collegeId} = response.data;
-                alert("Success !"+collegeId);
+                alert("Success !");
             }).catch((error)=>{
                 let message = "";
                 alert(error);
@@ -107,8 +107,7 @@ const headers = {
 return (
 <>
    <div className='form-container'>
-    {check ? (<div> College name is required Address is required Contact number is required Courses are required</div>) : (<div> d</div>)}
-    
+     
     <form className='form-box' onSubmit={handleSubmit}>
         <h2>Create New College</h2>
         <input type='text' name='collegeName' placeholder='College Name' value={formData.collegeName} onChange={handleChange} />
@@ -121,7 +120,7 @@ return (
         <input type='text'  name='website' placeholder='Website' value={formData.website} onChange={handleChange}  />
         <input type='text'  name='courses' placeholder='Courses' value={formData.courses} onChange={handleChange}  />
         {errors.courses && <div>{errors.courses}</div>}
-        <input type='text'  name='status' placeholder='Status' value={formData.status} onChange={handleChange}  />
+        <input type='hidden'  name='status' placeholder='Status' value="Pending" onChange={handleChange}  />
         <br/>
         <button type='submit' name="Add College" role='button'  disabled={loading} >
         {loading ? 'Loading in...' : 'Add College'}
