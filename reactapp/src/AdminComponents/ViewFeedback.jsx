@@ -18,7 +18,7 @@ const fetchData = async () => {
             "Content-Type":"application/json"
         }
         //update url and params 
-      const response = await axios.get(`${baseUrl}/api/feeback`,{ headers });
+      const response = await axios.get(`${baseUrl}/api/feedback`,{ headers });
       setData(response.data);
     }catch(error){
         alert("Failed to Fetch Data:"+error);

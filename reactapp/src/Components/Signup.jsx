@@ -11,7 +11,7 @@ const Signup = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
  
-const [form,setForm] = useState({email:'',password: '',confirmPassword:'',username: '',mobileNumber: '', userRole: ''});
+const [form,setForm] = useState({email:'',password: '',confirmPassword:'',username: '',mobileNumber: '', userRole: 'Student'});
 const [formError,setFormError] = useState(null);
 const [FieldError,setFieldFormError] = useState({});
 const [loading,setLoading] = useState(false);

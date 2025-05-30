@@ -12,25 +12,15 @@ const [loading,setLoading] = useState(false);
  
     const [formData, setFormData] = useState(
         {
-            collegeName : '',
-            address : '',
-            contactNumber : '',
-            email : '',
-            website : '',
-            courses : '',
-            status : ''
+            feedbackText : '',
+            
         }
     );
 
     const [errors, setErrors] = useState(
         {
-            name : '',
-            address : '',
-            contactNumber : '',
-            email : '',
-            website : '',
-            courses : '',
-            status : ''
+            feedbackText : '',
+            
         }
     );
 
@@ -50,17 +40,8 @@ const [loading,setLoading] = useState(false);
 
     const validateForm = () => {
         let newErrors = {};
-        if(!formData.collegeName.trim()){
-            newErrors.name = "College name is required"
-        }
-        if(!formData.address.trim()){
-            newErrors.address = "Address is required"
-        }
-        if(!formData.contactNumber.trim()){
-            newErrors.contactNumber = "Contact number is required"
-        }
-        if(!formData.courses.trim()){
-            newErrors.courses = "Courses are required"
+        if(!formData.feedbackText.trim()){
+            newErrors.feedbackText = "Feedback required"
         }
         setErrors(newErrors)
         return Object.keys(newErrors).length === 0;
@@ -79,11 +60,11 @@ const headers = {
     "Authorization":`Bearer ${token}`,
     "Content-Type":"application/json"
 }
-            axios.post(`${baseUrl}/api/colleges`,formData,{ headers })
+            axios.post(`${baseUrl}/api/feedback`,formData,{ headers })
             .then((response)=>{
         
-                const {collegeId} = response.data;
-                alert("Success !"+collegeId);
+                const {feedbackId} = response.data;
+                alert("Success !, Id: "+feedbackId);
             }).catch((error)=>{
                 let message = "";
                 alert(error);
@@ -104,14 +85,10 @@ const headers = {
 return (
 <>
    <div className='form-container'>
-     
     <form className='form-box' onSubmit={handleSubmit}>
-        <h2>Create Feedback</h2>
-        <input type='text' name='collegeName' placeholder='Feedback Title' value={formData.collegeName} onChange={handleChange} />
-        {errors.name && <div>{errors.name}</div>}
-        <input type='text'  name='address' placeholder='Feedback Content' value={formData.address} onChange={handleChange}  />
-        {errors.address && <div>{errors.address}</div>}
-        
+        <h2>Create Feedback</h2> 
+        {errors.feedbackText && <div>{errors.feedbackText}</div>} 
+        <input type='text'  name='feedbackText' placeholder='Feedback Text' value={formData.feedbackText} onChange={handleChange}  />
         <br/>
         <button type='submit' name="Submit Your Feedback" role='button'  disabled={loading} >
         {loading ? 'Logging in...' : 'Submit Your Feedback'}
@@ -120,7 +97,6 @@ return (
    </div>
 </>
 );
-
 };
 
 export default StudentPostFeedback;
